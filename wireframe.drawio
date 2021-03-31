@@ -1,6 +1,14 @@
-<mxfile host="app.diagrams.net" modified="2021-03-31T22:09:40.841Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="TSqkcr28xtXLIbLID-bg" version="14.5.3" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-03-31T23:42:57.910Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="IFHKC9F2NpAkvGVv12ar" version="14.5.3" type="github" pages="8">
+  <diagram id="6BHxPYrYha_IAXa4hT4B" name="Site map">
+    <mxGraphModel dx="926" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="jSKRhnqbRBqFd3RoWQQz-0" />
+        <mxCell id="jSKRhnqbRBqFd3RoWQQz-1" parent="jSKRhnqbRBqFd3RoWQQz-0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
   <diagram name="Home" id="03018318-947c-dd8e-b7a3-06fadd420f32">
-    <mxGraphModel dx="3166" dy="1311" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="926" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -104,7 +112,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="76qGkDXaDrzP4gvBoVVX" name="Produto (jogo)">
-    <mxGraphModel dx="1108" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="926" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="1beiMoYhPYEvIwXm0a7y-0" />
         <mxCell id="1beiMoYhPYEvIwXm0a7y-1" parent="1beiMoYhPYEvIwXm0a7y-0" />
@@ -112,7 +120,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="wH2rziI9w0hHYgkecAog" name="Ajuda/Suporte">
-    <mxGraphModel dx="1108" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="926" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="UxKOTzZetm44uuv51IiD-0" />
         <mxCell id="UxKOTzZetm44uuv51IiD-1" parent="UxKOTzZetm44uuv51IiD-0" />
@@ -120,7 +128,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="SwP_xfxtCfYEdSW9mGVN" name="Perfil do cliente">
-    <mxGraphModel dx="1847" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="926" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="Axev3EsFKdRVuj_XaynP-0" />
         <mxCell id="Axev3EsFKdRVuj_XaynP-1" parent="Axev3EsFKdRVuj_XaynP-0" />
@@ -195,7 +203,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="ZZih3XcRGYH3-U__97PG" name="Confirmação de compra">
-    <mxGraphModel dx="1108" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="926" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="fYHs2IggpskuXMHmWMrh-0" />
         <mxCell id="fYHs2IggpskuXMHmWMrh-1" parent="fYHs2IggpskuXMHmWMrh-0" />
