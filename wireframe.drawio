@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-01T00:44:26.266Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="EV75GYFkg992tYTwVEhZ" version="14.5.4" type="github" pages="16">
+<mxfile host="app.diagrams.net" modified="2021-04-01T00:58:57.053Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="y96-cHyITZ1JVoy9Vv1I" version="14.5.4" type="github" pages="16">
   <diagram id="6BHxPYrYha_IAXa4hT4B" name="Site map">
-    <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1583" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="jSKRhnqbRBqFd3RoWQQz-0" />
         <mxCell id="jSKRhnqbRBqFd3RoWQQz-1" parent="jSKRhnqbRBqFd3RoWQQz-0" />
@@ -47,10 +47,10 @@
           <mxGeometry x="230" y="450" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-3" value="7.1 Pagamento" style="rounded=0;whiteSpace=wrap;html=1;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
-          <mxGeometry x="960" y="240" width="120" height="60" as="geometry" />
+          <mxGeometry x="930" y="240" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-4" value="7.2 Confirmação da compra" style="rounded=0;whiteSpace=wrap;html=1;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
-          <mxGeometry x="960" y="310" width="120" height="60" as="geometry" />
+          <mxGeometry x="930" y="310" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-5" value="2.4 Favoritos" style="rounded=0;whiteSpace=wrap;html=1;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
           <mxGeometry x="230" y="520" width="120" height="60" as="geometry" />
@@ -60,6 +60,9 @@
         </mxCell>
         <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-7" value="Admin" style="rounded=0;whiteSpace=wrap;html=1;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
           <mxGeometry x="80" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="er7fl_btEjDB2VvMsWmW-1" value="&lt;pre class=&quot;chat-item__chat-info-msg&quot;&gt;1. Catálogo (Maria)&lt;br&gt;1.1 Detalhes do produto (Maria)&lt;br&gt;2. Login (Igor)&lt;br&gt;2.1 Perfil do cliente (Matheus)&lt;br&gt;2.2 Cadastro do jogo (Igor)&lt;br&gt;2.3 Acompanhamento do pedido (Matheus)&lt;br&gt;2.4 Favoritos (Igor)&lt;br&gt;3. Ajuda (Maria)&lt;br&gt;4. Quem somos ( Emannuelle)&lt;br&gt;5. Termos de uso/privacidade (Paulo)&lt;br&gt;6. Cadastro (Paulo)&lt;br&gt;7. Carrinho (Paulo) &lt;br&gt;7.1 Pagamento ( Emannuelle)&lt;br&gt;7.2 Confirmação da compra (Matheus)&lt;br&gt;&lt;br&gt;Admin ( Emannuelle)&lt;/pre&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jSKRhnqbRBqFd3RoWQQz-1">
+          <mxGeometry x="510" y="310" width="330" height="290" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
