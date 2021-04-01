@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-01T22:22:53.847Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="JUOq81_tJf6qTy9_lKxk" version="14.5.3" type="github" pages="16">
+<mxfile host="app.diagrams.net" modified="2021-04-01T22:43:34.931Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="WefvaVA02-qufUFbMAR8" version="14.5.3" type="github" pages="16">
   <diagram id="6BHxPYrYha_IAXa4hT4B" name="Site map">
     <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1597,18 +1597,37 @@
           <mxGeometry x="-1123" y="309" width="26" height="26" as="geometry" />
         </mxCell>
         <mxCell id="inuHuOJRDTly6juJfOjy-20" value="Cartão de Crédito" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBackgroundColor=#FFFFFF;" vertex="1" parent="2Rp3DTuk9bnwPIcLgobM-1">
-          <mxGeometry x="-1129" y="514" width="360" height="100" as="geometry">
+          <mxGeometry x="-1129" y="514" width="370" height="100" as="geometry">
             <mxRectangle x="-1120" y="580" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="inuHuOJRDTly6juJfOjy-21" value="Cartão Final XXXX" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=90;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=15;labelBackgroundColor=none;" vertex="1" parent="inuHuOJRDTly6juJfOjy-20">
-          <mxGeometry y="26" width="360" height="74" as="geometry" />
+          <mxGeometry y="26" width="370" height="74" as="geometry" />
         </mxCell>
         <mxCell id="inuHuOJRDTly6juJfOjy-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=15;" edge="1" parent="2Rp3DTuk9bnwPIcLgobM-1" source="_43dp2e12bBtr58_YMOm-0" target="_43dp2e12bBtr58_YMOm-0">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Wvw7YVuXyGW460KUojW7-3" value="Adicionar Novo" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontSize=15;align=center;" vertex="1" parent="2Rp3DTuk9bnwPIcLgobM-1">
-          <mxGeometry x="-908" y="630" width="140" height="50" as="geometry" />
+          <mxGeometry x="-899" y="630" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Wvw7YVuXyGW460KUojW7-4" value="PIX" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBackgroundColor=#FFFFFF;" vertex="1" parent="2Rp3DTuk9bnwPIcLgobM-1">
+          <mxGeometry x="-759" y="514" width="370" height="100" as="geometry">
+            <mxRectangle x="-1120" y="580" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wvw7YVuXyGW460KUojW7-9" value="Explicação sobre o PIX.&lt;br&gt;Gera o código ao clicar &quot;Finalizar Compra&quot;." style="text;whiteSpace=wrap;html=1;fontSize=15;spacingLeft=5;align=center;verticalAlign=middle;" vertex="1" parent="Wvw7YVuXyGW460KUojW7-4">
+          <mxGeometry y="26" width="370" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="Wvw7YVuXyGW460KUojW7-11" value="Boleto" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;labelBackgroundColor=#FFFFFF;" vertex="1" parent="2Rp3DTuk9bnwPIcLgobM-1">
+          <mxGeometry x="-389" y="514" width="350" height="100" as="geometry">
+            <mxRectangle x="-1120" y="580" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wvw7YVuXyGW460KUojW7-12" value="Explicação sobre o boleto.&lt;br&gt;Gera o boleto ao clicar em &quot;Finalizar Compra&quot;" style="text;whiteSpace=wrap;html=1;fontSize=15;spacingLeft=5;align=center;verticalAlign=middle;" vertex="1" parent="Wvw7YVuXyGW460KUojW7-11">
+          <mxGeometry y="26" width="350" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="Wvw7YVuXyGW460KUojW7-15" value="Finalizar Compra" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontSize=15;align=center;" vertex="1" parent="2Rp3DTuk9bnwPIcLgobM-1">
+          <mxGeometry x="-235" y="690" width="195" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
