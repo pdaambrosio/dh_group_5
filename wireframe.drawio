@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-02T03:59:16.235Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="jwBkB-eY7j-_8_XNMCUm" version="14.5.3" type="github" pages="22">
+<mxfile host="app.diagrams.net" modified="2021-04-02T04:01:26.556Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="QWg6TJcuHE7Skxd7KuR3" version="14.5.3" type="github" pages="22">
   <diagram id="6BHxPYrYha_IAXa4hT4B" name="Site map">
     <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -168,7 +168,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-6" value="&lt;font color=&quot;#ffffff&quot;&gt;9. &lt;br&gt;Admin&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#1BA1E2;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
+        <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-6" value="&lt;font color=&quot;#ffffff&quot;&gt;9. &lt;br&gt;Admin&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#1BA1E2;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
           <mxGeometry x="970" y="190" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_deCsTOBE6x4pkcqRfI9-0" value="2.5 Minha carteira" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="jSKRhnqbRBqFd3RoWQQz-1">
@@ -621,7 +621,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="rwUnRp-T9D9gH2rGis6C" name="1. Catálogo">
-    <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3495" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="C8xFhCKPfJF7BymrQ9Vo-0" />
         <mxCell id="C8xFhCKPfJF7BymrQ9Vo-1" parent="C8xFhCKPfJF7BymrQ9Vo-0" />
@@ -3707,7 +3707,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="fmawkRxL4wjO8Ryrs5QM" name="9.1 Admin Login">
+  <diagram id="fmawkRxL4wjO8Ryrs5QM" name="9. Admin">
     <mxGraphModel dx="4375" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="mjSpsgjzes19jneBsoX8-0" />
@@ -3736,7 +3736,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="RS6ovSKAWaD8_0Zxl3im" name="9.2 Painel Administrador">
+  <diagram id="RS6ovSKAWaD8_0Zxl3im" name="9.1 Painel de Controle">
     <mxGraphModel dx="1157" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="Ou4lsmE4BxFkOd96CfQ--0" />
