@@ -1,0 +1,7 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("../resources/OpenSans-Light.ttf");
+}
+body, form, button, label, ::placeholder{
+    font-family: OpenSans;
+}
