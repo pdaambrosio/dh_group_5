@@ -24,6 +24,7 @@ body {
     background-color: white;
     align-self: center;
     margin-left: 2%;
+    text-align: center;
 }
 
 .busca {
@@ -53,24 +54,24 @@ body {
     flex-basis: 50px;
 }
 
-ul {
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-li {
+.menu li {
     display: inline-block;
     padding: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 footer {
-    text-align: center;
+    display: flex;
     width: 100%;
     border: 2px solid gray;
     padding: 20px;
