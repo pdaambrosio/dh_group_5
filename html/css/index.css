@@ -1,11 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    font-family: Arial;
     margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
     width: 100%;
     background-color: #1d1736;
-    height: 25vh;
+    height: 10vh;
     display: flex;
 }
 
@@ -13,14 +22,14 @@ body {
     width: 4%;
     height: 40%;
     background-color: white;
-    align-items: center;
-    flex-direction: row;
     align-self: center;
     margin-left: 2%;
-    box-sizing: border-box;
 }
 
 .busca {
+    display: flex;
+    width: 200px;
+    height: 25px;
     margin: auto;
 }
 
@@ -39,10 +48,33 @@ body {
     background-color: #1d1736;
     display: flex;
     border-top: 4px solid white;
-    color: white;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 50px;
 }
 
-nav li {
-    display: inline;
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    border: 2px solid gray;
+    padding: 20px;
+    margin-top: auto;
+    background-color: #1d1736;
+    color: white;
 }
