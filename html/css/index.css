@@ -19,12 +19,13 @@ body {
 }
 
 .logo {
-    width: 4%;
-    height: 40%;
-    background-color: white;
-    align-self: center;
-    margin-left: 2%;
-    text-align: center;
+    max-width: 150px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
 .busca {
@@ -70,12 +71,26 @@ body {
     padding: 20px;
 }
 
+.logo-main {
+    display: flex;
+    margin: auto;
+}
+
 footer {
     display: flex;
     width: 100%;
     border: 2px solid gray;
-    padding: 20px;
+    padding: 2px;
     margin-top: auto;
     background-color: #1d1736;
+    color: white;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
     color: white;
 }
