@@ -27,9 +27,18 @@
             padding: 50px;
         }
 
+        .texto1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         a {
             text-decoration: none;
             color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
         }
 
@@ -42,9 +51,7 @@
 <body>
     <header>
         <div class="header">
-            <div class="logo">
-                <a href="#default" class="logo">logo</a>
-            </div>
+            <img class="logo" src="images/logo-icone.png" alt="logo">
             <div class="busca">
                 <input class="busca-termo" type="text" placeholder="Digite o nome do jogo">
                 <button class="botao-busca" type="submit">
@@ -59,39 +66,42 @@
         </div>
         <nav class="menu">
             <ul>
-                <li>Home</li>
-                <li>Xbox</li>
-                <li>Playstation</li>
-                <li>Nintendo</li>
-                <li>PC</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Xbox</a></li>
+                <li><a href="#">Playstation</a></li>
+                <li><a href="#">Nintendo</a></li>
+                <li><a href="#">PC</a></li>
             </ul>
         </nav>
     </header>
-    <div id="suaConta">
-        SUA CONTA
-    </div>
-    <div class="pai">
-        <a href="suasTrocas.html" class="tipo">
-            Suas trocas
-        </a>
-        <a href="dadosPessoais.html" class="tipo">
-            Dados pessoais
-        </a>
-        <a href="favoritos.html" class="tipo">
-            Favoritos
-        </a>
-    </div>
-    <div class="pai">
-        <a href="centralDeAjuda.html" class="tipo">
-            Central de ajuda
-        </a>
-        <a href="dadosDePamaneto.html" class="tipo">
-            Dados de pagamento
-        </a>
-        <a href="suaCarteira" class="tipo">
-            Sua carteira
-        </a>
-    </div>
+    <main>
+        <div id="suaConta">
+            SUA CONTA
+        </div>
+        <div class="pai">
+            <a href="suasTrocas.html" class="tipo"><img src="images/Checkout icons 48 x 48/1030 - Deals.png">
+                <div class="texto1">Trocas</div>
+            </a>
+            <a href="dadosPessoais.html" class="tipo"><img
+                    src="images/Checkout icons 48 x 48/1041 - Membership Card.png">
+                <div class="texto1">Dados pessoais</div>
+            </a>
+            <a href="favoritos.html" class="tipo"><img src="images/Checkout icons 48 x 48/1031 - Favorite.png">
+                <div class="texto1">Favoritos</div>
+            </a>
+        </div>
+        <div class="pai">
+            <a href="centralDeAjuda.html" class="tipo"><img src="images/Checkout icons 48 x 48/1059 - Help.png">
+                <div class="texto1">Central de ajuda</div>
+            </a>
+            <a href="dadosDePamaneto.html" class="tipo"><img src="images/Checkout icons 48 x 48/1063 - Transcation.png">
+                <div class="texto1">Dados de pagamento</div>
+            </a>
+            <a href="suaCarteira" class="tipo"><img src="images/Checkout icons 48 x 48/1044 - Wallet.png">
+                <div class="texto1">Sua carteira</div>
+            </a>
+        </div>
+    </main>
 </body>
 
 </html>
