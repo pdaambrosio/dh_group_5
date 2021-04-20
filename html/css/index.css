@@ -81,11 +81,24 @@ body {
     height: auto;
 }
 
+main h3 {
+    margin-left: 17px;
+}
+.ps4 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.xbox {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
 footer {
     display: flex;
     width: 100%;
-    border: 2px solid gray;
-    padding: 2px;
     margin-top: auto;
     background-color: #1d1736;
     color: white;
