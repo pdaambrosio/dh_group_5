@@ -74,6 +74,11 @@ body {
 .logo-main {
     display: flex;
     margin: auto;
+    margin-top: 10px;
+    max-width: 400px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
 }
 
 footer {
