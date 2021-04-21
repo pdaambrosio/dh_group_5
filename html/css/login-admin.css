@@ -2,6 +2,38 @@
     font-family: OpenSans;
     src: url("../resources/OpenSans-Light.ttf");
 }
+html{
+    font-size: 6.25%;
+}
 body, form, button, label, ::placeholder{
     font-family: OpenSans;
+}
+body{
+    background-color: #1D1736;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+  border: solid 2px #676766;
+  background-color: #C2C1C1;
+  width: 30%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12rem;
+}
+button{
+    margin-left: 2vw;
+}
+#email{
+    width: 100%;
+    height: 4vh;
+}
+#password{
+    width: 100%;
+    height: 4vh;
 }
