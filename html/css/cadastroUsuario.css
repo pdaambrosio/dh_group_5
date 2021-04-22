@@ -80,11 +80,17 @@ main {
     width: 37%;
     padding: 3%;
     text-align: justify;
+    height: 60vh;
+}
+
+.info p {
+    font-size: 12px;
 }
 
 .form {
-    width: 60%;
+    width: 50%;
     padding: 5%;
+    height:80vh;
 }
 
 .aviso {
