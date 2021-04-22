@@ -71,10 +71,32 @@ body {
     padding: 20px;
 }
 
+main {
+    display: flex;
+    align-items: center;
+}
+
 .info {
     width: 37%;
     padding: 3%;
     text-align: justify;
+}
+
+.form {
+    width: 60%;
+    padding: 5%;
+}
+
+.aviso {
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    letter-spacing: -.05em;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    width: 60%;
+    font-size: 12px;
 }
 
 footer {
