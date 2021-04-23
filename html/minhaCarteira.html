@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Carteira</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        #pai {
+            list-style-type: none;
+            width: 20vw;
+        }
+
+        #principal{
+            margin-left: 3vw;
+        }
+
+        .li1 {
+            background-color: #f8b000;
+            display: flex;
+            width: 20vw;
+            border-radius: 1vw;
+            margin-top: 3vw;
+        }
+
+        .link2 {
+            text-decoration: none;
+            color: white;
+            width: 20px;
+        }
+
+        .li1:hover {
+            background-color: #f8b200dc;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <img class="logo" src="images/logo-icone.png" alt="logo">
+            <div class="busca">
+                <input class="busca-termo" type="text" placeholder="Digite o nome do jogo">
+                <button class="botao-busca" type="submit">
+                    <i class="fa-busca"></i>
+                </button>
+            </div>
+            <div class="login-right">
+                <a href="#login">Login</a>
+                <a href="#cadastro">Cadastro</a>
+                <a href="#nome-usuario">Usuario</a>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Xbox</a></li>
+                <li><a href="#">Playstation</a></li>
+                <li><a href="#">Nintendo</a></li>
+                <li><a href="#">PC</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="principal">
+            Minha Carteira
+        </h1>
+        <ul id="pai">
+            <a href="numeroDeComprasEfetuadas.html" class="link2">
+                <li class="li1">
+                    <img src="images/Checkout icons 48 x 48/1029 - Shopping Cart.png">
+                    <p>
+                        Número de compras efetuadas
+                    </p>
+                </li>
+            </a>
+            <a href="meusCreditos.html" class="link2">
+                <li class="li1">
+                    <img src="images/Checkout icons 48 x 48/1071 - Currency.png">
+                    <p>
+                        Meus créditos
+                    </p>
+                </li>
+            </a>
+            <a href="numeroDeJogosEnviados.html" class="link2">
+                <li class="li1">
+                    <img src="images/Checkout icons 48 x 48/1063 - Transcation.png">
+                    <p>
+                        Número de jogos enviados
+                    </p>
+                </li>
+            </a>
+        </ul>
+    </main>
+    <footer>
+        <div class="atendimento">
+            <ul>
+                <li>Atendimento</li><br>
+                <li><img src="#" alt="WhatsApp"></li>
+                <li><img src="#" alt="contato@dominio.com.br"></li>
+                <li><img src="#" alt="telefone"></li>
+            </ul>
+        </div>
+        <div class="intitucional">
+            <ul>
+                <li>Institucional</li><br>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">Termos de uso</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </div>
+        <div class="sociais">
+            <ul>
+                <li>Redes Sociais</li><br>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>YouTube</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
