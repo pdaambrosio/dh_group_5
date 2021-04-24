@@ -71,6 +71,37 @@ body {
     padding: 20px;
 }
 
+.status-bar .check-progress{
+    position: relative;
+    display: flex;
+    width: 890px;
+    height: 37px;
+    padding: 10px;
+    margin: 10px auto;
+    justify-content: space-around;
+}
+
+.check-progress li {
+    list-style: none;
+}
+
+.status-bar .progress-bar {
+    display: flex;
+    width: 890px;
+    height: 20px;
+    margin: auto;
+    margin-top: -15px;
+}
+
+main .items {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    display: block;
+    margin: auto;
+    width: 70%;
+    background-color: brown;
+}
+
 footer {
     display: flex;
     width: 100%;
