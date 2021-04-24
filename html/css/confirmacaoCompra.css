@@ -98,7 +98,12 @@ main {
     margin-top: -15px;
 }
 
-
+main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
 
 footer {
     display: flex;
