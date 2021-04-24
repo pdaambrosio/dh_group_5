@@ -29,18 +29,21 @@ aside a{
     color: #676766;
     margin-top: 1.5vh;
     padding: 2%;
+    padding-left: 8%;
 }
 aside a.active{
     background-color: #1D1736;
-    border-radius: 15px;
+    border-radius: 8px;
     color: white;
     padding: 2%;
+    padding-left: 8%;
 }
 aside a:hover:not(.active){
-    background-color: #5f4fa0;
-    border-radius: 15px;
+    background-color: #1D1736;
+    border-radius: 8px;
     color: white;
     padding: 2%;
+    padding-left: 8%;
 }
 h1{
     font-size: 25rem;
