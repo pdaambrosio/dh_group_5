@@ -71,6 +71,11 @@ body {
     padding: 20px;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 .status-bar .check-progress{
     position: relative;
     display: flex;
@@ -93,13 +98,21 @@ body {
     margin-top: -15px;
 }
 
-main .items {
+main .carrinho {
     border-top: 3px solid black;
     border-bottom: 3px solid black;
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     width: 70%;
-    background-color: brown;
+}
+
+main .carrinho .lista {
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+    border-color: gray;
+    border-block-end-style: double;
 }
 
 footer {
