@@ -122,7 +122,6 @@ main .comandos {
     display: flex;
     justify-content: space-around;
     margin: auto;
-    /* background-color: blueviolet; */
 }
 
 footer {
