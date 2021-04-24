@@ -105,6 +105,7 @@ main .carrinho {
     flex-direction: column;
     margin: auto;
     width: 70%;
+    margin-top: 1%;
 }
 
 main .carrinho .lista {
@@ -113,6 +114,15 @@ main .carrinho .lista {
     padding: 2%;
     border-color: gray;
     border-block-end-style: double;
+}
+
+main .comandos {
+    width: 70%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    /* background-color: blueviolet; */
 }
 
 footer {
