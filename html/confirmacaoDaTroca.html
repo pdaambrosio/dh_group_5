@@ -5,45 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação da Compra</title>
     <link rel="stylesheet" href="css/index.css">
-    <title>Sua Conta</title>
     <style>
-        #suaConta {
-            text-align: center;
+        #main1{
+            background-image: url(images/pexels-pixabay-163036.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            padding-top: 8vw;
+            height: 120vw;
+            padding-bottom: 5vw;
+
+        }
+        #pai1{
+        text-align: center;
+        vertical-align: top;
+        padding: none;
+        padding-top: 0ch;
+        margin-top: none;
+    }
+        #troca{
+            padding-top: 0ch;
+            margin-top: 0vw;
+        }
+        #d1{
+            background-color: #1d1736;
             color: white;
-        }
-
-        .pai {
-            display: flex;
-        }
-
-        .tipo {
-            width: 33.3%;
-            text-align: center;
-            background-color: #f8b000;
-            margin-top: 100px;
-            margin-left: 30px;
-            margin-right: 30px;
-            padding: 50px;
             border-radius: 10px;
+            width: 20vw;
+            padding: 2vw;
+            margin-left: 39.5vw;
+            vertical-align: top;
+        }
+        #link1{
+            text-align: center;
+        }
+        #link2{
+            background-color: #c2c1c1;
+            width: 10px;
+            padding: 2vw;
+            margin-left: 1vw;
+            margin-bottom: 1vw;
+            border-radius: 10vw;
             text-decoration: none;
             color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
-
-        .texto1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        body {
-            background-color: #1d1736;
+        footer{
+            margin-top: 0ch;
         }
     </style>
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -70,33 +82,26 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div id="suaConta">
-            SUA CONTA
-        </div>
-        <div class="pai">
-            <a href="suasTrocas.html" class="tipo"><img src="images/Checkout icons 48 x 48/1030 - Deals.png">
-                <div class="texto1">Trocas</div>
-            </a>
-            <a href="dadosPessoais.html" class="tipo"><img
-                    src="images/Checkout icons 48 x 48/1041 - Membership Card.png">
-                <div class="texto1">Dados pessoais</div>
-            </a>
-            <a href="favoritos.html" class="tipo"><img src="images/Checkout icons 48 x 48/1031 - Favorite.png">
-                <div class="texto1">Favoritos</div>
-            </a>
-        </div>
-        <div class="pai">
-            <a href="centralDeAjuda.html" class="tipo"><img src="images/Checkout icons 48 x 48/1059 - Help.png">
-                <div class="texto1">Central de ajuda</div>
-            </a>
-            <a href="dadosDePamaneto.html" class="tipo"><img src="images/Checkout icons 48 x 48/1063 - Transcation.png">
-                <div class="texto1">Dados de pagamento</div>
-            </a>
-            <a href="suaCarteira" class="tipo"><img src="images/Checkout icons 48 x 48/1044 - Wallet.png">
-                <div class="texto1">Sua carteira</div>
+    <main id="main1">
+        <div id="pai1">
+            <h1 id="troca">
+                Troca Confirmada
+            </h1>
+            <div id="d1">
+                <p>
+                    Sua troca foi realizada com sucesso
+                </p>
+                <p>
+                    Agora é só aguardar a entrega do pedido
+                </p>
+            </div>
+            <a href="ttteste.html" id="link1">
+                código para rastreio
             </a>
         </div>
+        <a href="centralDeAjuda" id="link2">
+            Central de ajuda
+        </a>
     </main>
     <footer>
         <div class="atendimento">

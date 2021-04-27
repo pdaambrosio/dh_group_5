@@ -1,0 +1,67 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("../Fonts/OpenSans-Regular.ttf");
+}
+html{
+    font-size: 6.25%;
+}
+*{
+    box-sizing: border-box;
+}
+img{
+    width: 12vw;
+    height: 10vh;
+    padding-left: 3vw;
+}
+header{
+    background-color: #1D1736;
+    width: 100%;
+    color: #F8B000;
+    font-size: 12rem;
+    display: flex;
+    padding: 1vh;
+}
+header h1{
+    margin-left: 8%;
+}
+body{
+    margin: 0px;
+    font-family: OpenSans;
+    font-size: 15rem;
+}
+#menu-lateral{
+    list-style: none;
+    font-size: 18rem;
+    background-color: #1D1736;
+    width: 20%;
+    margin: 0%;
+    height: 100vh;
+    padding-inline-start: 0px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3%;
+}
+#menu-lateral a{
+    text-decoration: none;
+    color: white;
+    padding-right: 3vw;
+    padding-left: 3vw;
+}
+#menu-lateral a.active{
+    font-weight: bolder;
+    color: #F8B000;
+}
+#menu-lateral a:hover:not(.active){
+    color:  #F8B000;
+}
+#menu-lateral li{
+    padding-top: 5vh;
+}
+#vendas {
+    list-style: none;
+    font-size: 15rem;
+}
+.info{
+    display: flex;
+    width: 100vw;
+}

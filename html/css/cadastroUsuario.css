@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    background-color: #1d1736;
+    height: 10vh;
+    display: flex;
+}
+
+.logo {
+    max-width: 150px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.busca {
+    display: flex;
+    width: 200px;
+    height: 25px;
+    margin: auto;
+}
+
+.login-right {
+    margin-right: 2%;
+    align-self: center;
+}
+
+.login-right a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu {
+    background-color: #1d1736;
+    display: flex;
+    border-top: 4px solid white;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 50px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    width: 37%;
+    padding: 3%;
+    text-align: justify;
+    height: 60vh;
+}
+
+.info p {
+    font-size: 12px;
+}
+
+.form {
+    width: 50%;
+    padding: 5%;
+    height:80vh;
+}
+
+.aviso {
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    letter-spacing: -.05em;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    width: 80%;
+    font-size: 12px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    background-color: #1d1736;
+    color: white;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
