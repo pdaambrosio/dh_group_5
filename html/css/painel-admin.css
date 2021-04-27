@@ -20,9 +20,13 @@ header{
     font-size: 12rem;
     display: flex;
     padding: 1vh;
+    height: 9%;
 }
 header h1{
-    margin-left: 8%;
+    margin-left: 7.5%;
+}
+aside{
+    width: 20%;
 }
 body{
     margin: 0px;
@@ -33,7 +37,6 @@ body{
     list-style: none;
     font-size: 18rem;
     background-color: #1D1736;
-    width: 20%;
     margin: 0%;
     height: 100vh;
     padding-inline-start: 0px;
@@ -57,11 +60,43 @@ body{
 #menu-lateral li{
     padding-top: 5vh;
 }
-#vendas {
-    list-style: none;
-    font-size: 15rem;
-}
-.info{
+.resumo-vendas{
     display: flex;
-    width: 100vw;
+    color: #1D1736; 
+    font-weight: bold;
+    justify-content: space-around;
+    border: 2px solid #1D1736;
+    width: 80%;
+    padding-bottom: 2.5vh;
+}
+.conteudo{
+    display: flex;
+}
+main{
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main h1{
+    color: #1D1736;
+    align-self:flex-start;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+#ultimos-pedidos{
+    border: 2px solid #1D1736;
+    border-collapse: collapse;
+    text-align: left; 
+    color: #1D1736;
+    width: 80%;
+}
+th{
+    border: 2px solid #1D1736;
+    padding: 2%;
+}
+.ultima-linha{
+    border-bottom: 2px solid #1D1736;
 }
