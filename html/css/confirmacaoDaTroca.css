@@ -1,0 +1,57 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("../Fonts/OpenSans-Regular.ttf");
+}
+
+#main1{
+    background-image: url(../images/pexels-pixabay-163036.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding-top: 8vw;
+    height: 120vw;
+    padding-bottom: 5vw;
+
+}
+
+#pai1{
+text-align: center;
+vertical-align: top;
+padding: none;
+padding-top: 0ch;
+margin-top: none;
+}
+
+#troca{
+    padding-top: 0ch;
+    margin-top: 0vw;
+}
+
+#d1{
+    background-color: #1d1736;
+    color: white;
+    border-radius: 10px;
+    width: 20vw;
+    padding: 2vw;
+    margin-left: 39.5vw;
+    vertical-align: top;
+}
+
+#link1{
+    text-align: center;
+}
+
+#link2{
+    background-color: #c2c1c1;
+    width: 10px;
+    padding: 2vw;
+    margin-left: 1vw;
+    margin-bottom: 1vw;
+    border-radius: 10vw;
+    text-decoration: none;
+    color: black;
+}
+
+footer{
+    margin-top: 0ch;
+}
