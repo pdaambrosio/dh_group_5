@@ -2,8 +2,12 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: OpenSans;
+    src: url("../Fonts/OpenSans-Regular.ttf");
+}
+
 body {
-    font-family: Arial;
     margin: 0;
     padding: 0;
     height: 100vh;
