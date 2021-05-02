@@ -2,13 +2,12 @@
     box-sizing: border-box;
 }
 
-@font-face{
-    font-family: "Open Sans";
-    src: url("Fonts/OpenSans-Regular.ttf");
+@font-face {
+    font-family: OpenSans;
+    src: url("../Fonts/OpenSans-Regular.ttf");
 }
 
 body {
-    font-family: "Open Sans";
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -75,23 +74,28 @@ body {
     display: inline-block;
     padding: 20px;
 }
+}
 main {
     padding-left: 5%;
     padding-right: 5%;
-    font-family: "Open Sans";
 }
 
 h1 {
     text-align: center;
     padding: 1%;
-    font-family: ;
-    
+}
+
+h3 {
+    text-align: left;
+    padding-left: 3%;
 }
 
 .ps4 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
     
 }
 
@@ -99,19 +103,24 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
 
 }
 .switch {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
     
 }
 
 p { 
     text-align: center;
-    font-size: 14px;
+    font-size: 100%;
     color: #1d1736 ;
+    padding-bottom: 1%;
     
 }
 
@@ -123,11 +132,10 @@ button {
     border-radius: 3px;
     border: thin;
     text-align: center;
-    font-size: 12px;
-    padding: 3px;
-    margin: 3px;
+    font-size: 80%;
+    padding: 1%;
+    margin: 1%;
 }
-
 footer {
     display: flex;
     width: 100%;
@@ -143,4 +151,9 @@ footer ul {
 footer a {
     text-decoration: none;
     color: white;
+}
+
+.atendimento img {
+    height: 20px;
+    width: 20px;
 }
