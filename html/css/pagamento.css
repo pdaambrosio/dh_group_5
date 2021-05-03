@@ -9,9 +9,11 @@ html{
     box-sizing: border-box;
 }
 body{
-    font-family: OpenSans;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 h1{
     color: #676766; 
