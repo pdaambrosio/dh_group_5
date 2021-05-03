@@ -3,7 +3,7 @@
 }
 
 @font-face {
-    font-family: OpenSans;
+    font-family: "Open Sans";
     src: url("../Fonts/OpenSans-Regular.ttf");
 }
 
@@ -13,6 +13,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: "Open Sans";
 }
 
 .header {
