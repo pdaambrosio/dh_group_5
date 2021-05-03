@@ -35,16 +35,11 @@ aside{
 #resumo-compra{
     background-color: #f8f8f8;
     color: #676766;
-    padding-inline-start: 0%;
     padding: 3%;
 }
 #resumo-compra li{
     list-style: none;
-    padding-left: 1vw;
-    margin-top: 1vh;
-}
-.total{
-    border-top: 1px solid #C2C1C1;
+    margin: 7px;
 }
 #info-usuario{
     padding-inline-start: 0%;
@@ -123,4 +118,9 @@ button{
 footer{
     font-size: 16rem;
     margin-top: 10vh;
+}
+.title-resumo{
+    margin: 15px;
+    padding: 0;
+    text-align: center;
 }
