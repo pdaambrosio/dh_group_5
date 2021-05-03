@@ -12,6 +12,7 @@ body{
     font-family: OpenSans;
     display: flex;
     justify-content: center;
+    height: fit-content;
 }
 h1{
     color: #676766; 
@@ -111,4 +112,13 @@ button{
     display:flex;
     justify-content: flex-end;
     margin-right: 1vw;
+}
+.main-aside{
+    display:flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+footer{
+    font-size: 16rem;
+    margin-top: 10vh;
 }
