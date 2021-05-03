@@ -56,11 +56,9 @@ p{
 h2{
     font-size: 15rem;
 }
-.iframe-footer{
-    width: 100%;
-    border: none;
-    height: 152px;
+header{
+    font-size: 16rem;
 }
 footer{
-    height: 152px;
+    font-size: 16rem;
 }
