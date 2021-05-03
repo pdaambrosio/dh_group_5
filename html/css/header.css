@@ -14,7 +14,7 @@ body, form, button, label, ::placeholder{
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
 }
@@ -29,8 +29,8 @@ body {
 .logo {
     max-width: 150px;
     max-height: 80px;
-    width: auto;
-    height: auto;
+    width: 150px;
+    height: 80px;
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
