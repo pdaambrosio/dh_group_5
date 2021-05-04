@@ -1,0 +1,58 @@
+p{
+    font-size: 30px;
+    text-align: center;
+}
+.input2{
+    
+    border: 1px solid black;
+    border-radius:7px ;
+    margin-top: 50px;
+    height: 30px; 
+    width: 120px; 
+    display: flex;
+}
+.div{
+   margin-left: 40%;
+    display: flex;
+}
+
+.i4{
+    border: 1px solid black;
+    border-radius:7px ;
+    margin-top: 50px;
+    height: 30px; 
+    width: 120px; 
+    margin-left: 50px;
+    display: flex;
+    cursor: pointer;
+}
+.div2{
+    margin-left: 40%;
+    display: flex;
+}
+.i6{
+    margin-left:50px ;
+}
+.Descricao{
+    border: 1px solid black;
+    border-radius: 7px;
+    height:100px;  
+    width: 350px;
+    
+             
+}
+.Confirmacao{
+    
+    color: white;
+    background-color: rgb(13, 2, 63);
+    height:20px;
+    width: 159px;
+    margin-left: 579px;
+    margin-top:50px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius:3px ;
+}
+footer{
+    margin-top: 40px;
+}

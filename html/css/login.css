@@ -1,0 +1,82 @@
+body{
+    background-size: 100% ;
+    background-image:url(images/ps4.jpeg);
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-color: black;
+}
+
+.borda{
+    
+    border: 1px solid #2e3159;
+    border-radius: 20px;
+    background-color:#01050ee8;
+    height: 450px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 115px;
+    
+}
+.login{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+.input{
+   margin-bottom: 10px;
+   border: 1px solid white;
+   border-radius: 10px;
+   height: 30px;
+   width: 300px;
+   margin-top: 35px; 
+   margin-left: 40px;
+   cursor: auto;
+
+}
+a{
+    text-decoration:none;
+    color: white;
+}
+.esqueceuSenha{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 200px;
+    cursor: pointer;
+    
+}
+.Entrar{
+    
+    text-align: center;
+    width:110px ;
+    height:30px ; 
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-top:30px;
+    margin-left:140px;
+    cursor: pointer;
+
+ 
+ color:#2e3159 ;
+}
+.cadastro{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-style: normal;
+    margin-top: 30px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.ou{
+    margin-left: 150px;
+    color: blue;
+}
+
+.icone{
+    
+   background-size: 20px ;
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+   
+}
