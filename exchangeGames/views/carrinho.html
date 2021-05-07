@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/carrinho.css">
+    <title>Carrinho</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img class="logo" src="images/logo-icone.png" alt="logo">
+            <div class="busca">
+                <input class="busca-termo" type="text" placeholder="Digite o nome do jogo">
+                <button class="botao-busca" type="submit">
+                    <i class="fa-busca"></i>
+                </button>
+            </div>
+            <div class="login-right">
+                <a href="./login.html">Login</a>
+                <a href="./cadastroUsuario.html">Cadastro</a>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Xbox</a></li>
+                <li><a href="#">Playstation</a></li>
+                <li><a href="#">Nintendo</a></li>
+                <li><a href="#">PC</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav class="status-bar">
+            <ol class="check-progress" id="step1" title="Checkout Progress">
+                <li><span>Meu Carrinho</span></li>
+                <li><span>Minhas Informações</span></li>
+                <li><span>Pagamento</span></li>
+                <li><span>Confirmação</span></li>
+            </ol>
+            <progress class="progress-bar" max="100" value="25"></progress>
+        </nav>
+        <div class="carrinho" style="overflow-y: auto; height:50vh;">
+            <div class="lista">
+                <img src="images/icones jogos 117 x 147/ps4/assassins_creed_valhalla_ps4.jpg" alt="assassins_creed_valhalla_ps4">
+                <p>Assassins Creed</p>
+                <p>Qtd</p>
+                <p>R$</p>
+            </div>
+            <div class="lista">
+                <img src="images/icones jogos 117 x 147/ps4/cyberpunk_2077_ps4.jpg" alt="cyberpunk_2077_ps4">
+                <p>Cyberpunk 2077</p>
+                <p>Qtd</p>
+                <p>R$</p>
+            </div>
+            <div class="lista">
+                <img src="images/icones jogos 117 x 147/ps4/ghost_of_tsushima_ps4.jpg" alt="ghost_of_tsushima_ps4">
+                <p>Ghost of Tsushima</p>
+                <p>Qtd</p>
+                <p>R$</p>
+            </div>
+        </div>
+        <div class="comandos">
+            <div>
+                <label for="desconto">Codigo de desconto: </label><input name="desconto" id="desconto" type="text" size="10">
+            </div>
+            <div>
+                Total R$:
+            </div>
+            <div>
+                <button type="submit">Continuar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="atendimento">
+            <ul>
+                <li>Atendimento</li><br>
+                <li><a href="https://web.whatsapp.com/"><img src="./images/icones contato 64px/whatsapp.png" alt="WhatsApp"> WhatsApp</a></li>
+                <li><a href="./contato.html"><img src="./images/icones contato 64px/icone-circular-email.png" alt="contato@expressgames.com.br"> contato@expressgames.com.br</a></li>
+                <li><a href=""><img src="./images/icones contato 64px/telefone.png" alt="telefone"> 0800-888-999</a></li>
+            </ul>
+        </div>
+        <div class="intitucional">
+            <ul>
+                <li>Institucional</li><br>
+                <li><a href="./quem-somos.html">Quem somos</a></li>
+                <li><a href="./politicaDePrivacidade.html">Termos de uso</a></li>
+                <li><a href="./perguntasFrequentes.html">Ajuda</a></li>
+            </ul>
+        </div>
+        <div class="sociais">
+            <ul>
+                <li>Redes Sociais</li><br>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>YouTube</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

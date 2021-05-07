@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+    <style>
+       p{
+           font-size: 30px;
+           text-align: center;
+       }
+        .input2{
+            
+            border: 1px solid black;
+            border-radius:7px ;
+            margin-top: 50px;
+            height: 30px; 
+            width: 120px; 
+            margin-left:20px ;
+        }
+        .div{
+            height: 100px; ;
+            width:419px ;
+            display: flex;
+            margin:0 auto ;
+        }
+        .button{
+
+            color: white;
+            background-color: rgb(13, 2, 63);
+            height:20px;
+            width: 159px;
+            margin-left: 520px;
+            margin-top:50px;
+            cursor: pointer;
+            border: 1px solid black;
+            border-radius:3px ;
+
+
+        }
+
+       
+        footer{
+            margin-top: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img class="logo" src="images/logo-icone.png" alt="logo">
+            <div class="busca">
+                <input class="busca-termo" type="text" placeholder="Digite o nome do jogo">
+                <button class="botao-busca" type="submit">
+                    <i class="fa-busca"></i>
+                </button>
+            </div>
+            <div class="login-right">
+                <a href="#login">Login</a>
+                <a href="#cadastro">Cadastro</a>
+                <a href="#nome-usuario">Usuario</a>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Xbox</a></li>
+                <li><a href="#">Playstation</a></li>
+                <li><a href="#">Nintendo</a></li>
+                <li><a href="#">PC</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="lista">
+        <p>Dados pessoais</p><hr>
+    </section>
+ 
+  <div class="div">
+      
+      <input class=" input2 " type="text" placeholder="Nome">
+      <input class=" input2 " type="text" placeholder="Sobrenome">
+      <input class=" input2 " type="text" placeholder="Telefone">
+    </div>
+      <div class="div">
+      <input class=" input2 " type="text" placeholder="Email">
+      <input class=" input2 " type="text" placeholder="CPF/CNPJ">
+  </div>
+ 
+      <div class="div">
+      <input class=" input2 " type="text" placeholder="Endereço">
+      <input class=" input2 " type="text" placeholder="Número">
+      <input class=" input2 " type="text" placeholder="Estado">
+    </div>
+    <div class="div">
+      <input class=" input2 " type="text" placeholder="Cidade">
+      <input class=" input2 " type="text" placeholder="CEP">
+    </div>
+    <input class="button" type="submit" value="Salvar" > 
+
+    <footer>
+        <div class="atendimento">
+            <ul>
+                <li>Atendimento</li><br>
+                <li><img src="#" alt="WhatsApp"></li>
+                <li><img src="#" alt="contato@dominio.com.br"></li>
+                <li><img src="#" alt="telefone"></li>
+            </ul>
+        </div>
+        <div class="intitucional">
+            <ul>
+                <li>Institucional</li><br>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">Termos de uso</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </div>
+        <div class="sociais">
+            <ul>
+                <li>Redes Sociais</li><br>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>YouTube</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
