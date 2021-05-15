@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-07T23:17:47.064Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="Za7TUju_KU6_kPpm6ScW" version="14.6.11" type="github" pages="22">
+<mxfile host="app.diagrams.net" modified="2021-05-15T01:43:09.477Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="YiRBaLIJ7YBZsypCiEWW" version="14.6.11" type="github" pages="22">
   <diagram id="6BHxPYrYha_IAXa4hT4B" name="Site map">
-    <mxGraphModel dx="1673" dy="907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="706" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="jSKRhnqbRBqFd3RoWQQz-0" />
         <mxCell id="jSKRhnqbRBqFd3RoWQQz-1" parent="jSKRhnqbRBqFd3RoWQQz-0" />
@@ -154,7 +154,7 @@
         <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-1" value="2.2 Cadastro do jogo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
           <mxGeometry x="170" y="370" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-2" value="2.3 Meus pedidos" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;strokeColor=#006EAF;fontColor=#ffffff;fillColor=#FF0000;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
+        <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-2" value="2.3 Meus pedidos&lt;br&gt;(ok)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;strokeColor=#006EAF;fontColor=#ffffff;fillColor=#FF0000;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
           <mxGeometry x="170" y="460" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-5" value="2.4 Favoritos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
@@ -171,7 +171,7 @@
         <mxCell id="OkFQYpJ-uSqJq6BeiUNQ-6" value="&lt;font color=&quot;#ffffff&quot;&gt;9. &lt;br&gt;Admin&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#1BA1E2;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
           <mxGeometry x="970" y="190" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_deCsTOBE6x4pkcqRfI9-0" value="2.5 Minha carteira" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#006EAF;fontColor=#ffffff;fillColor=#FF0000;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
+        <mxCell id="_deCsTOBE6x4pkcqRfI9-0" value="2.5 Minha carteira&lt;br&gt;(ok)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#006EAF;fontColor=#ffffff;fillColor=#FF0000;" parent="jSKRhnqbRBqFd3RoWQQz-1" vertex="1">
           <mxGeometry x="170" y="640" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="IOISl7_CHAF3BRwX-5gd-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=15;" parent="jSKRhnqbRBqFd3RoWQQz-1" source="_deCsTOBE6x4pkcqRfI9-4" target="Q1FdcIszepTqRohs9iXN-5" edge="1">
