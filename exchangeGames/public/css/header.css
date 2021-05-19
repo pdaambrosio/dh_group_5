@@ -4,14 +4,14 @@
 
 @font-face {
     font-family: OpenSans;
-    src: url("../Fonts/OpenSans-Regular.ttf");
+    src: url("/Fonts/OpenSans-Regular.ttf");
 }
 
 body, form, button, label, ::placeholder{
     font-family: OpenSans;
 }
 
-body {
+.headerBody {
     margin: 0;
     padding: 0;
     height: fit-content;
@@ -26,11 +26,11 @@ body {
     display: flex;
 }
 
-.logo {
+.logoHeader {
     max-width: 150px;
     max-height: 80px;
-    width: 150px;
-    height: 80px;
+    width: auto;
+    height: auto;
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
@@ -54,7 +54,7 @@ body {
     list-style: none;
 }
 
-.menu {
+.menuHeader {
     background-color: #1d1736;
     display: flex;
     border-top: 4px solid white;
@@ -63,18 +63,18 @@ body {
     flex-basis: 50px;
 }
 
-.menu a {
+.menuHeader a {
     text-decoration: none;
     color: white;
 }
 
-.menu ul {
+.menuHeader ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.menu li {
+.menuHeader li {
     display: inline-block;
     padding: 20px;
 }
