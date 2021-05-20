@@ -5,69 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cadastroDeJogo.css"> 
     <title>Document</title>
-    <style>
-       
-        p{
-            font-size: 30px;
-            text-align: center;
-        }
-        .input2{
-            
-            border: 1px solid black;
-            border-radius:7px ;
-            margin-top: 50px;
-            height: 30px; 
-            width: 120px; 
-            display: flex;
-        }
-        .div{
-           margin-left: 40%;
-            display: flex;
-        }
-
-        .i4{
-            border: 1px solid black;
-            border-radius:7px ;
-            margin-top: 50px;
-            height: 30px; 
-            width: 120px; 
-            margin-left: 50px;
-            display: flex;
-            cursor: pointer;
-        }
-        .div2{
-            margin-left: 40%;
-            display: flex;
-        }
-        .i6{
-            margin-left:50px ;
-        }
-        .Descricao{
-            border: 1px solid black;
-            border-radius: 7px;
-            height:100px;  
-            width: 350px;
-            
-                     
-        }
-        .Confirmacao{
-            
-            color: white;
-            background-color: rgb(13, 2, 63);
-            height:20px;
-            width: 159px;
-            margin-left: 579px;
-            margin-top:50px;
-            cursor: pointer;
-            border: 1px solid black;
-            border-radius:3px ;
-        }
-        footer{
-            margin-top: 40px;
-        }
-        
-    </style>
 </head>
 <body>
     <header>
@@ -82,7 +21,6 @@
             <div class="login-right">
                 <a href="#login">Login</a>
                 <a href="#cadastro">Cadastro</a>
-                <a href="#nome-usuario">Usuario</a>
             </div>
         </div>
         <nav class="menu">
@@ -99,6 +37,7 @@
         <p>Cadastro de jogo</p><hr>
     </section>
   <div class="div">
+      <label class="label1" for="">Ano do jogo</label>
       <input class=" input2 " type="text" placeholder="Ano do jogo">
        <select class="input i4" name="" id="">
         <option value="Marca">Marca de jogo</option>
@@ -110,13 +49,10 @@
       
   </div>
   <div class="div2">
+      <label  class="label2" for="">categoria</label>
       <input class="input2 " type="text" placeholder="categoria">
       <input class="input2 i6" type="text" placeholder="Tempo de uso">
        </div>
-    <div class="div2">
-    <textarea class="input2 Descricao " type="text" placeholder="Descrição do produto">
-    </textarea>
-</div>
 
     <input class="Confirmacao" type="submit" value="Confirmação de cadastro" > <br>
     
@@ -124,17 +60,17 @@
         <div class="atendimento">
             <ul>
                 <li>Atendimento</li><br>
-                <li><img src="#" alt="WhatsApp"></li>
-                <li><img src="#" alt="contato@dominio.com.br"></li>
-                <li><img src="#" alt="telefone"></li>
+                <li><a href="https://web.whatsapp.com/"><img src="./images/icones contato 64px/whatsapp.png" alt="WhatsApp"> WhatsApp</a></li>
+                <li><a href="./contato.html"><img src="./images/icones contato 64px/icone-circular-email.png" alt="contato@expressgames.com.br"> contato@expressgames.com.br</a></li>
+                <li><a href=""><img src="./images/icones contato 64px/telefone.png" alt="telefone"> 0800-888-999</a></li>
             </ul>
         </div>
         <div class="intitucional">
             <ul>
                 <li>Institucional</li><br>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Termos de uso</a></li>
-                <li><a href="#">Ajuda</a></li>
+                <li><a href="./quem-somos.html">Quem somos</a></li>
+                <li><a href="./politicaDePrivacidade.html">Termos de uso</a></li>
+                <li><a href="./perguntasFrequentes.html">Ajuda</a></li>
             </ul>
         </div>
         <div class="sociais">

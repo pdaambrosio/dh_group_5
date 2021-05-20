@@ -1,0 +1,55 @@
+p{
+    font-size: 30px;
+    text-align: center;
+}
+.input2{
+    
+    border: 1px solid black;
+    border-radius:7px ;
+    margin-top: 50px;
+    height: 30px; 
+    width: 120px; 
+    display: flex;
+}
+.div{
+   margin-left: 40%;
+    display: flex;
+}
+
+.i4{
+    border: 1px solid black;
+    border-radius:7px ;
+    margin-top: 50px;
+    height: 30px; 
+    width: 120px; 
+    margin-left: 50px;
+    display: flex;
+    cursor: pointer;
+}
+.div2{
+    margin-left: 40%;
+    display: flex;
+}
+.i6{
+    margin-left:50px ;
+}
+.Descricao{
+    border: 1px solid black;
+    border-radius: 7px;
+    height:100px;  
+    width: 350px;
+    
+             
+}
+.Confirmacao{
+        width: 15%;
+        height: 3vh;
+        background-color: #F8B000;
+        border-radius: 5px;
+        border: #F8B000;
+        color: white;
+        cursor: pointer;
+    }
+footer{
+    margin-top: 40px;
+}

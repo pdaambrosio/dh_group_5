@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: "Open Sans";
     src: url("../Fonts/OpenSans-Regular.ttf");
@@ -76,7 +77,6 @@ body {
     padding: 20px;
 }
 
-
 main {
     padding-left: 5%;
     padding-right: 5%;
@@ -129,6 +129,7 @@ button {
     padding: 3px;
     margin: 3px;
 }
+
 footer {
     display: flex;
     width: 100%;
