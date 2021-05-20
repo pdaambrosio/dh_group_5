@@ -42,17 +42,14 @@ p{
              
 }
 .Confirmacao{
-    
-    color: white;
-    background-color: rgb(13, 2, 63);
-    height:20px;
-    width: 159px;
-    margin-left: 579px;
-    margin-top:50px;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius:3px ;
-}
+        width: 15%;
+        height: 3vh;
+        background-color: #F8B000;
+        border-radius: 5px;
+        border: #F8B000;
+        color: white;
+        cursor: pointer;
+    }
 footer{
     margin-top: 40px;
 }

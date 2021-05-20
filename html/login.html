@@ -4,34 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <title>projeto PI</title>
-    
+    <title>Login | Painel de Controle</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login-admin.css">
     
 </head>
-     <section class="borda">
-        <form method="POST">
-         <label></label>
-           <p class="login">Login</p>
-           <input class="input" type="text" placeholder="Email ou Telefone"> <br>
-           <input  class="input" type="password" name="senha" id="senha" placeholder="senha">
-           <a  onclick="mostrarSenha()"><img class="icone"  src="images/olho.png" alt=""> </a>
-           <label class="esqueceuSenha"> <a href="">Esqueceu a senha ?</a>  </label><br>
-           <input class="Entrar" type="submit" value="Entrar" > <br>
-           <a  href=""> <p class="cadastro">Não tem conta ? Cadastre se</p></a>
-        </form>
-     </section>
-  <script>
-      
-      function mostrarSenha (){
-          var tipo= document.getElementById("senha");
-          if(tipo.type == "password"){
-              tipo.type = "text"
-          }
-      }
-  </script>
-
 <body>
-  
+    <form id="meu-login">
+        <img src= "images/Logo_amarelo_fundo_claro2.png"/>
+        <h1>Painel de Controle</h1>
+        <p><input id="email" name= "email" placeholder="E-mail" required maxlength="150" type="email"/></p>
+        <p><input id="password" name="password" placeholder="Senha" type="password" required maxlength="15"/></p>
+        <p id="checkbox"><input id="lembrarId" name="lembrar" type="checkbox"/>
+        <label for="lembrarId">Lembrar-me</label></p>
+        <p><button form="meu-login">ENTRAR</button></p>
+        <p><a href="#">Cadastre-se</a></p>
+    </form>
 </body>
 </html>
