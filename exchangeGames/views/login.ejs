@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto PI</title>
+    
+    <style>
+        body{
+            background-size: 100% ;
+            background-image:url(images/ps4.jpeg);
+            background-position: center;
+            background-repeat:no-repeat ;
+            background-color: black;
+        }
+
+        .borda{
+            
+            border: 1px solid #2e3159;
+            border-radius: 20px;
+            background-color:#01050ee8;
+            height: 450px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 115px;
+            
+        }
+        .login{
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .input{
+           margin-bottom: 10px;
+           border: 1px solid white;
+           border-radius: 10px;
+           height: 30px;
+           width: 300px;
+           margin-top: 35px; 
+           margin-left: 40px;
+           cursor: auto;
+
+        }
+        a{
+            text-decoration:none;
+            color: white;
+        }
+        .esqueceuSenha{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 200px;
+            cursor: pointer;
+            
+        }
+        .Entrar{
+            
+            text-align: center;
+            width:110px ;
+            height:30px ; 
+            border: 1px solid white;
+            border-radius: 3px;
+            margin-top:30px;
+            margin-left:140px;
+            cursor: pointer;
+        
+         
+         color:#2e3159 ;
+        }
+        .cadastro{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-style: normal;
+            margin-top: 30px;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+        .ou{
+            margin-left: 150px;
+            color: blue;
+        }
+      
+        .icone{
+            
+           background-size: 20px ;
+           width: 20px;
+           height: 20px;
+           cursor: pointer;
+           
+        }
+        
+    </style>
+</head>
+     <section class="borda">
+        <form method="POST">
+         <label></label>
+           <p class="login">Login</p>
+           <input class="input" type="text" placeholder="Email ou Telefone"> <br>
+           <input  class="input" type="password" name="senha" id="senha" placeholder="senha">
+           <a  onclick="mostrarSenha()"><img class="icone"  src="images/olho.png" alt=""> </a>
+           <label class="esqueceuSenha"> <a href="">Esqueceu a senha ?</a>  </label><br>
+           <input class="Entrar" type="submit" value="Entrar" > <br>
+           <a  href=""> <p class="cadastro">Não tem conta ? Cadastre se</p></a>
+        </form>
+     </section>
+  <script>
+      
+      function mostrarSenha (){
+          var tipo= document.getElementById("senha");
+          if(tipo.type == "password"){
+              tipo.type = "text"
+          }
+      }
+  </script>
+
+<body>
+  
+</body>
+</html>
