@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="/css/login-admin.css">
 </head>
 <body>
-    <form id="meu-login">
+    <form id="meu-login" action="/admin" method="POST">
         <img src= "/images/Logo_amarelo_fundo_claro2.png"/>
         <h1>Área Restrita - Administrador</h1>
         <p><input id="email" name= "email" placeholder="E-mail" required maxlength="150" type="email"/></p>
-        <p><input id="password" name="password" placeholder="Senha" type="password" required maxlength="15"/></p>
+        <p><input id="password" name="senha" placeholder="Senha" type="password" required maxlength="15"/></p>
         <p id="checkbox"><input id="lembrarId" name="lembrar" type="checkbox"/>
         <label for="lembrarId">Lembrar-me</label></p>
-        <p><button form="meu-login">ENTRAR</button></p>
+        <p><input id="button" type="submit" value="ENTRAR"/></p>
         <p><a href="#">Esqueci minha senha</a></p>
     </form>
 </body>
