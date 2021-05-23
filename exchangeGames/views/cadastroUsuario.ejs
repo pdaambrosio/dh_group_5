@@ -20,37 +20,31 @@
             <p>Ficamos muito felizes em ter você conosco!</p>
         </div>
         <div class="form">
-            <input type='file'>
-            <br><br>
-            <label for="nome">Nome</label><br>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required size="50">
-            <br><br>
-            <label for="nome">Sobrenome</label><br>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu sobrenome" required size="50">
-            <br><br>
-            <label for="nome">Nome de Usuário</label><br>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome de usuário" required size="50">
-            <br><br>
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required size="50">
-            <br><br>
-            <label for="senha">Senha</label><br>
-            <input type="password" id="senha" name="senha" placeholder="Senha" required size="50">
-            <br><br>
-            <label for="senha">Confirmação de Senha</label><br>
-            <input type="password" id="senha" name="senha" placeholder="Senha" required size="50">
-            <br><br>
-            <input name="notificacoes" type="checkbox" id="exchange" value="exchange"><label for="exchange"> Sim, desejo receber outras notificações do site através de e-mail</label>
-            <br>
-            <input name="notificacoes" type="checkbox" id="parceiros" value="parceiros"><label for="parceiros"> Sim, também desejo receber e-mails de parceiros do site</label>
-            <br><br>
-            <div class="aviso">
-                <p>Ao clicar em confirmar você afirma que concorda com os Termos de Uso e Política de Privacidade do Exchange Games.</p>
-            </div>
-            <div class="concluir">
-                <button type="submit">Concluir Inscrição</button>
-            </div>
-        </div>
+            <form action="/cadastro" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required size="50">
+                <label for="nome">Sobrenome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu sobrenome" required size="50">
+                <label for="nome">Nome de Usuário</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome de usuário" required size="50">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required size="50">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required size="50">
+                <label for="senha">Confirmação de Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required size="50">
+                <div>
+                    <input name="notificacoes" type="checkbox" id="exchange" value="exchange"><label for="exchange">Sim, desejo receber outras notificações do site através de e-mail</label>
+                    <input name="notificacoes" type="checkbox" id="parceiros" value="parceiros"><label for="parceiros">Sim, também desejo receber e-mails de parceiros do site</label>
+                </div>
+                <div class="aviso">
+                    <p>Ao clicar em confirmar você afirma que concorda com os Termos de Uso e Política de Privacidade do Exchange Games.</p>
+                </div>
+                    <div class="concluir">
+                        <button type="submit">Concluir Inscrição</button>
+                    </div>
+                </div>
+            </form>
     </main>
     <footer>
         <%- include('footer.ejs') %>
