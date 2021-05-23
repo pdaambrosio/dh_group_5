@@ -21,18 +21,21 @@
         </div>
         <div class="form">
             <form action="/cadastro" method="POST">
+                <% if (mensagem) { %>
+                    <h3><%=mensagem%></h3>
+                <%}%>
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required size="50">
-                <label for="nome">Sobrenome</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu sobrenome" required size="50">
-                <label for="nome">Nome de Usuário</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome de usuário" required size="50">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required size="50">
+                <label for="nome_usuario">Nome de Usuário</label>
+                <input type="text" id="nome_usuario" name="nome_usuario" placeholder="Digite seu nome de usuário" required size="50">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required size="50">
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" placeholder="Senha" required size="50">
-                <label for="senha">Confirmação de Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="Senha" required size="50">
+                <label for="confirma_senha">Confirmação de Senha</label>
+                <input type="password" id="confirma_senha" name="confirma_senha" placeholder="Confirme sua senha" required size="50">
                 <div>
                     <input name="notificacoes" type="checkbox" id="exchange" value="exchange"><label for="exchange">Sim, desejo receber outras notificações do site através de e-mail</label>
                     <input name="notificacoes" type="checkbox" id="parceiros" value="parceiros"><label for="parceiros">Sim, também desejo receber e-mails de parceiros do site</label>
