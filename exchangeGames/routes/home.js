@@ -6,6 +6,10 @@ router.get('/quem-somos', homeController.quem);
 
 router.get('/perguntas', homeController.perguntas);
 
+router.get('/politica', homeController.politica);
+
+
+
 
   module.exports = router
 

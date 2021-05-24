@@ -6,5 +6,7 @@ module.exports.quem = function(req, res) {
     res.render('perguntasFrequentes');
   }
 
-  
+  module.exports.politica = function(req, res) {
+    res.render('politicaDePrivacidade');
+  }
 

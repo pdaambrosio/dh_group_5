@@ -9,29 +9,8 @@
 </head>
 <body>
     <header>
-        <div class="header">
-            <img class="logo" src="../public/images/logo-icone.png" alt="logo">
-            <div class="busca">
-                <input class="busca-termo" type="text" placeholder="Digite o nome do jogo">
-                <button class="botao-busca" type="submit">
-                    <i class="fa-busca"></i>
-                </button>
-            </div>
-            <div class="login-right">
-                <a href="./login.html">Login</a>
-                <a href="./cadastroUsuario.html">Cadastro</a>
-            </div>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Xbox</a></li>
-                <li><a href="#">Playstation</a></li>
-                <li><a href="#">Nintendo</a></li>
-                <li><a href="#">PC</a></li>
-            </ul>
-        </nav>
-    </header>
+        <%- include('header.ejs') %>
+   </header>
     <body>
         <main>
         <h1>Política de privacidade</h1>
@@ -51,33 +30,8 @@
         <p>A EXchange Games utiliza cookies e informações de sua navegação (sessão do browser) com o objetivo de traçar um perfil do público que visita o site e aperfeiçoar sempre nossos serviços, produtos, conteúdos e garantir as melhores ofertas e promoções para você. Durante todo este processo mantemos suas informações em sigilo absoluto. Vale lembrar que seus dados são registrados pela Exchange Games de forma automatizada, dispensando manipulação humana. Para que estes dados permaneçam intactos evite compartilhar sua senha com outras pessoas, mesmo que sejam amigos e parentes.</p>
         <h5>Cadastre-se e compre com tranquilidade, sem preocupações.</h5>
         </main>
-
         <footer>
-            <div class="atendimento">
-                <ul>
-                    <li>Atendimento</li><br>
-                    <li><a href="https://web.whatsapp.com/"><img src="./images/icones contato 64px/whatsapp.png" alt="WhatsApp"> WhatsApp</a></li>
-                    <li><a href="./contato.html"><img src="./images/icones contato 64px/icone-circular-email.png" alt="contato@expressgames.com.br"> contato@expressgames.com.br</a></li>
-                    <li><a href=""><img src="./images/icones contato 64px/telefone.png" alt="telefone"> 0800-888-999</a></li>
-                </ul>
-            </div>
-            <div class="intitucional">
-                <ul>
-                    <li>Institucional</li><br>
-                    <li><a href="./quem-somos.html">Quem somos</a></li>
-                    <li><a href="./politicaDePrivacidade.html">Termos de uso</a></li>
-                    <li><a href="./perguntasFrequentes.html">Ajuda</a></li>
-                </ul>
-            </div>
-            <div class="sociais">
-                <ul>
-                    <li>Redes Sociais</li><br>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                    <li>YouTube</li>
-                </ul>
-            </div>
+            <%- include('footer.ejs') %>
         </footer>
-
     </body>
 </html>
