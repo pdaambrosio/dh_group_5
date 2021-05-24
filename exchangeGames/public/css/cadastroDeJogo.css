@@ -1,0 +1,40 @@
+p{
+    font-size:30px;
+    text-align: center;
+}
+.div1{
+    height:73px;
+    width:70%;
+    margin: 0 auto;
+}
+.base{
+    height:4vh;
+    width:25%;
+    border:1px solid black;
+    margin-left:15%;
+    margin-top:10px ;
+    margin-bottom:10px ;
+}
+
+label{
+    margin-left:15% ;
+    padding-top:10px ;
+}
+.label2{
+    margin-left:22%;
+    margin-top:10px ;
+}
+.button{
+    width:15%;
+    height: 6vh;
+    background-color: #F8B000;
+    border-radius: 5px;
+    border: #F8B000;
+    color: white;
+    margin-top: 4vh;
+    cursor: pointer;
+    margin-left:40% ;
+    
+}
+
+
