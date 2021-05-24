@@ -11,7 +11,7 @@ const homeRouter = require('./routes/home');
 const adminRouter = require('./routes/admin');
 const cadastroRouter = require('./routes/cadastro');
 const suaContaRouter = require('./routes/suaConta');
-
+const cadastroJogoRouter = require('./routes/cadastroJogo')
 const app = express();
 
 // view engine setup
@@ -31,6 +31,7 @@ app.use('/home', homeRouter);
 app.use('/admin', adminRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/suaConta', suaContaRouter);
+app.use('/cadastro-jogo',cadastroJogoRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
