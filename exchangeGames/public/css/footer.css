@@ -11,7 +11,11 @@ body, form, button, label, ::placeholder{
     font-family: OpenSans;
 }
 
-body {
+a:hover {
+    color: #F8B000;
+  }
+
+.bodyFooter {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -36,7 +40,9 @@ footer a {
     color: white;
 }
 
+
 .atendimento img {
     height: 20px;
     width: 20px;
+    vertical-align: middle;
 }
