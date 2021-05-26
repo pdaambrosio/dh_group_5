@@ -1,1 +1,16 @@
-[]
+[
+    {
+        "nome": "PAULO",
+        "sobrenome": "DOS SANTOS",
+        "nome_usuario": "PAULO DANIEL AMBROSIO DOS SANTOS",
+        "email": "pda.ambrosio@gmail.com",
+        "hash": "$2b$05$eQbV/fIsyVxxm28G/DU83.htkSZldB2H83xufhdU3RyK.P8tqTb9W"
+    },
+    {
+        "nome": "Paulo Daniel",
+        "sobrenome": "Ambrosio dos Santos",
+        "nome_usuario": "Paulo Daniel Ambrosio dos Santos",
+        "email": "PAULO.SANTOS@NEXTIOS.COM.BR",
+        "hash": "$2b$05$onIe1FTm4U5ZMKXw.XsljOtgr6.vX2EDzAgX.5IJtfC8dJDI2Rwge"
+    }
+]
