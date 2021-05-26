@@ -4,86 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/css/home.css">
     <title>Home</title>
 </head>
 <body>
     <header>
-        <div class="header">
-            <img class="logo" src="images/logo-icone.png" alt="logo">
-            <div class="busca">
-                <input class="busca-termo" type="text" placeholder="Digite o nome do jogo">
-                <button class="botao-busca" type="submit">
-                    <i class="fa-busca"></i>
-                </button>
+        <%- include('header.ejs') %>
+   </header>
+    <main class="mainHome">
+        <img class="logo-main" src="/images/logo-fundo-claro.png" alt="logo-main"><br>
+        <h1 class="h1Home">Catálogo de Jogos</h1>
+            <h3 id="menuPlaystation" class="h3Home">Playstation 4</h3>
+            <div class="homePs4">
+                <p><img class="imgHome" src="/images/icones-ps4/assassins-creed-valhalla.png" alt="Assassins Creed Valhalla"><br>Assassins Creed Valhalla<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-ps4/cyber-punk.png" alt="Cyberpunk"><br>Cyberpunk<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-ps4/ghost.png" alt="Ghost"><br>Ghost of Tsushima<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-ps4/red-dead-redemption-2.png" alt="Red Dead Redemption 2"><br>Red Dead Redemption 2<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-ps4/sekiro.png" alt="Sekiro"><br>Sekiro<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-ps4/the-last-of-us-part-2.png" alt="The Last Of Us Part 2"><br>The Last Of Us Part II<br><button class="buttonHome">Saiba +</button></p>
+
             </div>
-            <div class="login-right">
-                <a href="./login.html">Login</a>
-                <a href="./cadastroUsuario.html">Cadastro</a>
-            </div>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Xbox</a></li>
-                <li><a href="#">Playstation</a></li>
-                <li><a href="#">Nintendo</a></li>
-                <li><a href="#">PC</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <img class="logo-main" src="images/logo-fundo-claro.png" alt="logo-main"><br>
-        <h3>Playstation 4</h3>
-        <div class="ps4">
-            <a href="#"><img src="images/icones jogos 117 x 147/ps4/assassins_creed_valhalla_ps4.jpg" alt="acv"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/ps4/cyberpunk_2077_ps4.jpg" alt="cp2077"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/ps4/final_fantasy_viiremake_ps4.jpg" alt="ff7r"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/ps4/ghost_of_tsushima_ps4.jpg" alt="got"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/ps4/hitman3_ps4.jpg" alt="hitman3"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/ps4/red_dead_redemption2_ps4.jpg" alt="rdr2"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/ps4/sekiro_shadows_die_twice_ps4.jpg" alt="ssdt"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/ps4/spider_man_miles_morales_ps4.jpg" alt="smmm"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/ps4/the_last_of_us_part_ii_ps4.jpg" alt="tloupII"></a>
-        </div>
-        <h3>Xbox One</h3>
-        <div class="xbox">
-            <a href="#"><img src="images/icones jogos 117 x 147/Xbox/call_of_duty_modern_warfire_one.jpg" alt="codmw"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/Xbox/cyberpunk_2077_one.jpg" alt="cp2077"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/Xbox/forza_motorsport_7_xbox_one.jpg" alt="forza7"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/Xbox/immortal_fenyx_rising_one.jpg" alt="ifr"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/Xbox/marvel_avengers_one.jpg" alt="mav"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/Xbox/minecraft_one.jpg" alt="minecraft"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/Xbox/sekiro_shadows_die_twice_one.jpg" alt="ssdt"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/Xbox/shadow_of_the_tomb_raider_one.jpg" alt="sottr"></a>
-            <a href="#"><img src="images/icones jogos 117 x 147/Xbox/tony_hawks_pro_skater_1_2_one.jpg" alt="thps12"></a>
-        </div>        
+            <h3 id="menuXbox" class="h3Home">Xbox One</h3>
+            <div class="homeXbox">
+                <p><img class="imgHome" src="/images/icones-xbox/avengers.png" alt="Avengers"><br>Avengers<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-xbox/forza-7.png" alt="Forza 7"><br>Forza 7<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-xbox/immortals-fenyx-rising.png" alt="Immortals Fenyx Rising"><br>Immortals Fenyx Rising<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-xbox/minecraft.png" alt="Minecraft"><br>Minecraft<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-xbox/modern-warfare.png" alt="Modern Warfare"><br>Modern Warfare<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-xbox/tomb-raider.png" alt="Tomb Raider"><br>Tomb Raider<br><button class="buttonHome">Saiba +</button></p>
+            </div>       
+            <h3 id="menuNintendo" class="h3Home">Nintendo Switch</h3>
+            <div class="homeSwitch">
+                <p><img class="imgHome" src="/images/icones-switch/Mario-Kart-8-Deluxe.png" alt="Mario Kart 8"><br>Mario Kart 8<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-switch/luigis-mansion.png" alt="Luigi's Mansion"><br>Luigi's Mansion<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-switch/splatoon2.png" alt="Splatoon 2"><br>Splatoon 2<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-switch/animal-crossing.png" alt="Animal Crossing"><br>Animal Crossing<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-switch/super_mario_maker_2_nintendo.png" alt="Super Mario Maker 2"><br>Super Mario Maker 2<br><button class="buttonHome">Saiba +</button></p>
+                <p><img class="imgHome" src="/images/icones-switch/Super-Smash-Bros.png" alt="Super Smash Bros"><br>Super Smash Bros Ultimate<br><button class="buttonHome">Saiba +</button></p>
+            </div>        
     </main>
     <footer>
-        <div class="atendimento">
-            <ul>
-                <li>Atendimento</li><br>
-                <li><a href="https://web.whatsapp.com/"><img src="./images/icones contato 64px/whatsapp.png" alt="WhatsApp"> WhatsApp</a></li>
-                <li><a href="./contato.html"><img src="./images/icones contato 64px/icone-circular-email.png" alt="contato@expressgames.com.br"> contato@expressgames.com.br</a></li>
-                <li><a href=""><img src="./images/icones contato 64px/telefone.png" alt="telefone"> 0800-888-999</a></li>
-            </ul>
-        </div>
-        <div class="intitucional">
-            <ul>
-                <li>Institucional</li><br>
-                <li><a href="./quem-somos.html">Quem somos</a></li>
-                <li><a href="./politicaDePrivacidade.html">Termos de uso</a></li>
-                <li><a href="./perguntasFrequentes.html">Ajuda</a></li>
-            </ul>
-        </div>
-        <div class="sociais">
-            <ul>
-                <li>Redes Sociais</li><br>
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>YouTube</li>
-            </ul>
-        </div>
+        <%- include('footer.ejs') %>
     </footer>
 </body>
 </html>

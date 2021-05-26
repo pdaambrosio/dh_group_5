@@ -1,30 +1,31 @@
+* {
+    box-sizing: border-box;
+} 
 @font-face {
     font-family: "Open Sans";
     src: url("../Fonts/OpenSans-Regular.ttf");
 }
 
-* {
-    box-sizing: border-box;
-} 
-
-nav {
-    padding: 10%;
+body {
+    font-family: "Open Sans";
 }
 
-.mainPerguntasFrequentes {
-    align-items: center;
-    justify-content: center;
-    font-family: 'Fonts/OpenSans-Regular.ttf';
+.mainPerguntasFrequentes { 
     color: #1d1736;
     font-size: 110%;
     font-style: normal;
     text-align: justify;
     line-height: 130%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 3%;
-
+    padding-top: 3%;
+    line-height: 110%;
 }
 
+.h1PerguntasFrequentes {
+    text-align: center;
+    
+}
 
 
