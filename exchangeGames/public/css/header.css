@@ -24,16 +24,18 @@ body, form, button, label, ::placeholder{
     background-color: #1d1736;
     height: 10vh;
     display: flex;
+    align-items: center;
 }
 
 .logoHeader {
     max-width: 150px;
-    max-height: 80px;
+    max-height: 50px;
     width: auto;
     height: auto;
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
+    align-items: center;
 }
 
 .busca {
@@ -41,6 +43,17 @@ body, form, button, label, ::placeholder{
     width: 200px;
     height: 25px;
     margin: auto;
+}
+
+.botao-busca {
+    background-color: #F8B000;
+    color: white;
+    text-rendering: auto;
+    display: inline-block;
+    border-radius: 3px;
+    border: thin;
+    text-align: center;
+    font-size: 80%;
 }
 
 .login-right {
