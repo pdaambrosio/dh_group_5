@@ -14,10 +14,10 @@
     <div>
         <p>Cadastro de jogo</p><hr>
     </div>
-    <form action="" method="POST">
+    <form action="/cadastroJogo/cadastrandoJogo" method="POST">
    <div class="div1">
        <label class="label" for="Ano do jogo"> Ano do jogo</label><br>
-       <input class="base" type="text" placeholder="Ano do jogo">
+       <input class="base" name="anoJogo" type="text" placeholder="Ano do jogo">
        <select class="base" name="" id="">
         <option value="Marca">Marca de jogo</option>
         <option value="ps4">Ps4</option>
@@ -29,10 +29,10 @@
    <div class="div1">
        <label  class="label"  for="">Descrição do produto</label>
        <label  class="label2"  for="">Tempo de uso</label><br>
-       <input  class="base" type="text" placeholder="Descriçao do produto">
-       <input  class="base"   type="text" placeholder="Tempo de uso">
+       <input  class="base" name="descricao" type="text" placeholder="Descriçao do produto">
+       <input  class="base" name="tempoJogo"  type="text" placeholder="Tempo de uso">
     </div>
-    <button class="button" form="Salvar">Salvar</button>
+    <input class="button" type="submit" value="Salvar"/>
 </form>
     <footer>
         <%- include('footer.ejs') %>
