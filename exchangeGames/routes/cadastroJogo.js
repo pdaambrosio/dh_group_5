@@ -5,7 +5,7 @@ const CadastroJogoController = require('../controller/cadastroJogoController')
 
 router.get('/', CadastroJogoController.cadastroJogo)
 
-router.post('/', CadastroJogoController)
+//router.post('/', CadastroJogoController)
 
 router.get('/cadastroJogo', CadastroJogoController.cadastroJogo);
 

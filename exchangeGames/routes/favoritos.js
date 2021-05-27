@@ -5,7 +5,7 @@ const favoritos = require('../controller/favoritos')
 
 router.get('/',favoritos.favoritos )
 
-router.post('/',favoritos )
+//router.post('/',favoritos )
 
 
 module.exports = router

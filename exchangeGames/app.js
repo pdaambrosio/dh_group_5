@@ -13,7 +13,7 @@ const cadastroRouter = require('./routes/cadastro');
 const suaContaRouter = require('./routes/suaConta');
 const cadastroJogoRouter = require('./routes/cadastroJogo');
 const  dadosPessoaisRouter = require('./routes/dadosPessoais');
-const  favoritosRouter = require('./controller/favoritos');
+const  favoritosRouter = require('./routes/favoritos');
 const app = express();
 
 // view engine setup
