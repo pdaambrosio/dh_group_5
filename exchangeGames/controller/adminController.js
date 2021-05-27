@@ -28,7 +28,6 @@ module.exports.cadastrandoJogo = (req, res) => {
     res.redirect('/admin/cadastrar-jogo')    
 }
 
-
 module.exports.uploadImg = (req,res) => {
     res.send(204)
 }
