@@ -1,14 +1,32 @@
+<<<<<<< HEAD
 body{
     height:100vh;
 }
+=======
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../Fonts/OpenSans-Regular.ttf");
+}
+
+body {
+    font-family: OpenSans;
+
+}
+
+>>>>>>> eba47d91fdf1f10f6773ed5107ce897451dd03ca
 p{
     font-size:30px;
     text-align: center;
 }
 .div1{
-    height:73px;
+
     width:70%;
-    margin: 0 auto;
+    margin: auto;
+    padding-top: 3%;
 }
 .base{
     height:4vh;
@@ -37,7 +55,7 @@ label{
     margin-top: 4vh;
     cursor: pointer;
     margin-left:40% ;
-    
+    margin-bottom: 10vh;
 }
 
 
