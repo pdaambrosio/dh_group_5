@@ -15,6 +15,10 @@
         <p>Cadastro de jogo</p><hr>
     </div>
     <form action="/cadastroJogo/cadastrandoJogo" method="POST">
+        <div class="div1">
+            <label class="label" for="Nome do jogo">Nome do jogo</label><br>
+            <input class="base" name="nomeJogo" type="text" placeholder="Nome do jogo">
+        </div>
    <div class="div1">
        <label class="label" for="Ano do jogo"> Ano do jogo</label><br>
        <input class="base" name="anoJogo" type="text" placeholder="Ano do jogo">
@@ -33,6 +37,7 @@
        <input  class="base" name="tempoJogo"  type="text" placeholder="Tempo de uso">
     </div>
     <input class="button" type="submit" value="Salvar"/>
+    
 </form>
     <footer>
         <%- include('footer.ejs') %>
