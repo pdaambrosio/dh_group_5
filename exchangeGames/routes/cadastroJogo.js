@@ -1,9 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
-const CadastroJogo = require('../controller/cadastroJogoController')
+const CadastroJogoController = require('../controller/cadastroJogoController')
 
-router.get('/', CadastroJogo.cadastroJogo)
+router.get('/', CadastroJogoController.cadastroJogo)
+
+router.post('/', CadastroJogoController)
+
+router.get('/cadastroJogo', CadastroJogoController.cadastroJogo);
+
+router.post('/cadastrandoJogo', CadastroJogoController.cadastrandoJogo)
 
 
 module.exports = router

@@ -11,7 +11,9 @@ const homeRouter = require('./routes/home');
 const adminRouter = require('./routes/admin');
 const cadastroRouter = require('./routes/cadastro');
 const suaContaRouter = require('./routes/suaConta');
-const cadastroJogoRouter = require('./routes/cadastroJogo')
+const cadastroJogoRouter = require('./routes/cadastroJogo');
+const  dadosPessoaisRouter = require('./routes/dadosPessoais');
+const  favoritosRouter = require('./controller/favoritos');
 const app = express();
 
 // view engine setup
@@ -31,8 +33,9 @@ app.use('/home', homeRouter);
 app.use('/admin', adminRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/suaConta', suaContaRouter);
-app.use('/cadastro-jogo',cadastroJogoRouter)
-
+app.use('/cadastroJogo',cadastroJogoRouter);
+app.use('/dados-pessoais',dadosPessoaisRouter);
+app.use('/favoritos', favoritosRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
