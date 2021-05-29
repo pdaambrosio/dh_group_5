@@ -9,7 +9,6 @@ router.get('/', CadastroJogoController.cadastroJogo)
 
 //router.get('/cadastroJogo', CadastroJogoController.cadastroJogo);
 
-router.post('/cadastro', CadastroJogoController.cadastrandoJogo)
+router.post('/cadastroJogo', CadastroJogoController.cadastrandoJogo)
 
-
-module.exports = router
+module.exports = router 

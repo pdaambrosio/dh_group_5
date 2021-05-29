@@ -14,8 +14,8 @@
     <div>
         <p>Cadastro de jogo</p><hr>
     </div>
-    <form action="/jogo/cadastrandoJogo" method="POST">
-        <div class="div1 divflex">
+    <form action="/jogos/cadastroJogo" method="POST">
+        <div class="div1">
             <label class="label" for="Nome do jogo">Nome do jogo</label><br>
             <input class="base" name="nomeJogo" type="text" placeholder="Nome do jogo" maxlength="150" required />
             <div><label  class="label" for="">Tempo de uso</label><br>
@@ -24,15 +24,14 @@
        <input class="base" name="anoJogo" type="text" placeholder="Ano do jogo" maxlength="4" required/>
        <select class="base" name="marca" required>
         <option value="Marca">Marca do jogo</option>
-        <option value="ps4">Playstation</option>
+        <option value="Playstation">Playstation</option>
         <option value="Nintendo">Nintendo</option>
         <option value="Xbox ">Xbox</option>
       </select>
    </div>
    <div class="div1">
        <label  class="label" for="">Descrição do produto</label>
-       <textarea  class="base descricaoJogo" name="descricao" type="text" placeholder="Descrição do produto" maxlength="1500" required>
-       </textarea>
+       <textarea  class="base descricaoJogo" name="descricao" type="text" placeholder="Descrição do produto" maxlength="1500" required></textarea>
     </div>
     <input class="button" type="submit" value="Salvar"/>
     
