@@ -5,5 +5,7 @@ const router = express.Router();
 
 router.get('/', dadosPessoais.dadosPessoais)
 
+router.post('/',dadosPessoais.salvarDadosPessoais)
+
 
 module.exports = router
