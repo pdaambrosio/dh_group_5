@@ -7,9 +7,8 @@ router.get('/', CadastroJogoController.cadastroJogo)
 
 //router.post('/', CadastroJogoController)
 
-//srouter.get('/cadastroJogo', CadastroJogoController.cadastroJogo);
+//router.get('/cadastroJogo', CadastroJogoController.cadastroJogo);
 
-router.post('/cadastrandoJogo', CadastroJogoController.cadastrandoJogo)
+router.post('/cadastroJogo', CadastroJogoController.cadastrandoJogo)
 
-
-module.exports = router
+module.exports = router 

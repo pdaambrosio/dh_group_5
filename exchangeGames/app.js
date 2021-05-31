@@ -31,7 +31,7 @@ app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use('/admin', adminRouter);
 app.use('/cadastro', cadastroRouter);
-app.use('/cadastroJogo',cadastroJogoRouter);
+app.use('/jogos',cadastroJogoRouter);
 app.use('/dados-pessoais',dadosPessoaisRouter);
 app.use('/favoritos', favoritosRouter)
 // catch 404 and forward to error handler
