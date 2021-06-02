@@ -39,21 +39,25 @@ body, form, button, label, ::placeholder{
 }
 
 .busca {
-    display: flex;
     width: 200px;
-    height: 25px;
+    height: 30px;
     margin: auto;
+    display: flex;
 }
+
+.busca-termo {
+    font-size: 14px;
+    font-display:initial;
+
+}
+
 
 .botao-busca {
     background-color: #F8B000;
     color: white;
-    text-rendering: auto;
-    display: inline-block;
     border-radius: 3px;
     border: thin;
-    text-align: center;
-    font-size: 80%;
+    font-size: 14px;
 }
 
 .login-right {

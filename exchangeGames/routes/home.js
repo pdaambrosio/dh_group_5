@@ -10,5 +10,11 @@ router.get('/perguntas', homeController.perguntas);
 
 router.get('/politica', homeController.politica);
 
+
+/*Para exibirmos o jogo na Home.
+Indicamos para a rota o parâmetro id*/
+
+router.get('/produto', homeController.produto);
+
   module.exports = router
 
