@@ -10,7 +10,6 @@ const usersRouter = require('./routes/users');
 const homeRouter = require('./routes/home');
 const adminRouter = require('./routes/admin');
 const cadastroRouter = require('./routes/cadastro');
-const suaContaRouter = require('./routes/suaConta');
 const cadastroJogoRouter = require('./routes/cadastroJogo');
 const  dadosPessoaisRouter = require('./routes/dadosPessoais');
 const  favoritosRouter = require('./routes/favoritos');
@@ -32,8 +31,7 @@ app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use('/admin', adminRouter);
 app.use('/cadastro', cadastroRouter);
-app.use('/suaConta', suaContaRouter);
-app.use('/cadastroJogo',cadastroJogoRouter);
+app.use('/jogos',cadastroJogoRouter);
 app.use('/dados-pessoais',dadosPessoaisRouter);
 app.use('/favoritos', favoritosRouter)
 // catch 404 and forward to error handler

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("../Fonts/OpenSans-Regular.ttf");
+}
+html{
+    font-size: 6.25%;
+}
+*{
+    box-sizing: border-box;
+}
+.logo-admin{
+    max-width: 150px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    margin-left: 3vw;
+}
+.header-admin{
+    background-color: #1D1736;
+    width: 100%;
+    color: #F8B000;
+    font-size: 12rem;
+    display: flex;
+    padding: 1vh;
+    height: 10vh;
+}
+.header-admin h1{
+    margin-left: 9vw;
+    align-self: center;
+}

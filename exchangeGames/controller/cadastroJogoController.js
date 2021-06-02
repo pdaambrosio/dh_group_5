@@ -25,7 +25,7 @@ module.exports.cadastrandoJogo = (req, res) => {
   arrayDeJogos[0] = novoJogo.id
   arrayDeJogos.push(novoJogo)    
   salvandoJogo(arrayDeJogos)
-  res.redirect('/cadastroJogo')
+  res.redirect('/jogos')
 }
 
- 
+  
