@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const session = require('express-session');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -14,6 +15,13 @@ const cadastroJogoRouter = require('./routes/cadastroJogo');
 const  dadosPessoaisRouter = require('./routes/dadosPessoais');
 const  favoritosRouter = require('./routes/favoritos');
 const app = express();
+
+//Habilitar sessão no express
+app.use(session({
+    secret: 'tvyburutbn',
+    resave: false,
+    saveUninitialized: false
+}))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

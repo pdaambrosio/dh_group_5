@@ -7,60 +7,26 @@
     <title>Exchange Games | Painel de Controle</title>
     <link rel="stylesheet" href="/css/painel-admin.css">
 </head>
-<body>
+<body class="body-admin flex">
 <header>
     <%- include('header-admin.ejs') %>
 </header>
-    <section class="conteudo">
+<div class="flex aside-main-admin">
 <aside class="menu-admin">
-        <%- include('menu-admin.ejs') %>
+    <%- include('menu-admin.ejs') %>
 </aside>
-<main>
-    <h1>Resumo das vendas</h1>
-    <div class="resumo-vendas">
-        <div><p>Vendas do dia</p>
-        R$ 0,00</div>
-        <div><p>Vendas da semana</p>
-        R$ 0,00</div>
-        <div><p>Vendas do mês</p>
-        R$ 0,00</div>
-        <div><p>Total de pedidos</p>
-        R$ 0,00</div>
-    </div>
-    <h1>Últimos pedidos</h1>
-    <table id="ultimos-pedidos">
-    <tr>
-        <th rowspan="3">Pedido efetuado:</th>
-        <td>Pedido Nº XXXXXXXX</td>
-    </tr>
-    <tr>
-        <td>Feito por usuário_01</td>
-    </tr>
-    <tr>
-        <td class="ultima-linha">Data dd/mm/aaaa, Horário 00:00</td>
-    </tr>
-    <tr>
-        <th rowspan="3">Pedido efetuado:</th>
-        <td>Pedido Nº XXXXXXXX</td>
-    </tr>
-    <tr>
-        <td>Feito por usuário_01</td>
-    </tr>
-    <tr>
-        <td class="ultima-linha">Data dd/mm/aaaa, Horário 00:00</td>
-    </tr>
-    <tr>
-        <th rowspan="3">Pedido efetuado:</th>
-        <td>Pedido Nº XXXXXXXX</td>
-    </tr>
-    <tr>
-        <td>Feito por usuário_01</td>
-    </tr>
-    <tr>
-        <td class="ultima-linha">Data dd/mm/aaaa, Horário 00:00</td>
-    </tr>
-    </table>
-    </main>
-    </section>
+<main class="conteudo-admin">
+    <form id="cadastrar-admin" action="/admin/painel" method="POST">
+    <h2>Cadastrar usuário administrador</h2>
+    <label for="nome">Nome</label>
+    <p><input id="nome" name= "nome" placeholder="Seu nome" required maxlength="150" type="text"/></p>
+    <label for="email">E-mail</label>
+    <p><input id="email" name= "email" placeholder="e-mail@exchangegames.com" required maxlength="150" type="email"/></p>
+    <label for="senha">Senha</label>
+    <p><input id="password" name="senha" placeholder="Definir uma senha" type="password" required maxlength="15"/></p>
+    <input id="button-cadastrar" type="submit" value="Cadastrar"/>
+    </form>
+</main>
+</div>
 </body>
 </html> 

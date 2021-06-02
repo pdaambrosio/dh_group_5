@@ -12,8 +12,8 @@ html{
     overflow: hidden;
     font-size: 18rem;
     background-color: #1D1736;
-    height: 100vh;
     display: flex;
+    height: 100%;
     flex-direction: column;
 }
 .menu-lateral a{

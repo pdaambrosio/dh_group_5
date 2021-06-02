@@ -8,51 +8,53 @@ html{
 *{
     box-sizing: border-box;
 }
-body{
+.menu-admin{
+    width: 20%;
+    flex-grow: 1;
+}
+.body-admin{
     margin: 0px;
     font-family: OpenSans;
     font-size: 15rem;
+    height: 100vh;
+    flex-direction: column;
 }
-.resumo-vendas{
-    display: flex;
-    color: #1D1736; 
-    font-weight: bold;
-    justify-content: space-around;
-    border: 2px solid #1D1736;
-    width: 80%;
-    padding-bottom: 2.5vh;
-}
-.conteudo{
+.flex{
     display: flex;
 }
-main{
-    text-align: center;
+.conteudo-admin{
+    flex-grow: 1;
     width: 80%;
+}
+.aside-main-admin{
+    flex-grow: 1;
+}
+#cadastrar-admin{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-main h1{
-    color: #1D1736;
-    align-self:flex-start;
-    margin-left: 10%;
-    margin-bottom: 3%;
-    margin-top: 3%;
-}
-#ultimos-pedidos{
-    border: 2px solid #1D1736;
-    border-collapse: collapse;
-    text-align: left; 
-    color: #1D1736;
-    width: 80%;
-}
-th{
-    border: 2px solid #1D1736;
-    padding: 2%;
-}
-.ultima-linha{
-    border-bottom: 2px solid #1D1736;
-} 
-.menu-admin{
+#button-cadastrar{
     width: 20%;
+    height: 6vh;
+    background-color: #F8B000;
+    border-radius: 5px;
+    border: #F8B000;
+    color: white;
+    margin-top: 4vh;
+    cursor: pointer;
+    align-self: center;
+}
+#email{
+    width: 30%;
+    height: 4vh;
+}
+#password{
+    width: 30%;
+    height: 4vh;
+}
+#nome{
+    width: 30%;
+    height: 4vh;
 }
