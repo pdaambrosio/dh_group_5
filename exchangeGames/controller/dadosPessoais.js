@@ -3,3 +3,8 @@ module.exports.dadosPessoais = (req, res) => {
 
 
 }
+
+module.exports.salvarDadosPessoais = (req, res) => {
+     console.log(req.body)
+
+}

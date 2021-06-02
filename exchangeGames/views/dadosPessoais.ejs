@@ -15,37 +15,37 @@
     <section class="lista">
         <p>Dados pessoais</p><hr>
     </section>
-    <form action="" method="POST">
+    <form action="/dados-pessoais" method="POST">
   <div class="div">
       <label class="" for="">Nome</label>
       <label class="nome" for=""> Sobrenome</label>
       <label class="telefone" for=""> Telefone</label><br>
-      <input class=" input2 " type="text" placeholder="Nome" autocomplete="off" required>
-      <input class=" input2 " type="text" placeholder="Sobrenome"  autocomplete="off" required>
-      <input class=" input2 " type="text" placeholder="Telefone"  autocomplete="off" required>
+      <input class=" input2 " name="nome" type="text" placeholder="Nome" autocomplete="off" >
+      <input class=" input2 " name="sobrenome" type="text" placeholder="Sobrenome"  autocomplete="off" required>
+      <input class=" input2 " name="telefone" type="text" placeholder="Telefone"  autocomplete="off" required >
     </div>
       <div class="div">
           <label for="">Email</label>
           <label class="nome" for="">CPF/CNPJ</label><br>
-      <input class=" input2 " type="text" placeholder="Email" autocomplete="off" required>
-      <input class=" input2 " type="text" placeholder="CPF/CNPJ" autocomplete="off" required>
+      <input class=" input2 " name="email" type="text" placeholder="Email" autocomplete="off" required>
+      <input class=" input2 " name="cpf" type="text" placeholder="CPF/CNPJ" autocomplete="off" required>
   </div>
       <div class="div">
           <label for="">Endereço</label>
           <label class="numeEsta" for="">Número</label>
           <label class="numeEsta" for="">Estado</label><br>
-      <input class=" input2 " type="text" placeholder="Endereço" autocomplete="off" required>
-      <input class=" input2 " type="text" placeholder="Número" autocomplete="off" required>
-      <input class=" input2 " type="text" placeholder="Estado" autocomplete="off" required>
+      <input class=" input2 " name="endereco" type="text" placeholder="Endereço" autocomplete="off" required>
+      <input class=" input2 " name="numero" type="text" placeholder="Número" autocomplete="off" required>
+      <input class=" input2 " name="estado" type="text" placeholder="Estado" autocomplete="off" required>
     </div>
     <div class="div">
         <label for="">Cidade</label>
         <label class="nome" for="">CEP</label><br>
 
-      <input class=" input2 " type="text" placeholder="Cidade" autocomplete="off" required>
-      <input class=" input2 " type="text" placeholder="CEP" autocomplete="off" required>
+      <input class=" input2 " name="cidade" type="text" placeholder="Cidade" autocomplete="off" required>
+      <input class=" input2 " name="cep" type="text" placeholder="CEP" autocomplete="off"required >
     </div>
-    <input class="button" type="submit" value="Salvar" >  
+    <input class="button"  type="submit" value="Salvar" >  
   </form>
     <footer>
         <%- include('footer.ejs') %>
