@@ -1,0 +1,5 @@
+# Backup MySQL
+docker run --rm --name backup --mount source=database_mysql,target=/var/lib/mysql -v ${pwd}:/backup alpine tar cvf /backup/database.tar /var/lib/mysql/
+
+# Restore MySQL
+docker run --rm --name restore --mount source=database_mysql,target=/var/lib/mysql -v ${pwd}:/backup alpine tar xvf /backup/test.tar -C /var/lib/mysql/
