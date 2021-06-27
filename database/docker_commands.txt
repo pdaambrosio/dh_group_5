@@ -1,5 +1,26 @@
+# Iniciar MySQL com docker-compose
+docker-compose -f .\mysql_compose.yaml up    # com logs na tela
+docker-compose -f .\mysql_compose.yaml up -d # sem logs na tela
+
+# Parar container via docker-compose
+docker-compose -f .\mysql_compose.yaml down
+
+# Listar container no docker
+docker container ls     # lista continer em execução
+docker container ls -a  # lista container que estão parados (stop)
+
+# Parar container
+docker container stop idDoContainer # ou nomeDoContainer
+
+# Remover container parado
+docker container rm idDoContainer   # ou nomeDoContainer
+docker container prune              # remove todos os containers parados
+
+# Listar volumes no docker
+docker volume ls
+
 # Backup MySQL
-docker run --rm --name backup --mount source=database_mysql,target=/var/lib/mysql -v ${pwd}:/backup alpine tar cvf /backup/database.tar /var/lib/mysql/
+docker run --rm --name backup --mount source=database_mysql,target=/var/lib/mysql -v ${pwd}:/backup alpine tar cvf /backup/database.tar /var/lib/mysql
 
 # Restore MySQL
-docker run --rm --name restore --mount source=database_mysql,target=/var/lib/mysql -v ${pwd}:/backup alpine tar xvf /backup/test.tar -C /var/lib/mysql/
+docker run --rm --name restore --mount source=database_mysql,target=/var/lib/mysql -v ${pwd}:/backup alpine tar xvf /backup/database.tar -C /var/lib/mysql/
