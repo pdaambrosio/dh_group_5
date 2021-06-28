@@ -5,53 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/cadastroDeJogo.css">
-    <title>Document</title>
+    <title>Exchange Games | Cadastro de jogo</title>
 </head>
-<body >
+<body>
     <header>
         <%- include('header.ejs') %>
     </header>
-    <div>
-        <p>Cadastro de jogo</p><hr>
-    </div>
-<<<<<<< HEAD
-    <form action="/cadastroJogo/cadastrandoJogo" method="POST">
-        <div class="div1">
-            <label class="label" for="Nome do jogo">Nome do jogo</label><br>
-            <input class="base" name="nomeJogo" type="text" placeholder="Nome do jogo">
-        </div>
-   <div class="div1">
-       <label class="label" for="Ano do jogo"> Ano do jogo</label><br>
-       <input class="base" name="anoJogo" type="text" placeholder="Ano do jogo">
-       <select class="base" name="" id="">
-        <option value="Marca">Marca de jogo</option>
-        <option value="ps4">Ps4</option>
-        <option value="Ps5">Ps5</option>
-        <option value="Nintendo">Nintendo</options>
-=======
+        <h2>Anuncie o seu jogo</h2>
     <form action="/jogos/cadastroJogo" method="POST">
-        <div class="div1">
-            <label class="label" for="Nome do jogo">Nome do jogo</label><br>
-            <input class="base" name="nomeJogo" type="text" placeholder="Nome do jogo" maxlength="150" required />
-            <div><label  class="label" for="">Tempo de uso</label><br>
-            <input  class="base" name="tempoJogo"  type="text" placeholder="Tempo de uso" maxlength="25" required/></div>
-       <label class="label" for="Ano do jogo"> Ano do jogo</label><br>
-       <input class="base" name="anoJogo" type="text" placeholder="Ano do jogo" maxlength="4" required/>
-       <select class="base" name="marca" required>
-        <option value="Marca">Marca do jogo</option>
-        <option value="Playstation">Playstation</option>
-        <option value="Nintendo">Nintendo</option>
->>>>>>> 4edf7e29b07e401b4d2bebeec596087d7a3141a4
-        <option value="Xbox ">Xbox</option>
-      </select>
-   </div>
-   <div class="div1">
-       <label  class="label" for="">Descrição do produto</label>
-       <textarea  class="base descricaoJogo" name="descricao" type="text" placeholder="Descrição do produto" maxlength="1500" required></textarea>
-    </div>
-    <input class="button" type="submit" value="Salvar"/>
-    
-</form>
+            <label for="Nome do jogo">Nome do jogo</label>
+                <input name="nomeJogo" type="text" placeholder="Exemplo: Super Mario 3D World" maxlength="150" required/>
+            <label for="Tempo de uso">Tempo de uso</label>
+                <input name="tempoJogo" type="text" placeholder="Exemplo: 2 anos" maxlength="25" required/>
+            <label for="Ano do jogo"> Ano do jogo</label>
+                <input name="anoJogo" type="text" placeholder="Exemplo: 2018" maxlength="4" required/>
+            <label for="Console">Console</label>
+                <select name="console" required>
+                    <option value="Switch">Switch</option>
+                    <option value="Wii/Wii U">Wii/Wii U</option>
+                    <option value="3DS/DS">3DS/DS</option>
+                    <option value="PlayStation 5">PlayStation 5</option>
+                    <option value="PlayStation 4">PlayStation 4</option>
+                    <option value="PlayStation 3">PlayStation 3</option>
+                    <option value="Xbox Series X">Xbox Series X</option>
+                    <option value="Xbox One">Xbox One</option>
+                    <option value="Xbox 360">Xbox 360</option>
+                </select>
+            <label for="Gênero">Gênero</label>
+                    <input type="checkbox" name="genero" value="Ação">Ação</input>
+                    <input type="checkbox" name="genero" value="Aventura">Aventura</input>
+                    <input type="checkbox" name="genero" value="Estratégia">Estratégia</input>
+                    <input type="checkbox" name="genero" value="RPG">RPG</input>
+                    <input type="checkbox" name="genero" value="Esporte">Esporte</input>
+                    <input type="checkbox" name="genero" value="Corrida">Corrida</input>
+                    <input type="checkbox" name="genero" value="Simulação">Simulação</input>
+                    <input type="checkbox" name="genero" value="Quebra-cabeça">Quebra-cabeça</input>
+                    <input type="checkbox" name="genero" value="Ritmo">Ritmo</input>
+                    <input type="checkbox" name="genero" value="Terror">Terror</input>
+                    <input type="checkbox" name="genero" value="Outros">Outros</input>
+            <label for="Condição">Condição do jogo</label>
+                <select name="condicao" required>
+                    <option value="Novo">Novo</option>
+                    <option value="Usado">Usado</option>
+                    <option value="Novo">Lacrado</option>
+                </select>
+            <label for="Descrição do produto">Descrição do produto</label>
+                <textarea  name="descricao" type="text" placeholder="Descreva o seu jogo" maxlength="1500" required></textarea>
+        <input type="submit" value="Salvar"/>        
+    </form>            
+    <form action="/jogos/upload" method="POST" enctype="multipart/form-data">
+            <label for="Fotos"><h3>Envie as fotos do seu jogo (no máximo 5)</h3></label>
+            <input type="file" name="foto"/>
+        <input type="submit" value="Enviar foto"/>
+    </form>
     <footer>
         <%- include('footer.ejs') %>
     </footer>
