@@ -53,13 +53,17 @@
                 <textarea  name="descricao" type="text" placeholder="Descreva o seu jogo" maxlength="1500" required></textarea>
         <input type="submit" value="Salvar"/>        
     </form>            
-    <form action="/jogos/upload" method="POST" enctype="multipart/form-data">
-            <label for="Fotos"><h3>Envie as fotos do seu jogo (no máximo 5)</h3></label>
-            <input type="file" name="foto"/>
-        <input type="submit" value="Enviar foto"/>
+    <form action="/jogos/multiupload" method="POST" enctype="multipart/form-data">
+        <label for="Fotos"><h3>Envie as demais fotos do seu jogo (no máximo 5)</h3></label>
+        <input type="file" name="fotos"/>
+        <input type="file" name="fotos"/>
+        <input type="file" name="fotos"/>
+        <input type="file" name="fotos"/>
+        <input type="file" name="fotos"/>
+    <input type="submit" value="Enviar foto"/>
     </form>
     <footer>
         <%- include('footer.ejs') %>
     </footer>
 </body>
-</html>
+</html> 
