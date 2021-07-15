@@ -1,12 +1,92 @@
 * {
     box-sizing: border-box;
 }
-
 @font-face {
     font-family: OpenSans;
     src: url("../Fonts/OpenSans-Regular.ttf");
 }
-
-body {
+.bodycj {
     font-family: OpenSans;
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.maincj{
+    flex-grow: 1;
+}
+.formcj{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputscj{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.inputscj input{
+    margin-bottom: 1vh;
+    height: 5vh;
+}
+.selectcj{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.selectcj select{
+    height: 5vh;
+    width: 85%;
+}
+.subselect1{
+    width: 50%;
+    text-align: left;
+}
+.subselect2{
+    width: 50%;
+    text-align: right;
+}
+.subselect2 p{
+    text-align: left;
+    padding-left: 15%;
+}
+.textcj{
+    resize: none;
+    width: 50%;
+    height: 30vh;
+}
+.descricaocj{
+    text-align: left;
+    width: 50%;
+    margin-bottom: 1.5vh;
+}
+.checkboxcj{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5vh;
+    width: 50%;
+}
+.checkboxcj p{
+    margin: 3px;
+    padding-left: 15px;
+}
+.inputfilescj{
+    width: 50%;
+}
+.buttoncj{
+    background-color: #F8B000;
+    border-radius: 5px;
+    border: #F8B000;
+    color: white;
+    height: 6vh;
+    width: 18vw;
+    margin: 5vh;
+}
+.labelscj{
+    margin-bottom: 5px;
+}
+.pcj{
+    margin: 0px;
+    margin-bottom: 5px;
 }

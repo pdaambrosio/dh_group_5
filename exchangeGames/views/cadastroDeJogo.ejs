@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="/css/cadastroDeJogo.css">
     <title>Exchange Games | Cadastro de jogo</title>
 </head>
-<body>
+<body class="bodycj">
     <header>
         <%- include('header.ejs') %>
     </header>
+    <main class="maincj">
+    <form class="formcj" action="/jogos/multiupload" method="POST" enctype="multipart/form-data">
         <h2>Anuncie o seu jogo</h2>
-    <form action="/jogos/cadastroJogo" method="POST">
-            <label for="Nome do jogo">Nome do jogo</label>
+        <div class="inputscj">
+            <label class="labelscj" for="Nome do jogo">Nome do jogo</label>
                 <input name="nomeJogo" type="text" placeholder="Exemplo: Super Mario 3D World" maxlength="150" required/>
-            <label for="Tempo de uso">Tempo de uso</label>
+            <label class="labelscj" for="Tempo de uso">Tempo de uso</label>
                 <input name="tempoJogo" type="text" placeholder="Exemplo: 2 anos" maxlength="25" required/>
-            <label for="Ano do jogo"> Ano do jogo</label>
+            <label class="labelscj" for="Ano do jogo"> Ano do jogo</label>
                 <input name="anoJogo" type="text" placeholder="Exemplo: 2018" maxlength="4" required/>
-            <label for="Console">Console</label>
+        </div>
+        <div class="selectcj">
+            <div class= "subselect1">
+                <p class="pcj"><label for="Console">Console</label></p> 
                 <select name="console" required>
                     <option value="Switch">Switch</option>
                     <option value="Wii/Wii U">Wii/Wii U</option>
@@ -31,37 +36,42 @@
                     <option value="Xbox One">Xbox One</option>
                     <option value="Xbox 360">Xbox 360</option>
                 </select>
-            <label for="Gênero">Gênero</label>
-                    <input type="checkbox" name="genero" value="Ação">Ação</input>
-                    <input type="checkbox" name="genero" value="Aventura">Aventura</input>
-                    <input type="checkbox" name="genero" value="Estratégia">Estratégia</input>
-                    <input type="checkbox" name="genero" value="RPG">RPG</input>
-                    <input type="checkbox" name="genero" value="Esporte">Esporte</input>
-                    <input type="checkbox" name="genero" value="Corrida">Corrida</input>
-                    <input type="checkbox" name="genero" value="Simulação">Simulação</input>
-                    <input type="checkbox" name="genero" value="Quebra-cabeça">Quebra-cabeça</input>
-                    <input type="checkbox" name="genero" value="Ritmo">Ritmo</input>
-                    <input type="checkbox" name="genero" value="Terror">Terror</input>
-                    <input type="checkbox" name="genero" value="Outros">Outros</input>
-            <label for="Condição">Condição do jogo</label>
+            </div>
+            <div class= "subselect2">
+                <p class="pcj"><label for="Condição">Condição do jogo</label></p>
                 <select name="condicao" required>
                     <option value="Novo">Novo</option>
                     <option value="Usado">Usado</option>
                     <option value="Novo">Lacrado</option>
                 </select>
-            <label for="Descrição do produto">Descrição do produto</label>
-                <textarea  name="descricao" type="text" placeholder="Descreva o seu jogo" maxlength="1500" required></textarea>
-        <input type="submit" value="Salvar"/>        
-    </form>            
-    <form action="/jogos/multiupload" method="POST" enctype="multipart/form-data">
-        <label for="Fotos"><h3>Envie as demais fotos do seu jogo (no máximo 5)</h3></label>
-        <input type="file" name="fotos"/>
-        <input type="file" name="fotos"/>
-        <input type="file" name="fotos"/>
-        <input type="file" name="fotos"/>
-        <input type="file" name="fotos"/>
-    <input type="submit" value="Enviar foto"/>
+            </div>
+        </div>
+        <div class="checkboxcj"><label for="Gênero">Gênero:</label>
+                    <p><input type="checkbox" name="genero" value="Ação">Ação</input></p>
+                    <p><input type="checkbox" name="genero" value="Aventura">Aventura</input></p>
+                    <p><input type="checkbox" name="genero" value="Estratégia">Estratégia</input></p>
+                    <p><input type="checkbox" name="genero" value="RPG">RPG</input></p>
+                    <p><input type="checkbox" name="genero" value="Esporte">Esporte</input></p>
+                    <p><input type="checkbox" name="genero" value="Corrida">Corrida</input></p>
+                    <p><input type="checkbox" name="genero" value="Simulação">Simulação</input></p>
+                    <p><input type="checkbox" name="genero" value="Quebra-cabeça">Quebra-cabeça</input></p>
+                    <p><input type="checkbox" name="genero" value="Ritmo">Ritmo</input></p>
+                    <p><input type="checkbox" name="genero" value="Terror">Terror</input></p>
+                    <p><input type="checkbox" name="genero" value="Outros">Outros</input></p>
+        </div>
+            <label class="labelscj" class="descricaocj" for="Descrição do produto">Descrição do produto</label>
+                <textarea class="textcj" name="descricao" type="text" placeholder="Descreva o seu jogo" maxlength="1500" required></textarea>   
+        <h3>Envie as fotos do seu jogo</h3>
+    <div class="inputfilescj">
+        <input type="file" name="fotos" />
+        <input type="file" name="fotos" />
+        <input type="file" name="fotos" />
+        <input type="file" name="fotos" />
+        <input type="file" name="fotos" />
+    </div>
+    <input class="buttoncj" type="submit" value="Salvar"/>   
     </form>
+    </main>
     <footer>
         <%- include('footer.ejs') %>
     </footer>
