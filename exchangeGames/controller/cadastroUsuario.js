@@ -19,7 +19,7 @@ module.exports.registrarUsuario = async (req, res) => {
             alerta: 'As senhas não são iguais. Tente novamente.',
             mensagem: '',
             usuario: usuario
-        });
+        }); return
     };
 
     if (buscarCadastro(usuario.email)) {
@@ -27,7 +27,7 @@ module.exports.registrarUsuario = async (req, res) => {
             mensagem: 'Usuário já cadastrado.',
             alerta: '',
             usuario: usuario
-        });
+        }); return
     } else {
         const hash = await encriptarSenha(usuario.senha);
         const usuarios = lerCadastro();
