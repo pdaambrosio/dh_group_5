@@ -6,7 +6,8 @@ const { buscarCadastro } = require('../helpers/buscarCadastro');
 module.exports.cadastro = (req, res) => {
     res.render('cadastroUsuario', {
         mensagem: '',
-        alerta: ''
+        alerta: '',
+        usuario: ''
     });
 };
 
@@ -16,15 +17,17 @@ module.exports.registrarUsuario = async (req, res) => {
     if (usuario.senha != usuario.confirma_senha) {
         res.render('cadastroUsuario', {
             alerta: 'As senhas não são iguais. Tente novamente.',
-            mensagem: ''
-        });
+            mensagem: '',
+            usuario: usuario
+        }); return
     };
 
     if (buscarCadastro(usuario.email)) {
         res.render('cadastroUsuario', {
             mensagem: 'Usuário já cadastrado.',
-            alerta: ''
-        });
+            alerta: '',
+            usuario: usuario
+        }); return
     } else {
         const hash = await encriptarSenha(usuario.senha);
         const usuarios = lerCadastro();
@@ -38,5 +41,5 @@ module.exports.registrarUsuario = async (req, res) => {
         cadastrar(usuarios);
     }
 
-    res.redirect('/admin/login');
+    res.redirect('/users/login');
 };

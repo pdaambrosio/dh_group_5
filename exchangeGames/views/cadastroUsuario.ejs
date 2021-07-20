@@ -22,27 +22,27 @@
         <div class="form">
             <form action="/cadastro" method="POST">
                 <% if (mensagem) { %>
-                    <h3><%=mensagem%></h3>
+                    <h5><%=mensagem%></h5>
                 <%}%>
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required size="50">
+                <input type="text" id="nome" name="nome" value="<%= usuario ? usuario.nome : '' %> " placeholder="Digite seu nome" required size="50">
                 <label for="sobrenome">Sobrenome</label>
-                <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required size="50">
+                <input type="text" id="sobrenome" name="sobrenome" value="<%= usuario ? usuario.sobrenome : '' %>" placeholder="Digite seu sobrenome" required size="50">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required size="50">
+                <input type="email" id="email" name="email" value="<%= usuario ? usuario.email : '' %> " placeholder="Digite seu e-mail" required size="50">
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" placeholder="Senha" required size="50">
                 <label for="confirma_senha">Confirmação de Senha</label>
                 <input type="password" id="confirma_senha" name="confirma_senha" placeholder="Confirme sua senha" required size="50">
                 <% if (alerta) { %>
-                    <h3><%=alerta%></h3>
+                    <h5><%=alerta%></h5>
                 <%}%>
                 <div class="termos">
-                    <p><input name="notificacoes" type="checkbox" id="exchange" value="exchange" required><label for="exchange">Sim, desejo receber outras notificações do site através de e-mail.</label></p>
-                    <p><input name="notificacoes" type="checkbox" id="parceiros" value="parceiros" required><label for="parceiros">Sim, também desejo receber e-mails de parceiros do site.</label></p>
+                    <p><input name="exchange" type="checkbox" id="exchange" value="exchange" required <%= usuario && usuario.exchange ? 'checked' : '' %> ><label for="exchange">Sim, desejo receber outras notificações do site através de e-mail.</label></p>
+                    <p><input name="parceiros" type="checkbox" id="parceiros" value="parceiros" required <%= usuario && usuario.parceiros ? 'checked' : '' %>><label for="parceiros">Sim, também desejo receber e-mails de parceiros do site.</label></p>
                 </div>
                 <div class="aviso">
-                    <p>Ao clicar em confirmar você afirma que concorda com os Termos de Uso e Política de Privacidade do Exchange Games.</p>
+                    <p>Ao clicar em confirmar você afirma que concorda com os <a href="/home/politica">Termos de Uso e Política de Privacidade</a> do Exchange Games.</p>
                 </div>
                     <div class="concluir">
                         <button type="submit">Concluir Inscrição</button>
