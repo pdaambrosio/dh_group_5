@@ -41,5 +41,5 @@ module.exports.registrarUsuario = async (req, res) => {
         cadastrar(usuarios);
     }
 
-    res.redirect('/admin/login');
+    res.redirect('/users/login');
 };
