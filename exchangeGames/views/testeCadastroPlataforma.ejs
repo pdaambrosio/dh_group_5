@@ -1,0 +1,28 @@
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Games | Plataforma</title>
+</head>
+<body>
+    <header>
+        <%- include('header.ejs') %>
+    </header>
+    <main>
+    <form action="/admin/cadastroPlataforma" method="POST">
+        <h2>Cadastre a plataforma</h2>
+        <div>
+            <label>Console</label>
+                <input name="console" type="text" placeholder="PS3, PS5, Xbox One..." maxlength="150" required/>
+            <label>Marca</label>
+                <input name="marca" type="text" placeholder="Nintendo, Xbox, PlayStation..." maxlength="150" required/>
+    <input type="submit" value="Salvar"/>   
+    </form>
+    </main>
+    <footer>
+        <%- include('footer.ejs') %>
+    </footer>
+</body>
+</html> 
