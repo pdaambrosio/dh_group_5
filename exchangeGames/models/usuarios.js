@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
     usuario_bloqueado: DataTypes.TINYINT(1),
     role: DataTypes.ENUM('USER','ADMIN'),
     lista_favoritos_id: DataTypes.BIGINT,
-    avatar: DataTypes.STRING(45)
+    avatar: DataTypes.STRING(250)
     }, {
         sequelize,
         modelName: 'Usuarios',
