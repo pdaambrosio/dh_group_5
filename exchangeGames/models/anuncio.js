@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   Anuncio.init({
     id: {
-        type: DataTypes.INTERGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
@@ -24,15 +24,15 @@ module.exports = (sequelize, DataTypes) => {
     nome: DataTypes.STRING(150),
     tempo_uso: DataTypes.STRING(45),
     condicao: DataTypes.ENUM('NOVO', 'USADO', 'LACRADO'),
-    chat_id: DataTypes.INTERGER,
+    chat_id: DataTypes.INTEGER,
     usuarios_id: {
-        type: DataTypes.INTERGER,
+        type: DataTypes.INTEGER,
         references:{
             model:'usuarios'
         }
     },
     plataformas_id: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             references:{
                 model:'plataformas'
             }

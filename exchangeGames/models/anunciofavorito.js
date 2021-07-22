@@ -14,7 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   AnuncioFavorito.init({
-    id: DataTypes.BIGINT,
+    id: {
+      type: DataTypes.BIGINT,
+      primaryKey: true,
+      autoIncrement: true
+    },
     lista_anuncio_id: DataTypes.BIGINT,
     anuncios_id: DataTypes.BIGINT,
     createdAt: DataTypes.DATE,
