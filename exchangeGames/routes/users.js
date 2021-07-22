@@ -9,7 +9,7 @@ router.get('/login', usersController.paginaLogin);
 router.post('/login', usersController.fazLogin);
 
 
-module.exports = router;
+module.exports = router; 
 
 
 

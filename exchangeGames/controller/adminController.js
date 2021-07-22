@@ -1,6 +1,8 @@
 const fs = require('fs');
 let arrayUsersAdmin = require('../model/usersAdmin.json')
 const bcrypt = require('bcrypt')
+const db = require('../models')
+const {Op} = require('sequelize')
 
 
 function salvandoUserAdmin(arrayUsersAdmin) {
@@ -56,3 +58,29 @@ module.exports.login = function(req, res) {
     }
     
   }
+
+
+  /*Testes*/
+
+  module.exports.cadastroGenero = function(req, res) {
+    res.render('testeCadastroGenero');
+  }
+
+  module.exports.cadastrandoGenero = async function (req, res) {
+    await db.Genero.create({
+      nome: req.body.genero
+    })
+    res.redirect('/admin/cadastroGenero');
+  }
+
+  module.exports.cadastroPlataforma = function(req, res) {
+    res.render('testeCadastroPlataforma');
+  }
+
+  module.exports.cadastrandoPlataforma = async function (req, res) {
+    await db.Plataforma.create({
+      console: req.body.console,
+      marca: req.body.marca
+    })
+    res.redirect('/admin/cadastroPlataforma');
+  } 

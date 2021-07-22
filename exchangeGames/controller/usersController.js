@@ -34,4 +34,4 @@ module.exports.paginaLogin = (req, res, next) => {
 async function validarSenha(senha, hash) {
   return await bcrypt.compare(senha, hash)
 }
-
+ 
