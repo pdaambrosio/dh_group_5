@@ -1,12 +1,19 @@
 'use strict';
-const { Model, DataTypes } = require('sequelize');
-
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Usuarios extends Model {
+  class usuarios extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
     static associate(models) {
+      // define association here
     }
   };
-  Usuarios.init({
+  usuarios.init({
     id: {
         type: DataTypes.BIGINT,
         primaryKey: true,
@@ -35,9 +42,10 @@ module.exports = (sequelize, DataTypes) => {
     role: DataTypes.ENUM('USER','ADMIN'),
     lista_favoritos_id: DataTypes.BIGINT,
     avatar: DataTypes.STRING(250)
-    }, {
-        sequelize,
-        modelName: 'Usuarios',
-    });
-    return Usuarios;
+  }, {
+    sequelize,
+    modelName: 'usuarios',
+    timestamps: false
+  });
+  return usuarios;
 };
