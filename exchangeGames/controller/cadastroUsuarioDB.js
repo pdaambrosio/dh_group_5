@@ -2,7 +2,6 @@ const { cadastrarUsuarioBD } = require('../helpers/cadastrarUsuarioBD');
 const { buscarUsuarioEmail } = require('../helpers/buscarUsuarioEmail');
 const { encriptarSenha } = require('../helpers/encriptarSenha');
 const { buscarUsuarioNickname } = require('../helpers/buscarUsuarioNickname');
-const models = require('../models');
 
 module.exports.cadastro = (req, res) => {
     res.render('cadastroUsuario', {
@@ -14,6 +13,8 @@ module.exports.cadastro = (req, res) => {
 
 module.exports.registrarUsuario = async (req, res) => {
     const usuario = req.body;
+    const consultarEmail = await buscarUsuarioEmail(usuario.email);
+    const consultarNickname = await buscarUsuarioNickname(usuario.nickname);
 
     if (usuario.senha != usuario.confirma_senha) {
         res.render('cadastroUsuario', {
@@ -23,21 +24,19 @@ module.exports.registrarUsuario = async (req, res) => {
         }); return
     };
     
-    if (await buscarUsuarioEmail(usuario.email)) {
+    if (consultarEmail) {
         res.render('cadastroUsuario', {
             mensagem: 'Usuário já cadastrado.',
             alerta: '',
             usuario: usuario
         }); return
-    }
-    if (await buscarUsuarioNickname(usuario.nickname)) {
+    } if (consultarNickname) {
         res.render('cadastroUsuario', {
             mensagem: 'O Nickname já existe, tente outro.',
             alerta: '',
             usuario: usuario
         }); return
-    }
-    else {
+    } else {
         const encriptar = await encriptarSenha(usuario.senha);
         cadastrarUsuarioBD({
             nome: usuario.nome,

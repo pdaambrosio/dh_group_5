@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt')
-const { buscarUsuarioEmail } = require('../helpers/buscarUsuarioEmail');
+const { consultaSenha } = require('../helpers/validarSenha');
 const { validarSenha } = require('../helpers/validarSenha');
 
 module.exports.suaConta = (req, res) => {
@@ -8,15 +8,15 @@ module.exports.suaConta = (req, res) => {
 
 module.exports.fazLogin = async (req, res) => {
   const login = req.body;
-  const usuarios = await buscarUsuarioEmail(login.email);
+  const senhaBanco = await consultaSenha(login.email);
 
-  if (!usuarios) {
-    res.send(404)
+  if (!senhaBanco) {
+    res.redirect('/users/login')
   } else {
-    if (await validarSenha(login.senha, usuarios.hash)) {
+    if (await validarSenha(login.senha, senhaBanco)) {
       res.redirect('/users/suaConta')
     } else {
-      res.send(400)
+      res.redirect('/users/login')
     }
   }
 }
