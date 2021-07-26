@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt')
 const { buscarUsuarioEmail } = require('../helpers/buscarUsuarioEmail');
+const { validarSenha } = require('../helpers/validarSenha');
 
 module.exports.suaConta = (req, res) => {
   res.render('suaConta');
@@ -23,8 +24,3 @@ module.exports.fazLogin = async (req, res) => {
 module.exports.paginaLogin = (req, res, next) => {
   res.render('login');
 }
-
-async function validarSenha(senha, hash) {
-  return await bcrypt.compare(senha, hash)
-}
- 

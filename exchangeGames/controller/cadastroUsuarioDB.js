@@ -1,6 +1,6 @@
 const { cadastrarUsuarioBD } = require('../helpers/cadastrarUsuarioBD');
 const { buscarUsuarioEmail } = require('../helpers/buscarUsuarioEmail');
-const { encriptarSenha } = require('../helpers/hash');
+const { encriptarSenha } = require('../helpers/encriptarSenha');
 const { buscarUsuarioNickname } = require('../helpers/buscarUsuarioNickname');
 const models = require('../models');
 
@@ -38,13 +38,13 @@ module.exports.registrarUsuario = async (req, res) => {
         }); return
     }
     else {
-        const hash = await encriptarSenha(usuario.senha);
+        const encriptar = await encriptarSenha(usuario.senha);
         cadastrarUsuarioBD({
             nome: usuario.nome,
             sobrenome: usuario.sobrenome,
             email: usuario.email,
             nickname: usuario.nickname,
-            senha: hash,
+            senha: encriptar,
             notificacao_site: 0,
             notificacao_parceiros: 0,
             usuario_bloqueado: 0,
