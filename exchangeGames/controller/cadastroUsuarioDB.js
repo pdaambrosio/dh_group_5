@@ -1,29 +1,50 @@
-const { cadastrar } = require('../helpers/cadastrar');
-const { lerCadastro } = require('../helpers/lerCadastro');
+const { cadastrarUsuarioBD } = require('../helpers/cadastrarUsuarioBD');
+const { buscarUsuarioEmail } = require('../helpers/buscarUsuarioEmail');
 const { encriptarSenha } = require('../helpers/hash');
-const { buscarCadastro } = require('../helpers/buscarCadastro');
+const { buscarUsuarioNickname } = require('../helpers/buscarUsuarioNickname');
 const models = require('../models');
 
-// module.exports.cadastrar = async function () {
-//     await models.Usuarios.create({
-//         nome
-//     })
-// };
-
-async function casdatro() {
-    await models.usuarios.create({
-        nome: 'Paulo Daniel',
-        sobrenome: 'Ambrosio',
-        email: 'pda.ambrosio@gmail.com',
-        nickname: 'pdajgs',
-        senha: 'adasdas1234',
-        notificacao_site: 0,
-        notificacao_parceiros: 0,
-        usuario_bloqueado: 0,
-        role: 'USER',
-        lista_favoritos_id: 10,
-        avatar: 'foto'
-    })
+module.exports.cadastro = (req, res) => {
+    res.render('cadastroUsuario', {
+        mensagem: '',
+        alerta: '',
+        usuario: ''
+    });
 };
 
-casdatro()
+module.exports.registrarUsuario = async (req, res) => {
+    const usuario = req.body;
+
+
+    if (usuario.senha != usuario.confirma_senha) {
+        res.render('cadastroUsuario', {
+            alerta: 'As senhas não são iguais. Tente novamente.',
+            mensagem: '',
+            usuario: usuario
+        }); return
+    };
+    
+    if (await buscarUsuarioEmail(usuario.email)) {
+        res.render('cadastroUsuario', {
+            mensagem: 'Usuário já cadastrado.',
+            alerta: '',
+            usuario: usuario
+        }); return
+    } else {
+        const hash = await encriptarSenha(usuario.senha);
+        cadastrarUsuarioBD({
+            nome: usuario.nome,
+            sobrenome: usuario.sobrenome,
+            email: usuario.email,
+            nickname: usuario.nickname,
+            senha: hash,
+            notificacao_site: 0,
+            notificacao_parceiros: 0,
+            usuario_bloqueado: 0,
+            role: 'USER',
+            lista_favoritos_id: 10,
+            avatar: 'foto'
+        });
+    }
+    res.redirect('/users/login');
+};
