@@ -1,19 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const usersController = require('../controller/usersController')
+const loginUsuario = require('../controller/loginUsuario')
 
-router.get('/suaConta', usersController.suaConta);
+router.get('/suaConta', loginUsuario.suaConta);
 
-router.get('/login', usersController.paginaLogin);
+router.get('/login', loginUsuario.paginaLogin);
 
-router.post('/login', usersController.fazLogin);
-
+router.post('/login', loginUsuario.fazLogin);
 
 module.exports = router; 
-
-
-
-
-
-
-

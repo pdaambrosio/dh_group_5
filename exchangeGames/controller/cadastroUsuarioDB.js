@@ -15,7 +15,6 @@ module.exports.cadastro = (req, res) => {
 module.exports.registrarUsuario = async (req, res) => {
     const usuario = req.body;
 
-
     if (usuario.senha != usuario.confirma_senha) {
         res.render('cadastroUsuario', {
             alerta: 'As senhas não são iguais. Tente novamente.',
