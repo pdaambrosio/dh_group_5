@@ -30,7 +30,15 @@ module.exports.registrarUsuario = async (req, res) => {
             alerta: '',
             usuario: usuario
         }); return
-    } else {
+    }
+    if (await buscarUsuarioNickname(usuario.nickname)) {
+        res.render('cadastroUsuario', {
+            mensagem: 'O Nickname já existe, tente outro.',
+            alerta: '',
+            usuario: usuario
+        }); return
+    }
+    else {
         const hash = await encriptarSenha(usuario.senha);
         cadastrarUsuarioBD({
             nome: usuario.nome,
