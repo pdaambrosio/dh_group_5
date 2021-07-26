@@ -1,3 +1,4 @@
+const e = require('express');
 const models = require('../models'); 
 
 module.exports.buscarUsuarioNickname = async function (nickname) { 
