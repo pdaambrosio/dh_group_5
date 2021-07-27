@@ -13,7 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Anuncio, {
       foreignKey: 'anuncios_id',
       targetKey: 'id'
-      })
+      }),
+      this.belongsTo(models.Genero, {
+        foreignKey: 'generos_id',
+        targetKey: 'id'
+        })
     }
   };
   Anuncio_Genero.init({
