@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Anuncio_Genero, {
         foreignKey: 'anuncios_id', 
         targetKey: 'id'
+      }),
+      this.belongsTo(models.Plataforma, {
+        foreignKey: 'plataformas_id',
+        targetKey: 'id'
       })
     }
   };
