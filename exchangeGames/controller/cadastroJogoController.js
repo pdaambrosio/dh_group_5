@@ -10,12 +10,6 @@ function salvandoJogo(arrayDeJogos) {
     );
 }
 
-module.exports.cadastroJogo = async (req, res) => {
-    const genero = await db.Genero.findAll()
-    console.log(genero[0].toJSON())
-    res.render('cadastroDeJogo', {genero:genero})
-}
-
 module.exports.cadastrandoJogo = (req, res) => {
   const novoJogo = {
       id: ++arrayDeJogos[0],
@@ -26,4 +20,13 @@ module.exports.cadastrandoJogo = (req, res) => {
   salvandoJogo(arrayDeJogos)
   res.redirect('/jogos')
 }
+
+module.exports.cadastroJogo = async (req, res) => {
+  const genero = await db.Genero.findAll()
+  const plataforma = await db.Plataforma.findAll()
+  console.log(genero[0].toJSON())
+  console.log(plataforma[0].toJSON())
+  res.render('cadastroDeJogo', {genero, plataforma})
+}
+
 

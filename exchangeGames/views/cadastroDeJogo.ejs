@@ -26,15 +26,9 @@
             <div class= "subselect1">
                 <p class="pcj"><label for="Console">Console</label></p> 
                 <select name="console" required>
-                    <option value="Switch">Switch</option>
-                    <option value="Wii/Wii U">Wii/Wii U</option>
-                    <option value="3DS/DS">3DS/DS</option>
-                    <option value="PlayStation 5">PlayStation 5</option>
-                    <option value="PlayStation 4">PlayStation 4</option>
-                    <option value="PlayStation 3">PlayStation 3</option>
-                    <option value="Xbox Series X">Xbox Series X</option>
-                    <option value="Xbox One">Xbox One</option>
-                    <option value="Xbox 360">Xbox 360</option>
+                    <% for(let i = 0; i < plataforma.length; i++){ %> 
+                        <option name="plataforma" value="<%=plataforma[i].id %>"><%=plataforma[i].console %></option>              
+                    <% } %>    
                 </select>
             </div>
             <div class= "subselect2">
