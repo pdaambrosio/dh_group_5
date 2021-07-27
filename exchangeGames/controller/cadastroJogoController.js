@@ -10,14 +10,25 @@ function salvandoJogo(arrayDeJogos) {
     );
 }
 
-module.exports.cadastrandoJogo = (req, res) => {
-  const novoJogo = {
-      id: ++arrayDeJogos[0],
-      ...req.body
+module.exports.cadastrandoJogo = async (req, res) => {
+  const generos = [].concat(req.body.genero)
+  console.log(req.body)
+  const novoJogo = await db.Anuncio.create({
+  ano: req.body.anoJogo,
+  descricao: req.body.descricao,
+  nome: req.body.nomeJogo,
+  tempo_uso: req.body.tempoJogo,
+  usuarios_id: 1,
+  plataformas_id: req.body.console,
+  condicao: req.body.condicao,
+  chat_id: 1
+  })
+  for(let i = 0; i < generos.length; i++){
+    await db.Anuncio_Genero.create({
+    anuncios_id: novoJogo.id,
+    generos_id: generos[i]
+    })
   }
-  arrayDeJogos[0] = novoJogo.id
-  arrayDeJogos.push(novoJogo)    
-  salvandoJogo(arrayDeJogos)
   res.redirect('/jogos')
 }
 

@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
       unique: true 
     }, 
     senha:{ 
-        type: DataTypes.STRING(45), 
+        type: DataTypes.STRING(150), 
         allowNull: false        
     }, 
     notificacao_site: DataTypes.TINYINT(1), 

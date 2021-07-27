@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         autoIncrement: true
     },
-    ano: DataTypes.NUMBER,
+    ano: DataTypes.STRING(10),
     descricao: DataTypes.STRING(1500),
     nome: DataTypes.STRING(150),
     tempo_uso: DataTypes.STRING(45),
