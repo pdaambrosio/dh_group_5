@@ -17,6 +17,9 @@
                     <div class="column is-5-tablet is-4-desktop is-3-widescreen">
                         <form action="/users/login" method="POST" class="box">
                             <div class="field">
+                                <% if (mensagem) { %>
+                                    <h5><%=mensagem%></h5>
+                                <%}%>
                                 <label class="label" for="email">Email</label>
                                 <div class="control has-icons-left">
                                     <input class="input" type="email" name="email" placeholder="email@gmail.com"

@@ -5,7 +5,12 @@ module.exports.consultaSenha = async function (email) {
     const usuario = await models.usuarios.findOne({ 
         where: { email }, 
     });
-    return usuario.senha
+    try {
+        return usuario.senha
+    }
+    catch (e) {
+        return ' '
+    }
 };
 
 module.exports.validarSenha = async function (senha, hash) {
