@@ -19,6 +19,24 @@ module.exports.cadastrandoJogo = async (req, res) => {
       const plataforma = await db.Plataforma.findAll()
       return res.render('cadastroDeJogo', {genero, plataforma, erro})
   }
+  if(req.body.anoJogo > 4){
+      const erro = "Formato do ano aceito: AAAA"
+      const genero = await db.Genero.findAll()
+      const plataforma = await db.Plataforma.findAll()
+      return res.render('cadastroDeJogo', {genero, plataforma, erro})
+  }
+  if(req.body.descricao> 1500){
+    const erro = "Descrição maior que 1500 caracteres!"
+    const genero = await db.Genero.findAll()
+    const plataforma = await db.Plataforma.findAll()
+    return res.render('cadastroDeJogo', {genero, plataforma, erro})
+  }
+  if(req.body.tempoJogo> 25){
+    const erro = "Tempo de uso maior que 25 caracteres!"
+    const genero = await db.Genero.findAll()
+    const plataforma = await db.Plataforma.findAll()
+    return res.render('cadastroDeJogo', {genero, plataforma, erro})
+  }
   const novoJogo = await db.Anuncio.create({
   ano: req.body.anoJogo,
   descricao: req.body.descricao,
