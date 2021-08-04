@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const cadastroController = require('../controller/cadastroUsuarioDB');
+const cadastroController = require('../controller/cadastroUsuarioController');
 
 router.get('/', cadastroController.cadastro);
 router.post('/', cadastroController.registrarUsuario);
