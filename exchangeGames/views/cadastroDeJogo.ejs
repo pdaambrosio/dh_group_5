@@ -13,7 +13,8 @@
     </header>
     <main class="maincj">
     <form class="formcj" action="/jogos/cadastroJogo" method="POST" >
-        <h2>Anuncie o seu jogo </h2>       
+        <h2>Anuncie o seu jogo </h2> 
+        <div class="errocj"><%= erro %></div>
         <div class="inputscj">
             <label class="labelscj" for="Nome do jogo">Nome do jogo</label>
                 <input name="nomeJogo" type="text" placeholder="Exemplo: Super Mario 3D World" maxlength="150" required/>
@@ -46,7 +47,7 @@
             <% } %>      
         </div>
             <label class="labelscj" class="descricaocj" for="Descrição do produto">Descrição do produto</label>
-                <textarea class="textcj" name="descricao" type="text" placeholder="Descreva o seu jogo" maxlength="1500" required></textarea>   
+                <textarea class="textcj" name="descricao" type="text" placeholder="Descreva o seu jogo" maxlength="1500" required></textarea>
         <h3>Envie as fotos do seu jogo</h3>
     <div class="inputfilescj">
         <input type="file" name="fotos" />
