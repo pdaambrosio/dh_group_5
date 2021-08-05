@@ -3,39 +3,62 @@ let arrayDeJogos = require('../model/jogos.json')
 const db = require('../models')
 const {Op} = require('sequelize')
 
-function salvandoJogo(arrayDeJogos) {
+/*function salvandoJogo(arrayDeJogos) {
     fs.writeFileSync(
       './model/jogos.json',
       JSON.stringify(arrayDeJogos)
     );
+}*/
+
+async function buscarGeneroPlataforma () {
+  const genero = await db.Genero.findAll()
+  const plataforma = await db.Plataforma.findAll()
+  return [genero, plataforma]
 }
 
 module.exports.cadastrandoJogo = async (req, res) => {
   const generos = [].concat(req.body.genero)
   console.log(req.body)
-  if(req.body.nomeJogo > 150){
-      const erro = "Nome maior que 150 caracteres!"
-      const genero = await db.Genero.findAll()
-      const plataforma = await db.Plataforma.findAll()
-      return res.render('cadastroDeJogo', {genero, plataforma, erro})
+  if(!req.body.nomeJogo){
+    const erro = "Insira um nome para o jogo."
+    const retorno = await buscarGeneroPlataforma()
+    return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
-  if(req.body.anoJogo > 4){
+  if(req.body.nomeJogo.length > 150){
+    console.log(req.body.nomeJogo + " " + req.body.nomeJogo.length)
+      const erro = "Nome maior que 150 caracteres."
+      const retorno = await buscarGeneroPlataforma()
+      return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
+  }
+  if(!req.body.anoJogo){
+    const erro = "Insira o ano do jogo."
+    const retorno = await buscarGeneroPlataforma()
+    return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
+  }
+  if(req.body.anoJogo.length > 4){
       const erro = "Formato do ano aceito: AAAA"
-      const genero = await db.Genero.findAll()
-      const plataforma = await db.Plataforma.findAll()
-      return res.render('cadastroDeJogo', {genero, plataforma, erro})
+      const retorno = await buscarGeneroPlataforma()
+      return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
-  if(req.body.descricao> 1500){
-    const erro = "Descrição maior que 1500 caracteres!"
-    const genero = await db.Genero.findAll()
-    const plataforma = await db.Plataforma.findAll()
-    return res.render('cadastroDeJogo', {genero, plataforma, erro})
+  if(!req.body.descricao){
+    const erro = "Insira uma descrição para o anúncio."
+    const retorno = await buscarGeneroPlataforma()
+    return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
-  if(req.body.tempoJogo> 25){
-    const erro = "Tempo de uso maior que 25 caracteres!"
-    const genero = await db.Genero.findAll()
-    const plataforma = await db.Plataforma.findAll()
-    return res.render('cadastroDeJogo', {genero, plataforma, erro})
+  if(req.body.descricao.length > 1500){
+    const erro = "Descrição maior que 1500 caracteres."
+    const retorno = await buscarGeneroPlataforma()
+    return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
+  }
+  if(!req.body.tempoJogo){
+    const erro = "Insira o tempo de uso."
+    const retorno = await buscarGeneroPlataforma()
+    return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
+  }
+  if(req.body.tempoJogo.length > 25){
+    const erro = "Tempo de uso maior que 25 caracteres."
+    const retorno = await buscarGeneroPlataforma()
+    return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
   const novoJogo = await db.Anuncio.create({
   ano: req.body.anoJogo,
@@ -53,8 +76,6 @@ module.exports.cadastrandoJogo = async (req, res) => {
     generos_id: generos[i]
     })
   }
-
-
   res.redirect('/jogos')
 }
 
