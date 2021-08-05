@@ -3,13 +3,6 @@ let arrayDeJogos = require('../model/jogos.json')
 const db = require('../models')
 const {Op} = require('sequelize')
 
-/*function salvandoJogo(arrayDeJogos) {
-    fs.writeFileSync(
-      './model/jogos.json',
-      JSON.stringify(arrayDeJogos)
-    );
-}*/
-
 async function buscarGeneroPlataforma () {
   const genero = await db.Genero.findAll()
   const plataforma = await db.Plataforma.findAll()
