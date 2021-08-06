@@ -21,9 +21,6 @@
         </div>
         <div class="form">
             <form action="/cadastro" method="POST">
-                <% if (mensagem) { %>
-                    <h5><%=mensagem%></h5>
-                <%}%>
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" value="<%= usuario ? usuario.nome : '' %>" placeholder="Digite seu nome" required size="50">
                 <label for="sobrenome">Sobrenome</label>
@@ -37,7 +34,14 @@
                 <label for="confirma_senha">Confirmação de Senha</label>
                 <input type="password" id="confirma_senha" name="confirma_senha" placeholder="Confirme sua senha" required size="50">
                 <% if (alerta) { %>
-                    <h5><%=alerta%></h5>
+                    <p>
+                        <label style="color: red;"><%=alerta%></label>
+                    </p>
+                <%}%>
+                <% if (mensagem) { %>
+                    <p>
+                        <label style="color: red;"><%=mensagem%></label>
+                    </p>
                 <%}%>
                 <div class="termos">
                     <p><input name="exchange" type="checkbox" id="exchange" value="exchange" <%= usuario && usuario.exchange ? 'checked' : '' %> required>
