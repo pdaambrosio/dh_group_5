@@ -6,7 +6,7 @@ module.exports.suaConta = (req, res) => {
   res.render('suaConta');
 };
 
-module.exports.paginaLogin = (req, res, next) => {
+module.exports.paginaLogin = (req, res) => {
   res.render('login', {
     mensagem: ''
   });
