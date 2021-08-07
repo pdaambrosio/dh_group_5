@@ -12,7 +12,7 @@
         <%- include('header.ejs') %>
     </header>
     <main class="maincj">
-    <form class="formcj" action="/jogos/cadastroJogo" method="POST" >
+    <form class="formcj" action="/jogos/cadastroJogo" method="POST" enctype="multipart/form-data">
         <h2>Anuncie o seu jogo </h2> 
         <div class="errocj"><%= erro %></div>
         <div class="inputscj">
