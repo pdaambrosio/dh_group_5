@@ -5,9 +5,9 @@ const { buscarUsuarioNickname } = require('../helpers/buscarUsuarioNickname');
 
 module.exports.cadastro = (req, res) => {
     res.render('cadastroUsuario', {
-        mensagem: '',
-        alerta: '',
-        usuario: ''
+        mensagem: null,
+        alerta: null,
+        usuario: null
     });
 };
 
@@ -19,7 +19,7 @@ module.exports.registrarUsuario = async (req, res) => {
     if (usuario.senha != usuario.confirma_senha) {
         res.render('cadastroUsuario', {
             alerta: 'As senhas não são iguais. Tente novamente.',
-            mensagem: '',
+            mensagem: null,
             usuario: usuario
         }); return
     };
@@ -27,13 +27,13 @@ module.exports.registrarUsuario = async (req, res) => {
     if (consultarEmail) {
         res.render('cadastroUsuario', {
             mensagem: 'Usuário já cadastrado.',
-            alerta: '',
+            alerta: null,
             usuario: usuario
         }); return
     } else if (consultarNickname) {
         res.render('cadastroUsuario', {
             mensagem: 'O Nickname já existe, tente outro.',
-            alerta: '',
+            alerta: null,
             usuario: usuario
         }); return
     }
@@ -58,7 +58,7 @@ module.exports.registrarUsuario = async (req, res) => {
         if (err.name === 'SequelizeValidationError') {
             return res.render('cadastroUsuario', {
                 mensagem: err.errors.map(e => e.message),
-                alerta: '',
+                alerta: null,
                 usuario: usuario
             });
         }

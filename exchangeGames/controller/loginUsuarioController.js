@@ -8,7 +8,7 @@ module.exports.suaConta = (req, res) => {
 
 module.exports.paginaLogin = (req, res) => {
   res.render('login', {
-    mensagem: ''
+    mensagem: null
   });
 };
 
