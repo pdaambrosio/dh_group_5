@@ -1,8 +1,9 @@
 const express = require('express');
-const  dadosPessoais = require('../controller/dadosPessoaisController');
+const validaSessao = require ('../middlewares/validaSessao');
+const dadosPessoais = require('../controller/dadosPessoaisController');
 const router = express.Router();
 
-router.get('/', dadosPessoais.dadosPessoais)
-router.post('/',dadosPessoais.salvarDadosPessoais)
+router.get('/', validaSessao, dadosPessoais.dadosPessoais);
+router.post('/', validaSessao, dadosPessoais.salvarDadosPessoais);
 
 module.exports = router

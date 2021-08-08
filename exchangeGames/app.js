@@ -12,13 +12,12 @@ const homeRouter = require('./routes/home');
 const adminRouter = require('./routes/admin');
 const cadastroRouter = require('./routes/cadastro');
 const cadastroJogoRouter = require('./routes/cadastroJogo');
-const  dadosPessoaisRouter = require('./routes/dadosPessoais');
-const  favoritosRouter = require('./routes/favoritos');
+const dadosPessoaisRouter = require('./routes/dadosPessoais');
+const favoritosRouter = require('./routes/favoritos');
 const app = express();
 
-//Habilitar sessão no express
 app.use(session({
-    secret: 'tvyburutbn',
+    secret: '9Y50LmX^otAb',
     resave: false,
     saveUninitialized: false
 }))
@@ -40,7 +39,7 @@ app.use('/home', homeRouter);
 app.use('/admin', adminRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/jogos',cadastroJogoRouter);
-app.use('/dados-pessoais',dadosPessoaisRouter);
+app.use('/dados-pessoais', dadosPessoaisRouter);
 app.use('/favoritos', favoritosRouter);
 
 // catch 404 and forward to error handler
