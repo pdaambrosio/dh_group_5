@@ -22,19 +22,39 @@ module.exports = (sequelize, DataTypes) => {
     }, 
     nome:{ 
         type: DataTypes.STRING(150), 
-        allowNull: false        
+        allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "O campo Nome deve ser preenchido."
+          },
+        }      
     }, 
     sobrenome:{ 
         type: DataTypes.STRING(150), 
-        allowNull: false        
+        allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "O campo Sobrenome deve ser preenchido."
+          },
+        }      
     }, 
     email:{ 
         type: DataTypes.STRING(150), 
-        allowNull: false        
+        allowNull: false,
+        validate: {
+          isEmail: {
+            msg: "O campo Email deve conter um e-mail valido."
+          }
+        }         
     }, 
     nickname: { 
       type: DataTypes.STRING(150), 
-      unique: true 
+      unique: true,
+      validate: {
+        notEmpty: {
+          msg: "Você precisa criar um Nickname."
+        },
+      } 
     }, 
     senha:{ 
         type: DataTypes.STRING(150), 

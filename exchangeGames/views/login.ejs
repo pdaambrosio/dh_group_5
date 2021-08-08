@@ -17,9 +17,6 @@
                     <div class="column is-5-tablet is-4-desktop is-3-widescreen">
                         <form action="/users/login" method="POST" class="box">
                             <div class="field">
-                                <% if (mensagem) { %>
-                                    <h5><%=mensagem%></h5>
-                                <%}%>
                                 <label class="label" for="email">Email</label>
                                 <div class="control has-icons-left">
                                     <input class="input" type="email" name="email" placeholder="email@gmail.com"
@@ -38,6 +35,11 @@
                                     </span>
                                 </div>
                             </div>
+                            <% if (mensagem) { %>
+                                <p>
+                                    <label style="color: red;"><%=mensagem%></label>
+                                </p>
+                            <%}%>
                             <div class="field">
                                 <label for="" class="checkbox">
                                     <input type="checkbox">

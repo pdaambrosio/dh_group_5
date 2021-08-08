@@ -21,27 +21,33 @@
         </div>
         <div class="form">
             <form action="/cadastro" method="POST">
-                <% if (mensagem) { %>
-                    <h5><%=mensagem%></h5>
-                <%}%>
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" value="<%= usuario ? usuario.nome : '' %> " placeholder="Digite seu nome" required size="50">
+                <input type="text" id="nome" name="nome" value="<%= usuario ? usuario.nome : '' %>" placeholder="Digite seu nome" required size="50">
                 <label for="sobrenome">Sobrenome</label>
                 <input type="text" id="sobrenome" name="sobrenome" value="<%= usuario ? usuario.sobrenome : '' %>" placeholder="Digite seu sobrenome" required size="50">
                 <label for="nome">Nickname</label>
-                <input type="text" id="nickname" name="nickname" value="<%= usuario ? usuario.nickname : '' %> " placeholder="Digite seu nickname" required size="50">
+                <input type="text" id="nickname" name="nickname" value="<%= usuario ? usuario.nickname : '' %>" placeholder="Digite seu nickname" required size="50">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" value="<%= usuario ? usuario.email : '' %> " placeholder="Digite seu e-mail" required size="50">
+                <input type="email" id="email" name="email" value="<%= usuario ? usuario.email : '' %>" placeholder="Digite seu e-mail" required size="50">
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" placeholder="Senha" required size="50">
                 <label for="confirma_senha">Confirmação de Senha</label>
                 <input type="password" id="confirma_senha" name="confirma_senha" placeholder="Confirme sua senha" required size="50">
                 <% if (alerta) { %>
-                    <h5><%=alerta%></h5>
+                    <p>
+                        <label style="color: red;"><%=alerta%></label>
+                    </p>
+                <%}%>
+                <% if (mensagem) { %>
+                    <p>
+                        <label style="color: red;"><%=mensagem%></label>
+                    </p>
                 <%}%>
                 <div class="termos">
-                    <p><input name="exchange" type="checkbox" id="exchange" value="exchange" required <%= usuario && usuario.exchange ? 'checked' : '' %> ><label for="exchange">Sim, desejo receber outras notificações do site através de e-mail.</label></p>
-                    <p><input name="parceiros" type="checkbox" id="parceiros" value="parceiros" required <%= usuario && usuario.parceiros ? 'checked' : '' %>><label for="parceiros">Sim, também desejo receber e-mails de parceiros do site.</label></p>
+                    <p><input name="exchange" type="checkbox" id="exchange" value="exchange" <%= usuario && usuario.exchange ? 'checked' : '' %> required>
+                    <label for="exchange">Sim, desejo receber outras notificações do site através de e-mail.</label></p>
+                    <p><input name="parceiros" type="checkbox" id="parceiros" value="parceiros" <%= usuario && usuario.parceiros ? 'checked' : '' %> required>
+                    <label for="parceiros">Sim, também desejo receber e-mails de parceiros do site.</label></p>
                 </div>
                 <div class="aviso">
                     <p>Ao clicar em confirmar você afirma que concorda com os <a href="/home/politica">Termos de Uso e Política de Privacidade</a> do Exchange Games.</p>

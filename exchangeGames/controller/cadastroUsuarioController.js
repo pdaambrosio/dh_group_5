@@ -1,4 +1,4 @@
-const { cadastrarUsuarioBD } = require('../helpers/cadastrarUsuarioBD');
+const { cadastrarUsuario } = require('../helpers/cadastrarUsuario');
 const { buscarUsuarioEmail } = require('../helpers/buscarUsuarioEmail');
 const { encriptarSenha } = require('../helpers/encriptarSenha');
 const { buscarUsuarioNickname } = require('../helpers/buscarUsuarioNickname');
@@ -30,15 +30,17 @@ module.exports.registrarUsuario = async (req, res) => {
             alerta: '',
             usuario: usuario
         }); return
-    } if (consultarNickname) {
+    } else if (consultarNickname) {
         res.render('cadastroUsuario', {
             mensagem: 'O Nickname já existe, tente outro.',
             alerta: '',
             usuario: usuario
         }); return
-    } else {
+    }
+    
+    try {
         const encriptar = await encriptarSenha(usuario.senha);
-        cadastrarUsuarioBD({
+        await cadastrarUsuario({
             nome: usuario.nome,
             sobrenome: usuario.sobrenome,
             email: usuario.email,
@@ -51,6 +53,14 @@ module.exports.registrarUsuario = async (req, res) => {
             lista_favoritos_id: 10,
             avatar: 'foto'
         });
+        return res.redirect('/users/login');
+    } catch (err) {
+        if (err.name === 'SequelizeValidationError') {
+            return res.render('cadastroUsuario', {
+                mensagem: err.errors.map(e => e.message),
+                alerta: '',
+                usuario: usuario
+            });
+        }
     }
-    res.redirect('/users/login');
 };

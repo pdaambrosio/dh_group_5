@@ -1,5 +1,5 @@
 const models = require('../models'); 
 
-module.exports.cadastrarUsuarioBD = async function (dadosUsuario) { 
+module.exports.cadastrarUsuario = async function (dadosUsuario) { 
     const usuario = await models.usuarios.create(dadosUsuario); 
 };
