@@ -30,7 +30,8 @@ module.exports.fazLogin = async (req, res) => {
   };
 
   if (await validarSenha(login.senha, senhaBanco)) {
-      res.redirect('suaConta');
+    req.session.emailUsuario = consultarEmail;
+    res.redirect('suaConta');
   } else {
       res.render('login', {
         mensagem: 'Email ou senha invalidos.'
