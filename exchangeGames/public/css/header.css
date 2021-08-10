@@ -63,6 +63,7 @@ body, form, button, label, ::placeholder{
 .login-right {
     margin-right: 2%;
     align-self: center;
+    color: white;
 }
 
 .login-right a {
