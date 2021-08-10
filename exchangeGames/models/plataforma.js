@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
         targetKey: 'id'
       })
     }
-  };
+  }
   Plataforma.init({
     id: {
       type: DataTypes.BIGINT,

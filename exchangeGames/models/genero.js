@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
         targetKey: 'id'
       })
     }
-  };
+  }
   Genero.init({
     id: {
       type: DataTypes.BIGINT,

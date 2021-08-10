@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         targetKey: 'id'
         })
     }
-  };
+  }
   Anuncio_Genero.init({
     id: {
       type: DataTypes.BIGINT,
