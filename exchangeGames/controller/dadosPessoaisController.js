@@ -1,7 +1,10 @@
-module.exports.dadosPessoais = (req, res) => {
-    res.render('dadosPessoais')
+const { buscarDadosPessoais } = require('../helpers/buscarDadosPessoais');
+
+module.exports.dadosPessoais = async (req, res) => {
+    const dadosPessoais = await buscarDadosPessoais(req.session.usuarioEmail);
+    res.render('dadosPessoais', {dadosPessoais});
 }
 
 module.exports.salvarDadosPessoais = (req, res) => {
-     console.log(req.body)
+     console.log(req.body);
 }

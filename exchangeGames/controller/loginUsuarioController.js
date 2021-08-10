@@ -32,7 +32,7 @@ module.exports.fazLogin = async (req, res) => {
   };
 
   if (await validarSenha(login.senha, senhaBanco)) {
-    req.session.usuarioNickname = buscarDados[0].nickname;
+    req.session.usuarioEmail= buscarDados[0].email;
     res.redirect('suaConta');
   } else {
       res.render('login', {

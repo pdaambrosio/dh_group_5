@@ -1,22 +1,51 @@
-p{
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../Fonts/OpenSans-Regular.ttf");
+}
+
+body, form, button, label, ::placeholder{
+    font-family: OpenSans;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
     font-size: 30px;
     text-align: center;
 }
- .input2{
-    height:4vh;
-    width:25%;
 
-     
- }
- .div{
-     height:5vh;
-     width:70%;
-     margin:0 auto;
-     margin-top:30px ;
-     
+.form {
+    width: 50%;
+    padding: 5%;
+}
 
- }
- .button{
+.form form {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+.form input {
+    margin-bottom: 1%;
+}
+
+.div {
+     height:3vh;
+     width:100%;
+     margin: auto;
+}
+
+.button {
     width:15%;
     height: 6vh;
     background-color: #F8B000;
@@ -25,18 +54,5 @@ p{
     color: white;
     margin-top: 4vh;
     cursor: pointer;
-    margin-left:40% ;
-    
- }
- footer{
-     margin-top: 40px;
- }
- .nome{
-       margin-left: 20%;
- }
- .telefone{
-     margin-left:15% ;
- }
- .numeEsta{
-     margin-left:17% ;
- }
+    margin-left:40%;
+}
