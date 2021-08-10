@@ -17,7 +17,7 @@ module.exports.fazLogin = async (req, res) => {
   const login = req.body;
   const senhaBanco = await consultaSenha(login.email);
   const consultarEmail = await buscarUsuarioEmail(login.email);
-  const buscarEmail = await buscarDadosPessoais(login.email);
+  const buscarDados = await buscarDadosPessoais(login.email);
 
   if (!consultarEmail) {
     res.render('login', {
@@ -32,7 +32,7 @@ module.exports.fazLogin = async (req, res) => {
   };
 
   if (await validarSenha(login.senha, senhaBanco)) {
-    req.session.usuarioNickname = buscarEmail[0].nickname;
+    req.session.usuarioNickname = buscarDados[0].nickname;
     res.redirect('suaConta');
   } else {
       res.render('login', {
