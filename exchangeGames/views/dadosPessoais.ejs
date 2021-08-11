@@ -14,26 +14,31 @@
     <section class="lista">
         <p>Dados pessoais</p><hr>
     </section>
-    <form action="/dados-pessoais" method="POST">
-        <div class="div">
-            <label for="nome">Nome</label>
-            <input name="nome" type="text" value=<%= dadosPessoais[0].nome %> autocomplete="off" >
-            <label for="sobrenome">Sobrenome</label>
-            <input name="sobrenome" type="text" value=<%= dadosPessoais[0].sobrenome %> autocomplete="off" required>
-        </div>
-        <div class="div">
-            <label for="email">Email</label>
-            <input name="email" type="text" value=<%= dadosPessoais[0].email %> autocomplete="off" required>
-            <label for="nickname">Nickname</label>
-            <input name="nickname" type="text" value=<%= dadosPessoais[0].nickname %> autocomplete="off" required>
-        </div>
-        <div class="div">
-            <label for="senha">Alterar Senha</label>
-            <input name="senha" type="text" placeholder="senha" autocomplete="off" required>
-            <input name="senha" type="text" placeholder="senha" autocomplete="off" required>
-        </div>
-        <input class="button"  type="submit" value="Salvar" >  
-    </form>
+        <form action="/dados-pessoais" method="POST">
+            <div class="div">
+                <label for="nome">Nome</label>
+                <input name="nome" id="nome" type="text" required value=<%= dadosUsuario[0].nome %>>
+                <label for="sobrenome">Sobrenome</label>
+                <input name="sobrenome" id="sobrenome" type="text" required value=<%= dadosUsuario[0].sobrenome %>>
+            </div>
+            <div class="div">
+                <label for="email">Email</label>
+                <input name="email" id="email" type="text" required value=<%= dadosUsuario[0].email %>>
+                <label for="nickname">Nickname</label>
+                <input name="nickname" id="nickname" type="text" required value=<%= dadosUsuario[0].nickname %>>
+            </div>
+            <div class="div">
+                <label for="senha">Alterar Senha</label>
+                <input name="senha" id="senha" type="text" placeholder="senha" required>
+                <input name="confirmaSenha" id="confirmaSenha" type="text" placeholder="senha" required>
+            </div>
+            <% if (mensagem) { %>
+                <p>
+                    <label style="color: red;"><%=mensagem%></label>
+                </p>
+            <%}%>
+            <input class="button" type="submit" value="Salvar" >  
+        </form>
     <footer>
         <%- include('footer.ejs') %>
     </footer>
