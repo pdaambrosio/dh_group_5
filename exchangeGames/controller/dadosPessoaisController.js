@@ -38,9 +38,10 @@ module.exports.salvarDadosPessoais = async (req, res) => {
             lista_favoritos_id: 10,
             avatar: 'foto'
         });
+        const dadosUsuario = await buscarDadosPessoais(req.session.usuarioEmail);
         return res.render('dadosPessoais', {
             dadosUsuario,
-            mensagem: null
+            mensagem: 'Informações atualizadas com sucesso.'
         });
     } catch (err) {
         if (err.name === 'SequelizeValidationError') {
