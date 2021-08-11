@@ -1,50 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/dadosPessoais.css">
     <title>Document</title>
 </head>
-<body id="bodyDadosPessoais">
+<body>
     <header>
         <%- include('header.ejs') %>
     </header>
     <section class="lista">
         <p>Dados pessoais</p><hr>
     </section>
-    <form action="/dados-pessoais" method="POST">
-  <div class="div">
-      <label class="" for="">Nome</label>
-      <label class="nome" for=""> Sobrenome</label>
-      <label class="telefone" for=""> Telefone</label><br>
-      <input class=" input2 " name="nome" type="text" placeholder="Nome" autocomplete="off" >
-      <input class=" input2 " name="sobrenome" type="text" placeholder="Sobrenome"  autocomplete="off" required>
-      <input class=" input2 " name="telefone" type="text" placeholder="Telefone"  autocomplete="off" required >
-    </div>
-      <div class="div">
-          <label for="">Email</label>
-          <label class="nome" for="">CPF/CNPJ</label><br>
-      <input class=" input2 " name="email" type="text" placeholder="Email" autocomplete="off" required>
-      <input class=" input2 " name="cpf" type="text" placeholder="CPF/CNPJ" autocomplete="off" required>
-  </div>
-      <div class="div">
-          <label for="">Endereço</label>
-          <label class="numeEsta" for="">Número</label>
-          <label class="numeEsta" for="">Estado</label><br>
-      <input class=" input2 " name="endereco" type="text" placeholder="Endereço" autocomplete="off" required>
-      <input class=" input2 " name="numero" type="text" placeholder="Número" autocomplete="off" required>
-      <input class=" input2 " name="estado" type="text" placeholder="Estado" autocomplete="off" required>
-    </div>
-    <div class="div">
-        <label for="">Cidade</label>
-        <label class="nome" for="">CEP</label><br>
-      <input class=" input2 " name="cidade" type="text" placeholder="Cidade" autocomplete="off" required>
-      <input class=" input2 " name="cep" type="text" placeholder="CEP" autocomplete="off"required >
-    </div>
-    <input class="button"  type="submit" value="Salvar" >  
-  </form>
+    <% if (mensagem) { %>
+        <section class="mensagem">
+            <p><%=mensagem%></p>
+        </section>
+    <%}%>
+        <form action="/dados-pessoais" method="POST">
+            <div class="div">
+                <label for="nome">Nome</label>
+                <input name="nome" id="nome" type="text" required value=<%= dadosUsuario[0].nome %>>
+                <label for="sobrenome">Sobrenome</label>
+                <input name="sobrenome" id="sobrenome" type="text" required value=<%= dadosUsuario[0].sobrenome %>>
+            </div>
+            <div class="div">
+                <label for="email">Email</label>
+                <input name="email" id="email" type="text" required value=<%= dadosUsuario[0].email %>>
+                <label for="nickname">Nickname</label>
+                <input name="nickname" id="nickname" type="text" required value=<%= dadosUsuario[0].nickname %>>
+            </div>
+            <div class="div">
+                <label for="senha">Alterar Senha</label>
+                <input name="senha" id="senha" type="text" placeholder="senha" required>
+                <input name="confirmaSenha" id="confirmaSenha" type="text" placeholder="senha" required>
+            </div>
+            <input class="button" type="submit" value="Salvar" >  
+        </form>
     <footer>
         <%- include('footer.ejs') %>
     </footer>

@@ -1,6 +1,7 @@
 const { consultaSenha } = require('../helpers/validarSenha');
 const { validarSenha } = require('../helpers/validarSenha');
 const { buscarUsuarioEmail } = require('../helpers/buscarUsuarioEmail');
+const { buscarDadosPessoais } = require('../helpers/buscarDadosPessoais');
 
 module.exports.suaConta = (req, res) => {
   res.render('suaConta');
@@ -16,6 +17,7 @@ module.exports.fazLogin = async (req, res) => {
   const login = req.body;
   const senhaBanco = await consultaSenha(login.email);
   const consultarEmail = await buscarUsuarioEmail(login.email);
+  const buscarDados = await buscarDadosPessoais(login.email);
 
   if (!consultarEmail) {
     res.render('login', {
@@ -30,7 +32,7 @@ module.exports.fazLogin = async (req, res) => {
   };
 
   if (await validarSenha(login.senha, senhaBanco)) {
-    req.session.emailUsuario = consultarEmail;
+    req.session.usuarioEmail= buscarDados[0].email;
     res.redirect('suaConta');
   } else {
       res.render('login', {
