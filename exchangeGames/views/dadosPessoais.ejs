@@ -15,9 +15,9 @@
         <p>Dados pessoais</p><hr>
     </section>
     <% if (mensagem) { %>
-        <p>
-            <label style="color: red;"><%=mensagem%></label>
-        </p>
+        <section class="mensagem">
+            <p><%=mensagem%></p>
+        </section>
     <%}%>
         <form action="/dados-pessoais" method="POST">
             <div class="div">

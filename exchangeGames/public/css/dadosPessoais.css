@@ -23,6 +23,10 @@ body {
     font-size: 30px;
     text-align: center;
 }
+.mensagem {
+    color: red;
+    text-align: center;
+}
 
 form {
     display: flex;
