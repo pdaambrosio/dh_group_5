@@ -19,34 +19,24 @@ body {
     flex-direction: column;
 }
 
-p {
+.lista {
     font-size: 30px;
     text-align: center;
 }
 
-.form {
-    width: 50%;
-    padding: 5%;
-}
-
-.form form {
+form {
     display: flex;
     flex-direction: column;
     padding: 3%;
-}
-
-.form input {
-    margin-bottom: 1%;
+    margin: auto;
 }
 
 .div {
-     height:3vh;
-     width:100%;
-     margin: auto;
+     height: 3vh;
 }
 
 .button {
-    width:15%;
+    width: 15%;
     height: 6vh;
     background-color: #F8B000;
     border-radius: 5px;
@@ -54,5 +44,5 @@ p {
     color: white;
     margin-top: 4vh;
     cursor: pointer;
-    margin-left:40%;
+    margin-left: 40%;
 }

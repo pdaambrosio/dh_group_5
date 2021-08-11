@@ -14,6 +14,11 @@
     <section class="lista">
         <p>Dados pessoais</p><hr>
     </section>
+    <% if (mensagem) { %>
+        <p>
+            <label style="color: red;"><%=mensagem%></label>
+        </p>
+    <%}%>
         <form action="/dados-pessoais" method="POST">
             <div class="div">
                 <label for="nome">Nome</label>
@@ -32,11 +37,6 @@
                 <input name="senha" id="senha" type="text" placeholder="senha" required>
                 <input name="confirmaSenha" id="confirmaSenha" type="text" placeholder="senha" required>
             </div>
-            <% if (mensagem) { %>
-                <p>
-                    <label style="color: red;"><%=mensagem%></label>
-                </p>
-            <%}%>
             <input class="button" type="submit" value="Salvar" >  
         </form>
     <footer>
