@@ -1,10 +1,9 @@
 const { encriptarSenha } = require('../helpers/encriptarSenha');
-const { cadastrarUsuario } = require('../helpers/cadastrarUsuario');
 const { atualizarUsuario } = require('../helpers/cadastrarUsuario');
-const { buscarDadosPessoais } = require('../helpers/buscarDadosPessoais');
+const { buscarDadosPessoaisId } = require('../helpers/buscarDadosPessoais');
 
 module.exports.dadosPessoais = async (req, res) => {
-    const dadosUsuario = await buscarDadosPessoais(req.session.usuarioEmail);
+    const dadosUsuario = await buscarDadosPessoaisId(req.session.usuario);
     res.render('dadosPessoais', {
         dadosUsuario,
         mensagem: null
@@ -14,7 +13,7 @@ module.exports.dadosPessoais = async (req, res) => {
 module.exports.salvarDadosPessoais = async (req, res) => {
      const usuario = req.body;
      const encriptar = await encriptarSenha(usuario.senha);
-     const dadosUsuario = await buscarDadosPessoais(req.session.usuarioEmail);
+     const dadosUsuario = await buscarDadosPessoaisId(req.session.usuario);
 
      if (usuario.senha != usuario.confirmaSenha) {
         res.render('dadosPessoais', {
@@ -24,23 +23,18 @@ module.exports.salvarDadosPessoais = async (req, res) => {
     };
 
     try {
-        await atualizarUsuario(usuario, req.session.usuarioEmail);
-        // await cadastrarUsuario({
-        //     nome: usuario.nome,
-        //     sobrenome: usuario.sobrenome,
-        //     email: usuario.email,
-        //     nickname: usuario.nickname,
-        //     senha: encriptar,
-        //     notificacao_site: 0,
-        //     notificacao_parceiros: 0,
-        //     usuario_bloqueado: 0,
-        //     role: 'USER',
-        //     lista_favoritos_id: 10,
-        //     avatar: 'foto'
-        // });
-        const dadosUsuario = await buscarDadosPessoais(req.session.usuarioEmail);
+        await atualizarUsuario(
+            {
+                nome: usuario.nome,
+                sobrenome: usuario.sobrenome,
+                email: usuario.email,
+                senha: encriptar
+            },
+            req.session.usuario
+        );
+        const dadosUsuario = await buscarDadosPessoaisId(req.session.usuario);
         req.session.save(function () {
-            req.session.usuarioEmail = dadosUsuario.email;
+            req.session.usuario = dadosUsuario.email;
 
             return res.render('dadosPessoais', {
                 dadosUsuario,
