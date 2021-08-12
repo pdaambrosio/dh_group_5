@@ -24,24 +24,28 @@ module.exports.salvarDadosPessoais = async (req, res) => {
     };
 
     try {
-        await atualizarUsuario(req.session.usuarioEmail);
-        await cadastrarUsuario({
-            nome: usuario.nome,
-            sobrenome: usuario.sobrenome,
-            email: usuario.email,
-            nickname: usuario.nickname,
-            senha: encriptar,
-            notificacao_site: 0,
-            notificacao_parceiros: 0,
-            usuario_bloqueado: 0,
-            role: 'USER',
-            lista_favoritos_id: 10,
-            avatar: 'foto'
-        });
+        await atualizarUsuario(usuario, req.session.usuarioEmail);
+        // await cadastrarUsuario({
+        //     nome: usuario.nome,
+        //     sobrenome: usuario.sobrenome,
+        //     email: usuario.email,
+        //     nickname: usuario.nickname,
+        //     senha: encriptar,
+        //     notificacao_site: 0,
+        //     notificacao_parceiros: 0,
+        //     usuario_bloqueado: 0,
+        //     role: 'USER',
+        //     lista_favoritos_id: 10,
+        //     avatar: 'foto'
+        // });
         const dadosUsuario = await buscarDadosPessoais(req.session.usuarioEmail);
-        return res.render('dadosPessoais', {
-            dadosUsuario,
-            mensagem: 'Informações atualizadas com sucesso.'
+        req.session.save(function () {
+            req.session.usuarioEmail = dadosUsuario.email;
+
+            return res.render('dadosPessoais', {
+                dadosUsuario,
+                mensagem: 'Informações atualizadas com sucesso.'
+            });
         });
     } catch (err) {
         if (err.name === 'SequelizeValidationError') {
