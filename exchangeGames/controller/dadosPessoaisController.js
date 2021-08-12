@@ -1,5 +1,5 @@
 const { encriptarSenha } = require('../helpers/encriptarSenha');
-const { atualizarUsuario } = require('../helpers/cadastrarUsuario');
+const { atualizarDadosPessoais } = require('../helpers/atualizarDadosPessoais');
 const { buscarDadosPessoaisId } = require('../helpers/buscarDadosPessoais');
 
 module.exports.dadosPessoais = async (req, res) => {
@@ -23,7 +23,7 @@ module.exports.salvarDadosPessoais = async (req, res) => {
     };
 
     try {
-        await atualizarUsuario(
+        await atualizarDadosPessoais(
             {
                 nome: usuario.nome,
                 sobrenome: usuario.sobrenome,
