@@ -33,13 +33,9 @@ module.exports.salvarDadosPessoais = async (req, res) => {
             req.session.usuario
         );
         const dadosUsuario = await buscarDadosPessoaisId(req.session.usuario);
-        req.session.save(function () {
-            req.session.usuario = dadosUsuario.email;
-
-            return res.render('dadosPessoais', {
-                dadosUsuario,
-                mensagem: 'Informações atualizadas com sucesso.'
-            });
+        return res.render('dadosPessoais', {
+            dadosUsuario,
+            mensagem: 'Informações atualizadas com sucesso.'
         });
     } catch (err) {
         if (err.name === 'SequelizeValidationError') {
