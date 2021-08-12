@@ -49,12 +49,22 @@
             <label class="labelscj" class="descricaocj" for="Descrição do produto">Descrição do produto</label>
                 <textarea class="textcj" name="descricao" type="text" placeholder="Descreva o seu jogo" maxlength="1500" required></textarea>
         <h3>Envie as fotos do seu jogo</h3>
-    <div class="inputfilescj">
-        <input type="file" name="fotos" />
-        <input type="file" name="fotos" />
-        <input type="file" name="fotos" />
-        <input type="file" name="fotos" />
-        <input type="file" name="fotos" />
+    <div class="imgscj">
+        <div class="forcj">
+        <% for(let i = 0; i < 5; i++){ %> 
+        <div id="imgPreview<%=i%>"></div>
+        <% } %>
+        </div>
+        <input type="file" accept="image/*" id="foto0" name="fotos" />
+        <label for="choose-file">Foto Principal</label>
+        <input type="file" accept="image/*" id="foto1" name="fotos" />
+        <label for="fotos">Foto</label>
+        <input type="file" accept="image/*" id="foto2" name="fotos" />
+        <label for="fotos">Foto</label>
+        <input type="file" accept="image/*" id="foto3" name="fotos" />
+        <label for="fotos">Foto</label>
+        <input type="file" accept="image/*" id="foto4" name="fotos" />
+        <label for="fotos">Foto</label>
     </div>
     <input class="buttoncj" type="submit" value="Salvar"/>   
     </form>
@@ -63,4 +73,31 @@
         <%- include('footer.ejs') %>
     </footer>
 </body>
+<script>
+    for(let i = 0; i < 5; i++){
+        let fotos = "foto" + i
+        let previews = "imgPreview" + i
+        console.log(i)
+        const chooseFile = document.getElementById(fotos);
+        console.log(chooseFile)
+        const imgPreview = document.getElementById(previews);
+
+        chooseFile.addEventListener("change", function () {
+            getImgData();
+        });
+
+        function getImgData() {
+            const files = chooseFile.files[0];
+            console.log(chooseFile.files[0])
+            if (files) {
+                const fileReader = new FileReader();
+                fileReader.readAsDataURL(files);
+                fileReader.addEventListener("load", function () {
+                    imgPreview.style.display = "block";
+                    imgPreview.innerHTML = '<img src="' + this.result + '" />';
+                });    
+            }
+        }
+    }
+</script>
 </html> 
