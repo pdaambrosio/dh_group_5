@@ -4,7 +4,9 @@ const { buscarUsuarioEmail } = require('../helpers/buscarUsuarioEmail');
 const { buscarDadosPessoaisEmail } = require('../helpers/buscarDadosPessoais');
 
 module.exports.suaConta = (req, res) => {
-  res.render('suaConta');
+  res.render('suaConta', {
+    usuarioLogado: req.session.nickname
+  });
 };
 
 module.exports.paginaLogin = (req, res) => {
@@ -33,6 +35,7 @@ module.exports.fazLogin = async (req, res) => {
 
   if (await validarSenha(login.senha, senhaBanco)) {
     req.session.usuario = buscarDados[0].id;
+    req.session.nickname = buscarDados[0].nickname;
     res.redirect('suaConta');
   } else {
       res.render('login', {

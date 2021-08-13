@@ -5,6 +5,7 @@ const { buscarUsuarioNickname } = require('../helpers/buscarUsuarioNickname');
 
 module.exports.cadastro = (req, res) => {
     res.render('cadastroUsuario', {
+        usuarioLogado: req.session.nickname,
         mensagem: null,
         alerta: null,
         usuario: null
@@ -18,6 +19,7 @@ module.exports.registrarUsuario = async (req, res) => {
 
     if (usuario.senha != usuario.confirmaSenha) {
         res.render('cadastroUsuario', {
+            usuarioLogado: req.session.nickname,
             alerta: 'As senhas não são iguais. Tente novamente.',
             mensagem: null,
             usuario: usuario
@@ -26,12 +28,14 @@ module.exports.registrarUsuario = async (req, res) => {
     
     if (consultarEmail) {
         res.render('cadastroUsuario', {
+            usuarioLogado: req.session.nickname,
             mensagem: 'Usuário já cadastrado.',
             alerta: null,
             usuario: usuario
         }); return
     } else if (consultarNickname) {
         res.render('cadastroUsuario', {
+            usuarioLogado: req.session.nickname,
             mensagem: 'O Nickname já existe, tente outro.',
             alerta: null,
             usuario: usuario
