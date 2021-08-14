@@ -26,11 +26,11 @@ module.exports.login = function(req, res) {
   }
 
 
-  module.exports.painel = function(req, res) {
+module.exports.painel = function(req, res) {
     res.render('painel-admin');
   }
 
-  module.exports.cadastrandoUserAdmin = (req, res) => {
+module.exports.cadastrandoUserAdmin = (req, res) => {
     const novoUser = {
         id: ++arrayUsersAdmin[0],
         ...req.body
@@ -59,11 +59,8 @@ module.exports.login = function(req, res) {
     
   }
 
-
-  /*Testes*/
-
   module.exports.cadastroGenero = function(req, res) {
-    res.render('testeCadastroGenero');
+    res.render('cadastroGenero');
   }
 
   module.exports.cadastrandoGenero = async function (req, res) {
@@ -74,7 +71,7 @@ module.exports.login = function(req, res) {
   }
 
   module.exports.cadastroPlataforma = function(req, res) {
-    res.render('testeCadastroPlataforma');
+    res.render('cadastroPlataforma');
   }
 
   module.exports.cadastrandoPlataforma = async function (req, res) {

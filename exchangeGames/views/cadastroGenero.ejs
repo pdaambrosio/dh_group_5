@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Games | Cadastro Gênero</title>
+    <link rel="stylesheet" href="/css/painel-admin.css">
+</head>
+<body class="body-admin flex">
+<header>
+    <%- include('header-admin.ejs') %>
+</header>
+<div class="flex aside-main-admin">
+<aside class="menu-admin">
+    <%- include('menu-admin.ejs') %>
+</aside>
+<main class="conteudo-admin">
+    <form class="cadastrandoGenero" action="/admin/cadastroGenero" method="POST">
+        <h2>Cadastrar novo gênero</h2>
+        <div>
+            <label for="Nome do gênero">Gênero</label>
+                <input name="genero" type="text" placeholder="Ação, aventura, RPG..." maxlength="150" required/>
+    <input type="submit" value="Salvar"/>   
+    </form>
+</main>
+</div>
+</body>
+</html>  

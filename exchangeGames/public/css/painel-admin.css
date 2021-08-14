@@ -28,33 +28,3 @@ html{
 }
 .aside-main-admin{
     flex-grow: 1;
-}
-#cadastrar-admin{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-#button-cadastrar{
-    width: 20%;
-    height: 6vh;
-    background-color: #F8B000;
-    border-radius: 5px;
-    border: #F8B000;
-    color: white;
-    margin-top: 4vh;
-    cursor: pointer;
-    align-self: center;
-}
-#email{
-    width: 30%;
-    height: 4vh;
-}
-#password{
-    width: 30%;
-    height: 4vh;
-}
-#nome{
-    width: 30%;
-    height: 4vh;
-} 
