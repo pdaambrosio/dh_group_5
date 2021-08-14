@@ -28,7 +28,7 @@ module.exports.cadastrandoJogo = async (req, res) => {
     const retorno = await buscarGeneroPlataforma()
     return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
-  if(req.body.anoJogo.length > 4){
+  if(req.body.anoJogo.length != 4){
       const erro = "Formato do ano aceito: AAAA"
       const retorno = await buscarGeneroPlataforma()
       return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
