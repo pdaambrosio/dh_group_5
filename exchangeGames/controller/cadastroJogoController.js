@@ -11,48 +11,54 @@ async function buscarGeneroPlataforma () {
 
 module.exports.cadastrandoJogo = async (req, res) => {
   const generos = [].concat(req.body.genero)
-  console.log(req.body)
+  //console.log(req.body)
   if(!req.body.nomeJogo){
     const erro = "Insira um nome para o jogo."
     const retorno = await buscarGeneroPlataforma()
     return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
   if(req.body.nomeJogo.length > 150){
-    console.log(req.body.nomeJogo + " " + req.body.nomeJogo.length)
-      const erro = "Nome maior que 150 caracteres."
+    //console.log(req.body.nomeJogo + " " + req.body.nomeJogo.length)
+      const erro = "Atenção: Nome maior que 150 caracteres."
       const retorno = await buscarGeneroPlataforma()
       return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
   if(!req.body.anoJogo){
-    const erro = "Insira o ano do jogo."
+    const erro = "Atenção: Insira o ano do jogo."
     const retorno = await buscarGeneroPlataforma()
     return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
   if(req.body.anoJogo.length != 4){
-      const erro = "Formato do ano aceito: AAAA"
+      const erro = "Atenção: Formato do ano aceito: AAAA"
       const retorno = await buscarGeneroPlataforma()
       return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
   if(!req.body.descricao){
-    const erro = "Insira uma descrição para o anúncio."
+    const erro = "Atenção: Insira uma descrição para o anúncio."
     const retorno = await buscarGeneroPlataforma()
     return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
   if(req.body.descricao.length > 1500){
-    const erro = "Descrição maior que 1500 caracteres."
+    const erro = "Atenção: Descrição maior que 1500 caracteres."
     const retorno = await buscarGeneroPlataforma()
     return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
   if(!req.body.tempoJogo){
-    const erro = "Insira o tempo de uso."
+    const erro = "Atenção: Insira o tempo de uso."
     const retorno = await buscarGeneroPlataforma()
     return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
   if(req.body.tempoJogo.length > 25){
-    const erro = "Tempo de uso maior que 25 caracteres."
+    const erro = "Atenção: Tempo de uso maior que 25 caracteres."
     const retorno = await buscarGeneroPlataforma()
     return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
+  if(!req.files.filename){
+    const erro = "Atenção: Envie ao menos uma foto do seu jogo."
+    const retorno = await buscarGeneroPlataforma()
+    return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
+  }
+  console.log(req.files)
   const novoJogo = await db.Anuncio.create({
   ano: req.body.anoJogo,
   descricao: req.body.descricao,
