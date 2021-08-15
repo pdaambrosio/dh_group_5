@@ -53,13 +53,14 @@ module.exports.cadastrandoJogo = async (req, res) => {
     const retorno = await buscarGeneroPlataforma()
     return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
-  if(!req.files.filename){
+    //console.log(req.files[0])
+  if(!req.files[0].filename){
     const erro = "Atenção: Envie ao menos uma foto do seu jogo."
     const retorno = await buscarGeneroPlataforma()
     return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro})
   }
-  console.log(req.files)
-  const novoJogo = await db.Anuncio.create({
+  
+  const novoAnuncio = await db.Anuncio.create({
   ano: req.body.anoJogo,
   descricao: req.body.descricao,
   nome: req.body.nomeJogo,
@@ -71,8 +72,15 @@ module.exports.cadastrandoJogo = async (req, res) => {
   })
   for(let i = 0; i < generos.length; i++){
     await db.Anuncio_Genero.create({
-    anuncios_id: novoJogo.id,
+    anuncios_id: novoAnuncio.id,
     generos_id: generos[i]
+    })
+  }
+  for(let i = 0; i < req.files.length; i++){
+    await db.Imagem.create({
+    anuncios_id: novoAnuncio.id,
+    foto_principal: i == 0 ? 1 : 0,
+    caminho: req.files[i].filename
     })
   }
   res.redirect('/jogos')
