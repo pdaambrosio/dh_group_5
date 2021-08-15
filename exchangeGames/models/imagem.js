@@ -14,13 +14,22 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Imagem.init({
-    id: DataTypes.NUMBER,
-    anuncios_id: DataTypes.NUMBER,
-    foto_principal: DataTypes.NUMBER,
-    caminho: DataTypes.STRING
+    id: {
+      type: DataTypes.BIGINT,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    anuncios_id: {
+      type: DataTypes.BIGINT,
+      references:{
+          model:'anuncios'
+      }
+  },
+    foto_principal: DataTypes.TINYINT(1),
+    caminho: DataTypes.STRING(250)
   }, {
     sequelize,
     modelName: 'Imagem',
   });
   return Imagem;
-};
+}; 
