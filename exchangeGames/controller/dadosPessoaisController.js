@@ -6,6 +6,7 @@ module.exports.dadosPessoais = async (req, res) => {
     const dadosUsuario = await buscarDadosPessoaisId(req.session.usuario);
     res.render('dadosPessoais', {
         dadosUsuario,
+        usuarioLogado: req.session.nickname,
         mensagem: null
     });
 }
@@ -18,6 +19,7 @@ module.exports.salvarDadosPessoais = async (req, res) => {
      if (usuario.senha != usuario.confirmaSenha) {
         res.render('dadosPessoais', {
             dadosUsuario,
+            usuarioLogado: req.session.nickname,
             mensagem: 'As senhas não são iguais. Tente novamente.'
         }); return
     };
@@ -28,13 +30,17 @@ module.exports.salvarDadosPessoais = async (req, res) => {
                 nome: usuario.nome,
                 sobrenome: usuario.sobrenome,
                 email: usuario.email,
+                nickname: usuario.nickname,
                 senha: encriptar
             },
             req.session.usuario
         );
         const dadosUsuario = await buscarDadosPessoaisId(req.session.usuario);
+        req.session.nickname = dadosUsuario[0].nickname;
+        console.log(dadosUsuario);
         return res.render('dadosPessoais', {
             dadosUsuario,
+            usuarioLogado: req.session.nickname,
             mensagem: 'Informações atualizadas com sucesso.'
         });
     } catch (err) {

@@ -11,34 +11,32 @@
     <header>
         <%- include('header.ejs') %>
     </header>
-    <section class="lista">
-        <p>Dados pessoais</p><hr>
-    </section>
-    <% if (mensagem) { %>
-        <section class="mensagem">
-            <p><%=mensagem%></p>
+    <main>
+        <section class="lista">
+            <p>Dados pessoais</p><hr>
         </section>
-    <%}%>
-        <form action="/dados-pessoais" method="POST">
-            <div class="div">
+        <% if (mensagem) { %>
+            <section class="mensagem">
+                <p><%=mensagem%></p>
+            </section>
+        <%}%>
+        <div class="form">
+            <form action="/dados-pessoais" method="POST">
                 <label for="nome">Nome</label>
                 <input name="nome" id="nome" type="text" required value=<%= dadosUsuario[0].nome %>>
                 <label for="sobrenome">Sobrenome</label>
                 <input name="sobrenome" id="sobrenome" type="text" required value=<%= dadosUsuario[0].sobrenome %>>
-            </div>
-            <div class="div">
                 <label for="email">Email</label>
                 <input name="email" id="email" type="text" required value=<%= dadosUsuario[0].email %>>
                 <label for="nickname">Nickname</label>
                 <input name="nickname" id="nickname" type="text" required value=<%= dadosUsuario[0].nickname %>>
-            </div>
-            <div class="div">
                 <label for="senha">Alterar Senha</label>
                 <input name="senha" id="senha" type="text" placeholder="senha" required>
                 <input name="confirmaSenha" id="confirmaSenha" type="text" placeholder="senha" required>
-            </div>
-            <input class="button" type="submit" value="Salvar" >  
-        </form>
+                <input class="button" type="submit" value="Salvar" >  
+            </form>
+        </div>
+    </main>
     <footer>
         <%- include('footer.ejs') %>
     </footer>

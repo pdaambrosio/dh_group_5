@@ -22,13 +22,16 @@ function verificarSenha(senha, hash){
 }
 
 module.exports.login = function(req, res) {
-    res.render('login-admin');
+    res.render('login-admin', {
+      usuarioLogado: req.session.nickname
+    });
   }
-
 
 module.exports.painel = function(req, res) {
-    res.render('painel-admin');
-  }
+    res.render('painel-admin', {
+      usuarioLogado: req.session.nickname
+    });
+}
 
 module.exports.cadastrandoUserAdmin = (req, res) => {
     const novoUser = {
@@ -39,10 +42,12 @@ module.exports.cadastrandoUserAdmin = (req, res) => {
     arrayUsersAdmin[0] = novoUser.id
     arrayUsersAdmin.push(novoUser)    
     salvandoUserAdmin(arrayUsersAdmin)
-    res.redirect('/admin/painel')
+    res.redirect('/admin/painel', {
+      usuarioLogado: req.session.nickname
+    })
   }
 
-  module.exports.logando = function(req, res) {
+module.exports.logando = function(req, res) {
     const userLogando = {
         ...req.body
     }
@@ -51,33 +56,45 @@ module.exports.cadastrandoUserAdmin = (req, res) => {
     {
         req.session.adminAutenticado = true,
         req.session.userAdminId = userSelecionado[0].id
-        res.redirect('/admin/painel');
+        res.redirect('/admin/painel', {
+          usuarioLogado: req.session.nickname
+        });
     }
     else{
-        res.render('login-admin');
+        res.render('login-admin', {
+          usuarioLogado: req.session.nickname
+        });
     }
     
   }
 
-  module.exports.cadastroGenero = function(req, res) {
-    res.render('cadastroGenero');
-  }
+module.exports.cadastroGenero = function(req, res) {
+    res.render('cadastroGenero', {
+      usuarioLogado: req.session.nickname
+    });
+}
 
-  module.exports.cadastrandoGenero = async function (req, res) {
+module.exports.cadastrandoGenero = async function (req, res) {
     await db.Genero.create({
       nome: req.body.genero
     })
-    res.redirect('/admin/cadastroGenero');
+    res.redirect('/admin/cadastroGenero', {
+      usuarioLogado: req.session.nickname
+    });
   }
 
-  module.exports.cadastroPlataforma = function(req, res) {
-    res.render('cadastroPlataforma');
-  }
+module.exports.cadastroPlataforma = function(req, res) {
+    res.render('cadastroPlataforma', {
+      usuarioLogado: req.session.nickname
+    });
+}
 
-  module.exports.cadastrandoPlataforma = async function (req, res) {
+module.exports.cadastrandoPlataforma = async function (req, res) {
     await db.Plataforma.create({
       console: req.body.console,
       marca: req.body.marca
     })
-    res.redirect('/admin/cadastroPlataforma');
+    res.redirect('/admin/cadastroPlataforma', {
+      usuarioLogado: req.session.nickname
+    });
   } 

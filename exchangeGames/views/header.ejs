@@ -12,8 +12,13 @@
                 <button class="botao-busca" type="submit">Pesquisar</button>
             </div>
             <div class="login-right">
-                <a href="/users/login">Login</a> |
-                <a href="/cadastro">Cadastro</a>
+                <% if (usuarioLogado) { %>
+                    <a href="/users/suaConta"><%= usuarioLogado %></a> |
+                    <a href="/home/logout">Sair</a>
+                <% } else { %>
+                    <a href="/users/login">Login</a> |
+                    <a href="/cadastro">Cadastro</a>
+                <% } %>
             </div>
         </div>
         <nav class="menuHeader">
