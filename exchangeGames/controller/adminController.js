@@ -27,14 +27,13 @@ module.exports.login = function(req, res) {
     });
   }
 
-
-  module.exports.painel = function(req, res) {
+module.exports.painel = function(req, res) {
     res.render('painel-admin', {
       usuarioLogado: req.session.nickname
     });
-  }
+}
 
-  module.exports.cadastrandoUserAdmin = (req, res) => {
+module.exports.cadastrandoUserAdmin = (req, res) => {
     const novoUser = {
         id: ++arrayUsersAdmin[0],
         ...req.body
@@ -48,7 +47,7 @@ module.exports.login = function(req, res) {
     })
   }
 
-  module.exports.logando = function(req, res) {
+module.exports.logando = function(req, res) {
     const userLogando = {
         ...req.body
     }
@@ -69,16 +68,13 @@ module.exports.login = function(req, res) {
     
   }
 
-
-  /*Testes*/
-
-  module.exports.cadastroGenero = function(req, res) {
-    res.render('testeCadastroGenero', {
+module.exports.cadastroGenero = function(req, res) {
+    res.render('cadastroGenero', {
       usuarioLogado: req.session.nickname
     });
-  }
+}
 
-  module.exports.cadastrandoGenero = async function (req, res) {
+module.exports.cadastrandoGenero = async function (req, res) {
     await db.Genero.create({
       nome: req.body.genero
     })
@@ -87,13 +83,13 @@ module.exports.login = function(req, res) {
     });
   }
 
-  module.exports.cadastroPlataforma = function(req, res) {
-    res.render('testeCadastroPlataforma', {
+module.exports.cadastroPlataforma = function(req, res) {
+    res.render('cadastroPlataforma', {
       usuarioLogado: req.session.nickname
     });
-  }
+}
 
-  module.exports.cadastrandoPlataforma = async function (req, res) {
+module.exports.cadastrandoPlataforma = async function (req, res) {
     await db.Plataforma.create({
       console: req.body.console,
       marca: req.body.marca

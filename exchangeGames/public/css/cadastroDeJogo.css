@@ -78,6 +78,7 @@
     display: flex;
 }
 .buttoncj{
+    font-family: OpenSans;
     background-color: #F8B000;
     border-radius: 5px;
     border: #F8B000;
@@ -98,3 +99,38 @@
     font-weight: bold;
     font-size: 16px;
 } 
+.imgpreview{
+    display: none; 
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #1D1736; 
+    margin-bottom: 20px;
+    max-width: 150px;
+    max-height: 150px;
+}
+.imgpreview img{
+    width: auto;
+    height: 100px; 
+    display: block;
+    max-width: 145px;
+    max-height: 145px;
+}
+[type="file"] {
+    height: 0;  
+    width: 0;
+    overflow: hidden;
+  }
+[type="file"] + label {
+    font-family: OpenSans;
+    background: #F8B000;
+    padding: 5px 30px;
+    border: 2px solid #F8B000;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+[type="file"] + label:hover {
+    background-color: #fff;
+    color: #F8B000;
+  }
