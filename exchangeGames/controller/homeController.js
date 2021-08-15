@@ -10,7 +10,7 @@ module.exports.home = function(req, res) {
   });
 }
 
-module.exports.sair = function(req, res) {
+module.exports.logout = function(req, res) {
   req.session.destroy(); 
   res.render('home', {
     usuarioLogado: null
@@ -42,7 +42,9 @@ module.exports.politica = function(req, res) {
   /*Alterando a função da página produto*/
 module.exports.produto = function(req, res) {
     //const exibindoJogo = selecionarJogo (arrayDeJogos, req.params.id)
-    res.render('detalhesDoProduto');
+    res.render('detalhesDoProduto', {
+      usuarioLogado: req.session.nickname
+    });
   }
 
   
