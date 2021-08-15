@@ -47,6 +47,7 @@ module.exports.salvarDadosPessoais = async (req, res) => {
         if (err.name === 'SequelizeValidationError') {
             return res.render('dadosPessoais', {
                 dadosUsuario,
+                usuarioLogado: req.session.nickname,
                 mensagem: err.errors.map(e => e.message)
             });
         }
