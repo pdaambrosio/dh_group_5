@@ -79,13 +79,21 @@
 }
 .buttoncj{
     font-family: OpenSans;
-    background-color: #F8B000;
+    font-size: 16px;
+    background: #F8B000;
+    padding: 5px 30px;
+    border: 2px solid #F8B000;
     border-radius: 5px;
-    border: #F8B000;
-    color: white;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
     height: 6vh;
     width: 18vw;
     margin: 5vh;
+}
+.buttoncj:hover{
+    background-color: #fff;
+    color: #F8B000;
 }
 .labelscj{
     margin-bottom: 5px;

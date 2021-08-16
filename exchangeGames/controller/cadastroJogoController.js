@@ -1,5 +1,3 @@
-const fs = require('fs');
-let arrayDeJogos = require('../model/jogos.json')
 const db = require('../models')
 const {Op} = require('sequelize')
 

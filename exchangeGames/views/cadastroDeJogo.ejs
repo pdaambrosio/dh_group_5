@@ -49,21 +49,22 @@
             <label class="labelscj" class="descricaocj" for="Descrição do produto">Descrição do produto</label>
                 <textarea class="textcj" name="descricao" type="text" placeholder="Descreva o seu jogo" maxlength="1500" required></textarea>
         <h3>Envie as fotos do seu jogo</h3>
+        <p>Formatos aceitos: JPG, JPEG e PNG.</p>
     <div class="imgscj">
         <div class="forcj">
         <% for(let i = 0; i < 5; i++){ %> 
         <div class="imgpreview" id="imgPreview<%=i%>"></div>
         <% } %>
         </div>
-        <input type="file" accept="image/*" id="foto0" name="fotos" />
+        <input type="file" accept=".jpg, .jpeg, .png" id="foto0" name="fotos" />
             <label for="foto0">Foto Principal</label>
-        <input type="file" accept="image/*" id="foto1" name="fotos" />
+        <input type="file" accept=".jpg, .jpeg, .png" id="foto1" name="fotos" />
             <label for="foto1">Foto</label>
-        <input type="file" accept="image/*" id="foto2" name="fotos" />
+        <input type="file" accept=".jpg, .jpeg, .png" id="foto2" name="fotos" />
             <label for="foto2">Foto</label>
-        <input type="file" accept="image/*" id="foto3" name="fotos" />
+        <input type="file" accept=".jpg, .jpeg, .png" id="foto3" name="fotos" />
             <label for="foto3">Foto</label>
-        <input type="file" accept="image/*" id="foto4" name="fotos" />
+        <input type="file" accept=".jpg, .jpeg, .png" id="foto4" name="fotos" />
             <label for="foto4">Foto</label>
     </div>
     <input class="buttoncj" type="submit" value="Salvar"/>   
