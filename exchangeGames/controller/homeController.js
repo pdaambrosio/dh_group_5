@@ -39,8 +39,9 @@ module.exports.politica = function(req, res) {
 module.exports.produto = async function(req, res) {
     const anuncio = await db.Anuncio.findOne({
       where: {id: req.params.id},
-      include: [db.Plataforma, db.Imagem, 'generos']
+      include: [db.Plataforma, db.Imagem, 'generos', 'usuario']
     })
+    console.log(anuncio)
     res.render('detalhesDoProduto', {
       usuarioLogado: req.session.nickname,
       anuncio

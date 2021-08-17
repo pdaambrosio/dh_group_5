@@ -14,13 +14,12 @@
         <main class="mainDetalhesDoProduto">
             <div class="caixaDetalhesDoProduto">
                 <div class="tituloDetalhesDoProduto">
-                    <%=console.log(anuncio.toJSON())%>
                 <img src="/uploads/<%=anuncio.Imagems[0].caminho%>" alt="<%= anuncio.nome %>" width="300px" height="377px"/>
             </div>
             <div class="descricaoDetalhesDoProduto">
                 <h2 class="h2DetalhesDoProduto"><%= anuncio.nome %></h2>
                 <h6 class="h6DetalhesDoProduto">Anúncio criado em <%= anuncio.createdAt %>  - cód do anúncio: <%= anuncio.id %></h6>
-                <p>Nome do anunciante:</p>
+                <p>Nome do anunciante: <%= anuncio.usuario.nickname %></p> 
                 <p>Ano do jogo: <%= anuncio.ano %></p>
                 <p>Marca: <%= anuncio.Plataforma.marca %></p>
                 <p>Console: <%= anuncio.Plataforma.console %></p>

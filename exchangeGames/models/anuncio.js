@@ -28,6 +28,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'anuncios_id',
         targetKey: 'id'
       })
+      this.belongsTo(models.usuarios, {
+        foreignKey: 'usuarios_id',
+        as: 'usuario',
+        targetKey: 'id'
+      })
     }
   };
   Anuncio.init({
