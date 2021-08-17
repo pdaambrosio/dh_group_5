@@ -64,6 +64,7 @@ module.exports.cadastrandoJogo = async (req, res) => {
   nome: req.body.nomeJogo,
   tempo_uso: req.body.tempoJogo,
   usuarios_id: 1,
+  //Colocar o req.session.id
   plataformas_id: req.body.console,
   condicao: req.body.condicao,
   chat_id: 1

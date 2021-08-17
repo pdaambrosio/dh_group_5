@@ -14,23 +14,24 @@
         <main class="mainDetalhesDoProduto">
             <div class="caixaDetalhesDoProduto">
                 <div class="tituloDetalhesDoProduto">
-                <img src="/images/last-of-us.jpg" alt="Capa do jogo Last of us" width="300px" height="377px"/>
+                <img src="/uploads/<%=anuncio.Imagems[0].caminho%>" alt="<%= anuncio.nome %>" width="300px" height="377px"/>
             </div>
             <div class="descricaoDetalhesDoProduto">
-                <h2 class="h2DetalhesDoProduto">The Last of Us</h2>
+                <h2 class="h2DetalhesDoProduto"><%= anuncio.nome %></h2>
                 <h6 class="h6DetalhesDoProduto">Anúncio criado em   - cód do anúncio: </h6>
                 <p>Nome do anunciante:</p>
-                <p>Ano do jogo:</p>
-                <p>Marca:</p>
-                <p>Tempo de uso:</p>
+                <p>Ano do jogo: <%= anuncio.ano %></p>
+                <p>Marca: <%= anuncio.Plataforma.marca %></p>
+                <p>Console: <%= anuncio.Plataforma.console %></p>
+                <p>Tempo de uso: <%= anuncio.tempo_uso %></p>
+                <p>Condição do jogo: <%= anuncio.condicao %></p>
                 <br>
                 <button class="buttonDetalhesDoProduto">Chat</button>
             </div> 
             </div>
         <div class="descricao">
             <h4>Descrição do Produto</h4>
-            <p>The Last of Us é uma experiência que promete redefinir o gênero de jogos de apocalipse zumbi com uma mistura de sobrevivência e ação, contando uma história centrada nos personagens, que são muito carismáticos devido ao senso interno de sobrevivência que cada ser humano possui dentro de si, sobre uma praga moderna que dizima a espécie humana há 20 anos atrás.
-                A remasterização de um dos melhores jogos do Playstation 3 promete gráficos incríveis, um sistema de movimentação melhorado e alguns novos itens relevantes adicionados no jogo, que irão auxiliar o jogador em sua jornada pós apocalíptica. O jogo também irá contar com várias adições em seu modo multiplayer, aumentando o realismo.</p>
+            <p><%= anuncio.descricao %></p>
         </div>
         </main>
         <footer>

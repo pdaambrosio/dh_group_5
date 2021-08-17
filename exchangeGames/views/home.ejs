@@ -37,7 +37,7 @@
             <div class="homeSwitch">
                 <%= console.log(jogos[0].toJSON()) %>                  
                 <% for(let i = 0; i < jogos.length; i++){ %> 
-                <p><img class="imgHome" src="/uploads/<%=jogos[i].Imagems[0].caminho%>" alt="<%= jogos[i].nome %>"><br><%= jogos[i].nome %><br><button class="buttonHome">Saiba +</button></p>
+                <p><a href="/home/produto/<%=jogos[i].id%>"><img class="imgHome" src="/uploads/<%=jogos[i].Imagems[0].caminho%>" alt="<%= jogos[i].nome %>"></a><br><%= jogos[i].nome %><br><button class="buttonHome">Saiba +</button></p>
                 <% } %>
             </div>        
     </main>

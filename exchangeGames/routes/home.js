@@ -7,7 +7,7 @@ router.get('/logout', homeController.logout);
 router.get('/quem-somos', homeController.quem);
 router.get('/perguntas', homeController.perguntas);
 router.get('/politica', homeController.politica);
-router.get('/produto', homeController.produto);
+router.get('/produto/:id', homeController.produto);
 
 module.exports = router
 
