@@ -17,8 +17,14 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Plataforma, {
         foreignKey: 'plataformas_id',
         targetKey: 'id'
-      })
+      }),
       this.hasMany(models.Imagem, {
+        foreignKey: 'anuncios_id',
+        targetKey: 'id'
+      }),
+      this.belongsToMany(models.Genero, {
+        through: 'anuncios_generos',
+        as: 'generos',
         foreignKey: 'anuncios_id',
         targetKey: 'id'
       })

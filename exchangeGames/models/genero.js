@@ -13,6 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Anuncio_Genero, {
         foreignKey: 'generos_id', 
         targetKey: 'id'
+      }),
+       this.belongsToMany(models.Anuncio, {
+        through: 'anuncios_generos',
+        as: 'anuncios',
+        foreignKey: 'generos_id',
+        targetKey: 'id'
       })
     }
   };
