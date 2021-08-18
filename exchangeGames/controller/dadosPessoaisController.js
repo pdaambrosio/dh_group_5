@@ -31,6 +31,11 @@ module.exports.salvarDadosPessoais = async (req, res) => {
                 sobrenome: usuario.sobrenome,
                 email: usuario.email,
                 nickname: usuario.nickname,
+                cidade: usuario.cidade,
+                estado: usuario.estado,
+                facebook: usuario.facebook,
+                instagram: usuario.instagram,
+                twitter: usuario.twitter,
                 senha: encriptar
             },
             req.session.usuario

@@ -62,7 +62,12 @@ module.exports = (sequelize, DataTypes) => {
     senha:{ 
         type: DataTypes.STRING(150), 
         allowNull: false        
-    }, 
+    },
+    cidade: DataTypes.STRING(100),
+    estado: DataTypes.STRING(100),
+    facebook: DataTypes.STRING(100),
+    instagram: DataTypes.STRING(100),
+    twitter: DataTypes.STRING(100),  
     notificacao_site: DataTypes.TINYINT(1), 
     notificacao_parceiros: DataTypes.TINYINT(1), 
     usuario_bloqueado: DataTypes.TINYINT(1), 
