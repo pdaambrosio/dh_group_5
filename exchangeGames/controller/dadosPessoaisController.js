@@ -40,9 +40,9 @@ module.exports.salvarDadosPessoais = async (req, res) => {
             },
             req.session.usuario
         );
+        console.log(atualizarDadosPessoais);
         const dadosUsuario = await buscarDadosPessoaisId(req.session.usuario);
         req.session.nickname = dadosUsuario[0].nickname;
-        console.log(dadosUsuario);
         return res.render('dadosPessoais', {
             dadosUsuario,
             usuarioLogado: req.session.nickname,

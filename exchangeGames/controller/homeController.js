@@ -11,10 +11,14 @@ module.exports.home = async function(req, res) {
   });
 }
 
-module.exports.logout = function(req, res) {
+module.exports.logout = async function(req, res) {
+  const jogos = await db.Anuncio.findAll({
+    include: [db.Plataforma, db.Imagem]
+  })
   req.session.destroy(); 
   res.render('home', {
-    usuarioLogado: null
+    usuarioLogado: null,
+    jogos
   });
 }
 
