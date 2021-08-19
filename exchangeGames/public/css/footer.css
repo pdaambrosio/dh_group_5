@@ -10,11 +10,6 @@
 body, form, button, label, ::placeholder{
     font-family: OpenSans;
 }
-
-a:hover {
-    color: #F8B000;
-  }
-
 .bodyFooter {
     margin: 0;
     padding: 0;
@@ -22,7 +17,6 @@ a:hover {
     display: flex;
     flex-direction: column;
 }
-
 footer {
     display: flex;
     width: 100%;
@@ -30,17 +24,17 @@ footer {
     background-color: #1d1736;
     color: white;
 }
-
 footer ul {
     list-style: none;
 }
 
-footer a {
+.linkFooter {
     text-decoration: none;
     color: white;
 }
-
-
+.linkFooter:hover {
+    color: #F8B000;
+}
 .atendimento img {
     height: 20px;
     width: 20px;
