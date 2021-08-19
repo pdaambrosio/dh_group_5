@@ -18,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .logo-main {
     display: flex;
     margin: auto;
@@ -29,7 +28,6 @@ body {
     height: auto;
     padding-top: 3%;
 }
-
 .mainHome {
     padding-left: 5%;
     padding-right: 5%;
@@ -46,12 +44,13 @@ body {
 }
 
 .imgHome {
-    width: auto;
-    height: auto;
+    width: 190px;
+    height: 270px;
     max-width: 200px;
-    max-height: 251x;
+    max-height: 250x;
     transition: all 0.5s;
     cursor: pointer;
+    overflow: hidden;
 }
 .imgHome:hover{
     -webkit-transform: scale(1.1);
@@ -62,10 +61,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding-left: 3%;
-    padding-right: 3%;
-    
+    padding-right: 3%; 
 }
-
 .homeXbox {
     display: flex;
     flex-direction: row;
@@ -80,17 +77,14 @@ body {
     justify-content: space-between;
     padding-left: 3%;
     padding-right: 3%;
-    
 }
-
-p { 
+.linkJogo { 
     text-align: center;
     font-size: 100%;
     color: #1d1736 ;
     padding-bottom: 1%;
-    
+    margin: 8px;
 }
-
 .buttonHome {
     background-color: #F8B000;
     color: white;
