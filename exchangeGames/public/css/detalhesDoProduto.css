@@ -1,43 +1,33 @@
 * {
     box-sizing: border-box;
 }
-
 @font-face{
     font-family: "Open Sans";
     src: url("Fonts/OpenSans-Regular.ttf");
 }
-
 body {
     font-family: "Open Sans";
 }
-
-
 .mainDetalhesDoProduto {
     font-family: "Open Sans";
     padding: 5%;
-    
 }
-
 .caixaDetalhesDoProduto {
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
     padding-left: 15%;
     padding-right: 15%;
-
 }
-
 .h2DetalhesDoProduto {
     text-align: center;
     font-size: 200%;
 
 }
-
 .h6DetalhesDoProduto {
     text-align: center;
 
 }
-
 .descricaoDetalhesDoProduto{
     display: flex;
     flex-direction: column;
@@ -57,16 +47,13 @@ h1 {
     color: #1d1736 ;
       
 }
-
 p. {
-
     text-align: center;
     font-size: 14px;
     color: #1d1736 ;
 
 }
-
-button {
+.buttonChat {
     background-color: #F8B000;
     color: white;
     text-rendering: auto;
@@ -77,14 +64,13 @@ button {
     font-size: 18px;
     padding: 10px;
     margin: 3px;
+    height: 6vh;
+    width: 16vw;
 }
-
 .descricao {
     text-align: justify;
     font-size: 100%;
     padding-right: 20%;
     padding-left: 20%;
     padding-top: 5%;
-
-
 }
