@@ -49,23 +49,17 @@
             <label class="labelscj" class="descricaocj" for="Descrição do produto">Descrição do produto</label>
                 <textarea class="textcj" name="descricao" type="text" placeholder="Descreva o seu jogo" maxlength="1500" required></textarea>
         <h3>Envie as fotos do seu jogo</h3>
-        <p>Formatos aceitos: JPG, JPEG e PNG.</p>
+        <span class="spancj">Formatos aceitos: JPG, JPEG e PNG.</span>
     <div class="imgscj">
         <div class="forcj">
         <% for(let i = 0; i < 5; i++){ %> 
-        <div class="imgpreview" id="imgPreview<%=i%>"></div>
+        <div class="botaoeimg">
+            <div class="imgPreview" id="imgPreview<%=i%>"></div>
+        <input type="file" accept=".jpg, .jpeg, .png" id="foto<%= i %>" name="fotos" />
+        <label class="botaoimg" for="foto<%= i %>"> <%= i == 0 ? 'Foto Principal' : '+Foto'%></label>
+    </div>
         <% } %>
         </div>
-        <input type="file" accept=".jpg, .jpeg, .png" id="foto0" name="fotos" />
-            <label for="foto0">Foto Principal</label>
-        <input type="file" accept=".jpg, .jpeg, .png" id="foto1" name="fotos" />
-            <label for="foto1">Foto</label>
-        <input type="file" accept=".jpg, .jpeg, .png" id="foto2" name="fotos" />
-            <label for="foto2">Foto</label>
-        <input type="file" accept=".jpg, .jpeg, .png" id="foto3" name="fotos" />
-            <label for="foto3">Foto</label>
-        <input type="file" accept=".jpg, .jpeg, .png" id="foto4" name="fotos" />
-            <label for="foto4">Foto</label>
     </div>
     <input class="buttoncj" type="submit" value="Salvar"/>   
     </form>
@@ -78,18 +72,18 @@
     for(let i = 0; i < 5; i++){
         let fotos = "foto" + i
         let previews = "imgPreview" + i
-        console.log(i)
-        const chooseFile = document.getElementById(fotos);
-        console.log(chooseFile)
+        //console.log(i)
+        const escolhendoImg = document.getElementById(fotos);
+        //console.log(escolhendoImg)
         const imgPreview = document.getElementById(previews);
 
-        chooseFile.addEventListener("change", function () {
+        escolhendoImg.addEventListener("change", function () {
             getImgData();
         });
 
         function getImgData() {
-            const files = chooseFile.files[0];
-            console.log(chooseFile.files[0])
+            const files = escolhendoImg.files[0];
+            console.log(escolhendoImg.files[0])
             if (files) {
                 const fileReader = new FileReader();
                 fileReader.readAsDataURL(files);
@@ -102,3 +96,4 @@
     }
 </script>
 </html>  
+
