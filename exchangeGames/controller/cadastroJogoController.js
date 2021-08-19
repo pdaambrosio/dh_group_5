@@ -94,4 +94,42 @@ module.exports.cadastroJogo = async (req, res) => {
   res.render('cadastroDeJogo', {genero, plataforma, erro, usuarioLogado: req.session.nickname})
 }
 
+//Editar jogo
+
+module.exports.editarJogo = async function(req, res) {
+  const anuncio = await db.Anuncio.findOne({
+    where: {id: req.params.id},
+    include: [db.Plataforma, db.Imagem, 'generos'/*, 'usuario'*/]
+  })
+  const genero = await db.Genero.findAll()
+  const plataforma = await db.Plataforma.findAll()
+  console.log(anuncio)
+  res.render('editarJogo', {
+    usuarioLogado: req.session.nickname,
+    anuncio,
+    erro: "",
+    genero,
+    plataforma
+  });
+}
+module.exports.editandoJogo = async function(req, res) {
+  const anuncio = await db.Anuncio.findOne({
+    where: {id: req.params.id},
+    include: [db.Plataforma, db.Imagem, 'generos'/*, 'usuario'*/]
+  })
+  const genero = await db.Genero.findAll()
+  const plataforma = await db.Plataforma.findAll()
+  console.log(anuncio)
+  console.log(req.files)
+  res.render('editarJogo', {
+    usuarioLogado: req.session.nickname,
+    anuncio,
+    erro: "",
+    genero,
+    plataforma
+  });
+
+}
+
+
 

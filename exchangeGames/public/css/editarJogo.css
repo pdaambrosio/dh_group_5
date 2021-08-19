@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: OpenSans;
+    src: url("../Fonts/OpenSans-Regular.ttf");
+}
+.bodycj {
+    font-family: OpenSans;
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.maincj{
+    flex-grow: 1;
+}
+.formcj{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputscj{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.inputscj input{
+    margin-bottom: 1vh;
+    height: 5vh;
+}
+.selectcj{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.selectcj select{
+    height: 5vh;
+    width: 85%;
+}
+.subselect1{
+    width: 50%;
+    text-align: left;
+}
+.subselect2{
+    width: 50%;
+    text-align: right;
+}
+.subselect2 p{
+    text-align: left;
+    padding-left: 15%;
+}
+.textcj{
+    resize: none;
+    width: 50%;
+    height: 30vh;
+}
+.descricaocj{
+    text-align: left;
+    width: 50%;
+    margin-bottom: 1.5vh;
+}
+.checkboxcj{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5vh;
+    width: 50%;
+}
+.checkboxcj p{
+    margin: 3px;
+    padding-left: 15px;
+}
+.imgscj{
+    width: 50%;
+}
+.forcj{
+    display: flex;
+    flex-wrap: wrap;
+}
+.buttoncj{
+    font-family: OpenSans;
+    font-size: 16px;
+    background: #F8B000;
+    padding: 5px 30px;
+    border: 2px solid #F8B000;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: 6vh;
+    width: 18vw;
+    margin: 5vh;
+}
+.buttoncj:hover{
+    background-color: #fff;
+    color: #F8B000;
+}
+.labelscj{
+    margin-bottom: 5px;
+}
+.pcj{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.errocj{
+    color: #F8B000;
+    font-weight: bold;
+    font-size: 16px;
+} 
+.imgPreview{
+    width: 150px;
+    height: 150px;
+    border: 1px dashed #1D1736; 
+    margin-bottom: 20px;
+    margin: 5px;
+    max-width: 150px;
+    max-height: 150px;
+    overflow: hidden;
+}
+.imgPreview img{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+}
+[type="file"] {
+    height: 0;  
+    width: 0;
+    overflow: hidden;
+  }
+[type="file"] + .botaoimg {
+    font-family: OpenSans;
+    font-size: 13px;
+    background: #F8B000;
+    padding: 5px 30px;
+    border: 2px solid #F8B000;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+[type="file"] + .botaoimg:hover {
+    background-color: #fff;
+    color: #F8B000;
+  }
+.spancj{
+    margin-bottom: 10px;
+    color: #1D1736
+}
+.botaoimg{
+    display:block;
+    float:left;
+    width: 98%;
+    justify-content: center;
+}
+.botaoeimg{
+    text-align: center;
+}

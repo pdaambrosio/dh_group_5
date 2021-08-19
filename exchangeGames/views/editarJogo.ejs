@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/editarJogo.css">
+    <title>Exchange Games | Cadastro de jogo</title>
+</head>
+<body class="bodycj">
+    <header>
+        <%- include('header.ejs') %>
+    </header>
+    <main class="maincj">
+    <form class="formcj" action="/jogos/editarJogo/<%= anuncio.id %>" method="POST" enctype="multipart/form-data">
+        <h2>Edite o anúncio do seu jogo</h2> 
+        <div class="errocj"><%= erro %></div>
+        <div class="inputscj">
+            <label class="labelscj" for="Nome do jogo">Nome do jogo</label>
+                <input name="nomeJogo" value="<%= anuncio.nome %>" type="text" placeholder="Exemplo: Super Mario 3D World" maxlength="150" required/>
+            <label class="labelscj" for="Tempo de uso">Tempo de uso</label>
+                <input name="tempoJogo" value="<%= anuncio.tempo_uso %>" type="text" placeholder="Exemplo: 2 anos" maxlength="25" required/>
+            <label class="labelscj" for="Ano do jogo"> Ano do jogo</label>
+                <input name="anoJogo" value="<%= anuncio.ano %>" type="text" placeholder="Exemplo: 2018" maxlength="4" required/>
+        </div>
+        <div class="selectcj">
+            <div class= "subselect1">
+                <p class="pcj"><label for="Console">Console</label></p> 
+                <select name="console" required>
+                    <% for(let i = 0; i < plataforma.length; i++){ %> 
+                        <option name="plataforma" value="<%=plataforma[i].id %>" <% if(anuncio.Plataforma.id == plataforma[i].id){ %> selected <% } %> ><%=plataforma[i].console %></option>              
+                    <% } %>    
+                </select>
+            </div>
+            <div class= "subselect2">
+                <p class="pcj"><label for="Condição">Condição do jogo</label></p>
+                <select name="condicao" required>
+                    <option value="Novo" <% if(anuncio.condicao == "NOVO"){ %> selected <% } %>>Novo</option>
+                    <option value="Usado" <% if(anuncio.condicao == "USADO"){ %> selected <% } %>>Usado</option>
+                    <option value="Lacrado" <% if(anuncio.condicao == "LACRADO"){ %> selected <% } %>>Lacrado</option>
+                </select>
+            </div>
+        </div>
+        <div class="checkboxcj"><label for="Gênero">Gênero:</label>
+            <% for(let i = 0; i < genero.length; i++){ %> 
+                <p><input type="checkbox" name="genero" value="<%=genero[i].id %>" <% if(anuncio.generos.find((gen) => gen.id == genero[i].id)){ %> checked <% } %>  ><%=genero[i].nome %></input></p>                
+            <% } %>      
+        </div>
+            <label class="labelscj" class="descricaocj" for="Descrição do produto">Descrição do produto</label>
+                <textarea class="textcj" name="descricao" type="text" placeholder="Descreva o seu jogo" maxlength="1500" required><%= anuncio.descricao %></textarea>
+        <h3>Envie as fotos do seu jogo</h3>
+        <span class="spancj">Formatos aceitos: JPG, JPEG e PNG.</span>
+    <div class="imgscj">
+        <div class="forcj">
+        <% for(let i = 0; i < 5; i++){ %> 
+        <div class="botaoeimg">
+            <div class="imgPreview" id="imgPreview<%=i%>"> <% if(anuncio.Imagems[i]){ %>  <img src="/uploads/<%=anuncio.Imagems[i].caminho%>" alt=""> <% } %>  </div>
+        <input type="file" accept=".jpg, .jpeg, .png" id="foto<%= i %>" name="fotos" />
+        <label class="botaoimg" for="foto<%= i %>"> <%= i == 0 ? 'Foto Principal' : '+Foto'%></label>
+    </div>
+        <% } %>
+        </div>
+    </div>
+    <input class="buttoncj" type="submit" value="Salvar"/>   
+    </form>
+    </main>
+    <footer>
+        <%- include('footer.ejs') %>
+    </footer>
+</body>
+<script>
+    for(let i = 0; i < 5; i++){
+        let fotos = "foto" + i
+        let previews = "imgPreview" + i
+        //console.log(i)
+        const escolhendoImg = document.getElementById(fotos);
+        //console.log(escolhendoImg)
+        const imgPreview = document.getElementById(previews);
+
+        escolhendoImg.addEventListener("change", function () {
+            getImgData();
+        });
+
+        function getImgData() {
+            const files = escolhendoImg.files[0];
+            console.log(escolhendoImg.files[0])
+            if (files) {
+                const fileReader = new FileReader();
+                fileReader.readAsDataURL(files);
+                fileReader.addEventListener("load", function () {
+                    imgPreview.style.display = "block";
+                    imgPreview.innerHTML = '<img src="' + this.result + '" />';
+                });    
+            }
+        }
+    }
+</script>
+</html>  
+
