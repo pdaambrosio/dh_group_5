@@ -36,7 +36,7 @@
             <h3 id="menuNintendo" class="h3Home">Nintendo Switch</h3>
             <div class="homeSwitch">      
                 <% for(let i = 0; i < jogos.length; i++){ %> 
-                <p class="linkJogo"><a href="/home/produto/<%=jogos[i].id%>"><img class="imgHome" src="/uploads/<%=jogos[i].Imagems[0].caminho%>" alt="<%= jogos[i].nome %>"></a><br><%= jogos[i].nome %><br><button class="buttonHome">Saiba +</button></p>
+                <p class="linkJogo"><a class="linkandoJogo" href="/home/produto/<%=jogos[i].id%>"><img class="imgHome" src="/uploads/<%=jogos[i].Imagems[0].caminho%>" alt="<%= jogos[i].nome %>"></a><br><%= jogos[i].nome %><br><button class="buttonHome"><a class="linkandoJogo" href="/home/produto/<%=jogos[i].id%>">Saiba +</a></button></p>
                 <% } %>
             </div>        
     </main>
