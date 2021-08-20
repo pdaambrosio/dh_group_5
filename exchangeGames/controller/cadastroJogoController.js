@@ -63,7 +63,7 @@ module.exports.cadastrandoJogo = async (req, res) => {
   descricao: req.body.descricao,
   nome: req.body.nomeJogo,
   tempo_uso: req.body.tempoJogo,
-  usuarios_id: 1,
+  usuarios_id:req.session.usuario,
   //Colocar o req.session.id
   plataformas_id: req.body.console,
   condicao: req.body.condicao,
@@ -99,7 +99,7 @@ module.exports.cadastroJogo = async (req, res) => {
 module.exports.editarJogo = async function(req, res) {
   const anuncio = await db.Anuncio.findOne({
     where: {id: req.params.id},
-    include: [db.Plataforma, db.Imagem, 'generos'/*, 'usuario'*/]
+    include: [db.Plataforma, db.Imagem, 'generos','usuario']
   })
   const genero = await db.Genero.findAll()
   const plataforma = await db.Plataforma.findAll()
@@ -113,22 +113,21 @@ module.exports.editarJogo = async function(req, res) {
   });
 }
 module.exports.editandoJogo = async function(req, res) {
-  const anuncio = await db.Anuncio.findOne({
-    where: {id: req.params.id},
-    include: [db.Plataforma, db.Imagem, 'generos'/*, 'usuario'*/]
-  })
-  const genero = await db.Genero.findAll()
-  const plataforma = await db.Plataforma.findAll()
-  console.log(anuncio)
+  /*await db.Anuncio.update({
+    ano: req.body.anoJogo,
+    descricao: req.body.descricao,
+    nome: req.body.nomeJogo,
+    tempo_uso: req.body.tempoJogo,
+    plataformas_id: req.body.console,
+    condicao: req.body.condicao,
+    },
+    {where: {id:req.params.id}
+})  
+  console.log(req.session.usuario)*/
+  //console.log(req.files)
   console.log(req.files)
-  res.render('editarJogo', {
-    usuarioLogado: req.session.nickname,
-    anuncio,
-    erro: "",
-    genero,
-    plataforma
-  });
-
+  const anuncio = `/home/produto/${req.params.id}`
+  res.redirect(anuncio);
 }
 
 
