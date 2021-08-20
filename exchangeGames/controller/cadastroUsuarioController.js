@@ -61,6 +61,7 @@ module.exports.registrarUsuario = async (req, res) => {
     } catch (err) {
         if (err.name === 'SequelizeValidationError') {
             return res.render('cadastroUsuario', {
+                usuarioLogado: null,
                 mensagem: err.errors.map(e => e.message),
                 alerta: null,
                 usuario: usuario
