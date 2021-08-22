@@ -16,7 +16,6 @@ module.exports.cadastrandoJogo = async (req, res) => {
     return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro, usuarioLogado: req.session.nickname})
   }
   if(req.body.nomeJogo.length > 150){
-    //console.log(req.body.nomeJogo + " " + req.body.nomeJogo.length)
       const erro = "Atenção: Nome maior que 150 caracteres."
       const retorno = await buscarGeneroPlataforma()
       return res.render('cadastroDeJogo', {genero:retorno[0], plataforma:retorno[1], erro, usuarioLogado: req.session.nickname})
@@ -112,13 +111,86 @@ module.exports.editarJogo = async function(req, res) {
     plataforma
   });
 }
+//Validações editar anúncio
 module.exports.editandoJogo = async function(req, res) {
+  if(!req.body.nomeJogo){
+    const erro = "Insira um nome para o jogo."
+    const retorno = await buscarGeneroPlataforma()
+    const anuncio = await db.Anuncio.findOne({
+      where: {id: req.params.id},
+      include: [db.Plataforma, db.Imagem, 'generos','usuario']
+    })
+    return res.render('editarJogo', {anuncio, genero:retorno[0], plataforma:retorno[1], erro, usuarioLogado: req.session.nickname})
+  }
+  if(req.body.nomeJogo.length > 150){
+    const erro = "Atenção: Nome maior que 150 caracteres."
+    const retorno = await buscarGeneroPlataforma()
+    const anuncio = await db.Anuncio.findOne({
+      where: {id: req.params.id},
+      include: [db.Plataforma, db.Imagem, 'generos','usuario']
+    })
+    return res.render('editarJogo', {anuncio, genero:retorno[0], plataforma:retorno[1], erro, usuarioLogado: req.session.nickname})
+  }
+  if(!req.body.anoJogo){
+    const erro = "Atenção: Insira o ano do jogo."
+    const retorno = await buscarGeneroPlataforma()
+    const anuncio = await db.Anuncio.findOne({
+      where: {id: req.params.id},
+      include: [db.Plataforma, db.Imagem, 'generos','usuario']
+    })
+    return res.render('editarJogo', {anuncio, genero:retorno[0], plataforma:retorno[1], erro, usuarioLogado: req.session.nickname})
+  }
+  if(req.body.anoJogo.length != 4){
+    const erro = "Atenção: Formato do ano aceito: AAAA"
+    const retorno = await buscarGeneroPlataforma()
+    const anuncio = await db.Anuncio.findOne({
+      where: {id: req.params.id},
+      include: [db.Plataforma, db.Imagem, 'generos','usuario']
+    })
+    return res.render('editarJogo', {anuncio, genero:retorno[0], plataforma:retorno[1], erro, usuarioLogado: req.session.nickname})
+  }
+  if(!req.body.descricao){
+    const erro = "Atenção: Insira uma descrição para o anúncio."
+    const retorno = await buscarGeneroPlataforma()
+    const anuncio = await db.Anuncio.findOne({
+      where: {id: req.params.id},
+      include: [db.Plataforma, db.Imagem, 'generos','usuario']
+    })
+    return res.render('editarJogo', {anuncio, genero:retorno[0], plataforma:retorno[1], erro, usuarioLogado: req.session.nickname})
+  }
+  if(req.body.descricao.length > 1500){
+    const erro = "Atenção: Descrição maior que 1500 caracteres."
+    const retorno = await buscarGeneroPlataforma()
+    const anuncio = await db.Anuncio.findOne({
+      where: {id: req.params.id},
+      include: [db.Plataforma, db.Imagem, 'generos','usuario']
+    })
+    return res.render('editarJogo', {anuncio, genero:retorno[0], plataforma:retorno[1], erro, usuarioLogado: req.session.nickname})
+  }
+  if(!req.body.tempoJogo){
+    const erro = "Atenção: Insira o tempo de uso."
+    const retorno = await buscarGeneroPlataforma()
+    const anuncio = await db.Anuncio.findOne({
+      where: {id: req.params.id},
+      include: [db.Plataforma, db.Imagem, 'generos','usuario']
+    })
+    return res.render('editarJogo', {anuncio, genero:retorno[0], plataforma:retorno[1], erro, usuarioLogado: req.session.nickname})
+  }
+  if(req.body.tempoJogo.length > 25){
+    const erro = "Atenção: Tempo de uso maior que 25 caracteres."
+    const retorno = await buscarGeneroPlataforma()
+    const anuncio = await db.Anuncio.findOne({
+      where: {id: req.params.id},
+      include: [db.Plataforma, db.Imagem, 'generos','usuario']
+    })
+    return res.render('editarJogo', {anuncio, genero:retorno[0], plataforma:retorno[1], erro, usuarioLogado: req.session.nickname})
+}
   const generos = [].concat(req.body.genero)
   const anuncioOriginal = await db.Anuncio.findOne({        
     where: {id: req.params.id},
     include:['generos']
 })  
-  
+/*
   await db.Anuncio.update({
     ano: req.body.anoJogo,
     descricao: req.body.descricao,
@@ -151,7 +223,7 @@ for(let i = 0; i < generos.length; i++){
       })
   }
 }
-
+*/
   console.log(req.session.usuario)
   //console.log(req.files)
   console.log(req.files)
