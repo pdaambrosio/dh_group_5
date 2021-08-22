@@ -103,7 +103,7 @@ module.exports.editarJogo = async function(req, res) {
   })
   const genero = await db.Genero.findAll()
   const plataforma = await db.Plataforma.findAll()
-  console.log(anuncio)
+  //console.log(anuncio)
   res.render('editarJogo', {
     usuarioLogado: req.session.nickname,
     anuncio,
@@ -113,7 +113,13 @@ module.exports.editarJogo = async function(req, res) {
   });
 }
 module.exports.editandoJogo = async function(req, res) {
-  /*await db.Anuncio.update({
+  const generos = [].concat(req.body.genero)
+  const anuncioOriginal = await db.Anuncio.findOne({        
+    where: {id: req.params.id},
+    include:['generos']
+})  
+  
+  await db.Anuncio.update({
     ano: req.body.anoJogo,
     descricao: req.body.descricao,
     nome: req.body.nomeJogo,
@@ -123,7 +129,30 @@ module.exports.editandoJogo = async function(req, res) {
     },
     {where: {id:req.params.id}
 })  
-  console.log(req.session.usuario)*/
+//Deletar gênero do anúncio
+for(let i = 0; i < anuncioOriginal.generos.length; i++){
+  if(!generos.find((verificandoGeneros) => anuncioOriginal.generos[i].id == verificandoGeneros)){
+      await db.Anuncio_Genero.destroy({
+          where: {
+              [Op.and]: [
+                  {anuncios_id:req.params.id},
+                  {generos_id: anuncioOriginal.generos[i].id}
+              ]
+          }
+      })
+  }
+}
+//Adicionar gênero no anúncio
+for(let i = 0; i < generos.length; i++){
+  if(!anuncioOriginal.generos.find((verificandoGeneros) => generos[i] == verificandoGeneros.id)){
+      await db.Anuncio_Genero.create({
+        anuncios_id: req.params.id,
+        generos_id: generos[i]
+      })
+  }
+}
+
+  console.log(req.session.usuario)
   //console.log(req.files)
   console.log(req.files)
   const anuncio = `/home/produto/${req.params.id}`
