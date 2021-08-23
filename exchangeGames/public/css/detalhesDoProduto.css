@@ -54,32 +54,49 @@ p. {
 
 }
 .buttonChat {
-    background-color: #F8B000;
+    background: #F8B000;
     color: white;
     text-rendering: auto;
     display: inline-block;
     border-radius: 3px;
-    border: thin;
+    border: 2px solid #F8B000;
     text-align: center;
-    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
     padding: 10px;
     margin: 3px;
     height: 6vh;
     width: 16vw;
 }
+.buttonChat:hover{
+    background-color: white;
+    color: #F8B000;
+    font-weight: bold;
+}
 .buttonEditar {
-    background-color: #1d1736;
+    background: #1d1736;
     color: white;
     text-rendering: auto;
     display: inline-block;
     border-radius: 3px;
-    border: thin;
+    border: 2px solid #1d1736;
     text-align: center;
-    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
     padding: 10px;
     margin: 3px;
     height: 6vh;
     width: 16vw;
+}
+.buttonEditar:hover{
+    background: white;
+    color: #1d1736;
+    font-weight: bold;
+}
+.linkEditar{
+    text-decoration: none;
 }
 .descricao {
     text-align: justify;
