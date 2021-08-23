@@ -43,7 +43,7 @@
         </div>
         <div class="checkboxcj"><label for="Gênero">Gênero:</label>
             <% for(let i = 0; i < genero.length; i++){ %> 
-                <p><input type="checkbox" name="genero" value="<%=genero[i].id %>"><%=genero[i].nome %></input></p>                
+                <p><input type="checkbox" name="genero" id="<%=genero[i].nome %>" value="<%=genero[i].id %>"></input> <label for="<%=genero[i].nome %>"><%=genero[i].nome %></label> </p>                
             <% } %>      
         </div>
             <label class="labelscj" class="descricaocj" for="Descrição do produto">Descrição do produto</label>
