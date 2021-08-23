@@ -50,7 +50,7 @@ module.exports.produto = async function(req, res) {
       where: {id: req.params.id},
       include: [db.Plataforma, db.Imagem, 'generos', 'usuario']
     })
-    console.log(anuncio)
+    //console.log(anuncio)
     res.render('detalhesDoProduto', {
       usuarioLogado: req.session.nickname,
       anuncio

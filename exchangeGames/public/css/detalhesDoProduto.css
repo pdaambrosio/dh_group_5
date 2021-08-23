@@ -67,6 +67,20 @@ p. {
     height: 6vh;
     width: 16vw;
 }
+.buttonEditar {
+    background-color: #1d1736;
+    color: white;
+    text-rendering: auto;
+    display: inline-block;
+    border-radius: 3px;
+    border: thin;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    margin: 3px;
+    height: 6vh;
+    width: 16vw;
+}
 .descricao {
     text-align: justify;
     font-size: 100%;

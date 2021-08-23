@@ -29,6 +29,7 @@
                     <%= anuncio.generos[i].nome %> <% } %> </p> 
                 <br>
                 <button class="buttonChat">Chat</button>
+             <% if(usuarioLogado == anuncio.usuario.nickname){%> <button class="buttonEditar"><a class="linkandoAnuncio" href="/jogos/editarJogo/<%=anuncio.id%>">Editar anúncio</a></button> <% } %> 
             </div> 
             </div>
         <div class="descricao">
