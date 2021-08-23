@@ -5,9 +5,14 @@ module.exports.home = async function(req, res) {
   const jogos = await db.Anuncio.findAll({
     include: [db.Plataforma, db.Imagem]
   })
+const jogosNintendo = jogos.filter((jogo) => jogo.Plataforma.marca == 'Nintendo')
+const jogosXbox = jogos.filter((jogo) => jogo.Plataforma.marca == 'Microsoft')
+const jogosPS = jogos.filter((jogo) => jogo.Plataforma.marca == 'Sony')
+
+  console.log(jogos[0].Plataforma.marca)
   res.render('home', {
     usuarioLogado: req.session.nickname,
-    jogos
+    jogosNintendo, jogosXbox, jogosPS
   });
 }
 

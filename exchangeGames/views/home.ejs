@@ -14,29 +14,22 @@
     <main class="mainHome">
         <img class="logo-main" src="/images/logo-fundo-claro.png" alt="logo-main"><br>
         <h1 class="h1Home">Catálogo de Jogos</h1>
-            <h3 id="menuPlaystation" class="h3Home">Playstation 4</h3>
+            <h3 id="menuPlaystation" class="h3Home">Playstation</h3>
             <div class="homePs4">                                
-                <p><img class="imgHome" src="/images/icones-ps4/assassins-creed-valhalla.png" alt="Assassins Creed Valhalla"><br>Assassins Creed Valhalla<br><button class="buttonHome">Saiba +</button></p>
-                <p><img class="imgHome" src="/images/icones-ps4/cyber-punk.png" alt="Cyberpunk"><br>Cyberpunk<br><button class="buttonHome">Saiba +</button></p>
-                <p><img class="imgHome" src="/images/icones-ps4/ghost.png" alt="Ghost"><br>Ghost of Tsushima<br><button class="buttonHome">Saiba +</button></p>
-                <p><img class="imgHome" src="/images/icones-ps4/red-dead-redemption-2.png" alt="Red Dead Redemption 2"><br>Red Dead Redemption 2<br><button class="buttonHome">Saiba +</button></p>
-                <p><img class="imgHome" src="/images/icones-ps4/sekiro.png" alt="Sekiro"><br>Sekiro<br><button class="buttonHome">Saiba +</button></p>
-                <p><img class="imgHome" src="/images/icones-ps4/the-last-of-us-part-2.png" alt="The Last Of Us Part 2"><br>The Last Of Us Part II<br><button class="buttonHome">Saiba +</button></p>
-
+                <% for(let i = 0; i < jogosPS.length; i++){ %> 
+                    <p class="linkJogo"><a class="linkandoJogo" href="/home/produto/<%=jogosPS[i].id%>"><img class="imgHome" src="/uploads/<%=jogosPS[i].Imagems[0].caminho%>" alt="<%= jogosPS[i].nome %>"></a><br><%= jogosPS[i].nome %><br><button class="buttonHome"><a class="linkandoJogo" href="/home/produto/<%=jogosPS[i].id%>">Saiba +</a></button></p>
+                    <% } %>
             </div>
-            <h3 id="menuXbox" class="h3Home">Xbox One</h3>
+            <h3 id="menuXbox" class="h3Home">Xbox</h3>
             <div class="homeXbox">
-                <p> <a href="/home/produto"><img class="imgHome" src="/images/icones-xbox/avengers.png" alt="Avengers"></a> <br>Avengers<br><button class="buttonHome">Saiba +</button></p>
-                <p><img class="imgHome" src="/images/icones-xbox/forza-7.png" alt="Forza 7"><br>Forza 7<br><button class="buttonHome">Saiba +</button></p>
-                <p><img class="imgHome" src="/images/icones-xbox/immortals-fenyx-rising.png" alt="Immortals Fenyx Rising"><br>Immortals Fenyx Rising<br><button class="buttonHome">Saiba +</button></p>
-                <p><img class="imgHome" src="/images/icones-xbox/minecraft.png" alt="Minecraft"><br>Minecraft<br><button class="buttonHome">Saiba +</button></p>
-                <p><img class="imgHome" src="/images/icones-xbox/modern-warfare.png" alt="Modern Warfare"><br>Modern Warfare<br><button class="buttonHome">Saiba +</button></p>
-                <p><img class="imgHome" src="/images/icones-xbox/tomb-raider.png" alt="Tomb Raider"><br>Tomb Raider<br><button class="buttonHome">Saiba +</button></p>
+                <% for(let i = 0; i < jogosXbox.length; i++){ %> 
+                    <p class="linkJogo"><a class="linkandoJogo" href="/home/produto/<%=jogosXbox[i].id%>"><img class="imgHome" src="/uploads/<%=jogosXbox[i].Imagems[0].caminho%>" alt="<%= jogosXbox[i].nome %>"></a><br><%= jogosXbox[i].nome %><br><button class="buttonHome"><a class="linkandoJogo" href="/home/produto/<%=jogosXbox[i].id%>">Saiba +</a></button></p>
+                    <% } %>
             </div>       
-            <h3 id="menuNintendo" class="h3Home">Nintendo Switch</h3>
+            <h3 id="menuNintendo" class="h3Home">Nintendo</h3>
             <div class="homeSwitch">      
-                <% for(let i = 0; i < jogos.length; i++){ %> 
-                <p class="linkJogo"><a class="linkandoJogo" href="/home/produto/<%=jogos[i].id%>"><img class="imgHome" src="/uploads/<%=jogos[i].Imagems[0].caminho%>" alt="<%= jogos[i].nome %>"></a><br><%= jogos[i].nome %><br><button class="buttonHome"><a class="linkandoJogo" href="/home/produto/<%=jogos[i].id%>">Saiba +</a></button></p>
+                <% for(let i = 0; i < jogosNintendo.length; i++){ %> 
+                <p class="linkJogo"><a class="linkandoJogo" href="/home/produto/<%=jogosNintendo[i].id%>"><img class="imgHome" src="/uploads/<%=jogosNintendo[i].Imagems[0].caminho%>" alt="<%= jogosNintendo[i].nome %>"></a><br><%= jogosNintendo[i].nome %><br><button class="buttonHome"><a class="linkandoJogo" href="/home/produto/<%=jogosNintendo[i].id%>">Saiba +</a></button></p>
                 <% } %>
             </div>        
     </main>
