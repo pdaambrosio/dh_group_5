@@ -16,15 +16,9 @@ const jogosPS = jogos.filter((jogo) => jogo.Plataforma.marca == 'Sony')
   });
 }
 
-module.exports.logout = async function(req, res) {
-  const jogos = await db.Anuncio.findAll({
-    include: [db.Plataforma, db.Imagem]
-  })
+module.exports.logout = function(req, res) {
   req.session.destroy(); 
-  res.render('home', {
-    usuarioLogado: null,
-    jogos
-  });
+  res.redirect('/home')
 }
 
 module.exports.quem = function(req, res) {
