@@ -70,6 +70,10 @@ module.exports.produto = async function(req, res) {
     let console = req.query.console ? req.query.console : ''
     let condicao = req.query.condicao ? req.query.condicao : ''
     let genero = req.query.genero ? req.query.genero : ''
+    let nickUsuario = req.query.nickUsuario ? req.query.nickUsuario : ''
+
+    
+
     
     let resultado = await db.Anuncio.findAll({
       where: {
@@ -81,7 +85,9 @@ module.exports.produto = async function(req, res) {
       include: [
         {model: db.Plataforma, where: {console: {[Op.like]: `%${console}%`}}}, 
         {model: db.Genero, as: 'generos', where: {nome: {[Op.or]:[genero,{[Op.like]: `%${genero}%`}]}}}, 
-        {model: db.Imagem, where: {foto_principal: 1}}]
+        {model: db.Imagem, where: {foto_principal: 1}},
+        {model: db.usuarios, as: 'usuario', where: {nickname: {[Op.like]: `%${nickUsuario}%`} }}
+      ]
     })
     return res.send(resultado)
   }

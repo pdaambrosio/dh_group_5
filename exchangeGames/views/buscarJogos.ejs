@@ -15,7 +15,7 @@
     <aside class="filtrosBusca">
         <form action="/buscar/">
         <h3 class="tituloCategoria">Categorias</h3>
-        <h4 class="subCategorias">Buscar</h4>
+        <h4 class="subCategorias">Buscar jogo</h4>
             <label for="Buscar"></label>
             <input name="nomeAnuncio" type="text" placeholder="Nome do jogo" maxlength="150" />
         <h4 class="subCategorias">Console</h4>
@@ -32,6 +32,9 @@
                 <p class="categoriasBusca"><input type="checkbox" name="genero" id="<%=generos[i].nome %>" value="<%=generos[i].nome %>"/>
                 <label for="<%=generos[i].nome %>"><%=generos[i].nome %></label></p>
             <% } %> 
+        <h4 class="subCategorias">Buscar por usuário</h4>
+        <label for="Buscar"></label>
+            <input name="nickUsuario" type="text" placeholder="Nick do usuário" maxlength="150" />
         <button class="botaoLateral" type="submit">Buscar</button>
         </form>
     </aside>
