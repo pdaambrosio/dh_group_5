@@ -15,7 +15,9 @@
 .pai {
     display: flex;
 }
-
+.mainConta{
+    height:70vh;
+}
 .tipo {
     width: 33.3%;
     text-align: center;
