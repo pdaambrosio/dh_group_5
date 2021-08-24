@@ -1,4 +1,4 @@
-const db = require('../models')
+exchangeGames/controller/homeController.jsconst db = require('../models')
 const {Op} = require('sequelize')
 
 module.exports.home = async function(req, res) {
@@ -57,4 +57,31 @@ module.exports.produto = async function(req, res) {
     });
   }
 
-  
+  module.exports.buscar = async function(req, res) {
+    const plataformas = await db.Plataforma.findAll()
+    const generos = await db.Genero.findAll()    
+    res.render('buscarJogos', {
+      usuarioLogado: req.session.nickname, plataformas, generos
+    });
+  }
+
+  module.exports.pesquisarAnuncios = async function(req, res) {
+    let nome = req.query.nomeAnuncio ? req.query.nomeAnuncio : ''
+    let console = req.query.console ? req.query.console : ''
+    let condicao = req.query.condicao ? req.query.condicao : ''
+    let genero = req.query.genero ? req.query.genero : ''
+    
+    let resultado = await db.Anuncio.findAll({
+      where: {
+        [Op.and]:{
+          nome : {[Op.like]: `%${nome}%`},
+          condicao: {[Op.like]: `%${condicao}%`}
+        }
+      },
+      include: [
+        {model: db.Plataforma, where: {console: {[Op.like]: `%${console}%`}}}, 
+        {model: db.Genero, as: 'generos', where: {nome: {[Op.or]:[genero,{[Op.like]: `%${genero}%`}]}}}, 
+        {model: db.Imagem, where: {foto_principal: 1}}]
+    })
+    return res.send(resultado)
+  }

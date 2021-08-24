@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: OpenSans;
+    src: url("../Fonts/OpenSans-Regular.ttf");
+}
+.mainBusca{
+    display:flex;
+    width: 100%;
+    margin-top: 20px;
+}
+.filtrosBusca{
+    width: 20%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.tituloCategoria{
+    border-bottom: solid 1px #F8B000;
+    margin-bottom: 20px;
+}
+.categoriasBusca{
+    margin: 8px;
+    padding-left: 10px;
+}
+.resultadosBusca{
+    display: flex;
+    width: 70%;
+    flex-wrap:wrap;
+    height: 300px;
+    justify-content: flex-start;
+}
+.resultadoImg{
+    width: 150px;
+    height: 250px;
+    object-fit: scale-down;
+    margin: 15px;
+}
+.resultadoAnuncio{
+    text-decoration: none;
+    font-size: 13px;
+}
+.resultadoNome{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    color: #1d1736;
+}
+.botaoLateral{
+    background-color: #F8B000;
+    border-radius: 5px;
+    border: #F8B000;
+    color: white;
+    cursor: pointer;
+    width: 50%;
+    height: 5vh;
+    margin-bottom: 40px;
+    margin-top: 15px;
+    margin-left: 60px;
+}

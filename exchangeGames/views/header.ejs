@@ -7,10 +7,10 @@
     <header>
         <div class="header">
             <img class="logoHeader" src="/images/logo-icone.png" alt="logo">
-            <div class="busca">
-                <input class="busca-termo" type="text" placeholder="Digite o nome do jogo">
+            <form class="busca" action="/buscar/">
+                <input class="busca-termo" type="text" placeholder="Digite o nome do jogo" name="nomeAnuncio">
                 <button class="botao-busca" type="submit">Pesquisar</button>
-            </div>
+            </form>
             <div class="login-right">
                 <% if (usuarioLogado) { %>
                     <a href="/users/suaConta"><%= usuarioLogado %></a> |

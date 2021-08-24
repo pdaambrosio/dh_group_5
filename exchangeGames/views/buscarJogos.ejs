@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/buscarJogos.css">
+    <title>Exchange Games | Cadastro de jogo</title>
+</head>
+<body>
+    <header>
+    <%- include('header.ejs') %>
+    </header>
+    <main class="mainBusca">
+    <aside class="filtrosBusca">
+        <form action="/buscar/">
+        <h3 class="tituloCategoria">Categorias</h3>
+        <h4 class="subCategorias">Buscar</h4>
+            <label for="Buscar"></label>
+            <input name="nomeAnuncio" type="text" placeholder="Nome do jogo" maxlength="150" />
+        <h4 class="subCategorias">Console</h4>
+            <% for(let i = 0; i < plataformas.length; i++){ %>
+                <p class="categoriasBusca"><input type="checkbox" name="console" id="<%=plataformas[i].console %>" value="<%=plataformas[i].console %>"/>
+                <label for="<%=plataformas[i].console %>"><%=plataformas[i].console %></label></p>
+            <% } %> 
+        <h4 class="subCategorias">Condição</h4>
+            <p class="categoriasBusca"><input name="condicao" type="checkbox" value="Novo" id="novo"/><label for="novo">Novo</label></p>
+            <p class="categoriasBusca"><input name="condicao" type="checkbox" value="Usado" id="usado"/><label for="usado">Usado</label></p>
+            <p class="categoriasBusca"><input name="condicao" type="checkbox" value="Lacrado" id="lacrado"/><label for="lacrado">Lacrado</label></p>
+        <h4 class="subCategorias">Gênero</h4>
+            <% for(let i = 0; i < generos.length; i++){ %>
+                <p class="categoriasBusca"><input type="checkbox" name="genero" id="<%=generos[i].nome %>" value="<%=generos[i].nome %>"/>
+                <label for="<%=generos[i].nome %>"><%=generos[i].nome %></label></p>
+            <% } %> 
+        <button class="botaoLateral" type="submit">Buscar</button>
+        </form>
+    </aside>
+    <div class="resultadosBusca">
+    </div>
+    </main>
+    <footer>
+        <%- include('footer.ejs') %>
+    </footer>
+</body>
+<script>
+    const exibirAnuncios = document.querySelector('.resultadosBusca')
+     async function carregarAnuncios(){
+        const url = new URL(window.location.href)       
+        const resultado = await fetch(`http://localhost:3000/pesquisarAnuncios${url.search}`)
+        const anuncios = await resultado.json()        
+        exibirAnuncios.innerHTML = ""
+        for(let i= 0; i<anuncios.length; i++){            
+            exibirAnuncios.innerHTML +=  `<a class="resultadoAnuncio" href="/produto/${anuncios[i].id}"><img class="resultadoImg" src="/uploads/${anuncios[i].Imagems[0].caminho}"/><p class="resultadoNome">${anuncios[i].nome}</p></a>`                
+        }}
+        window.onload = carregarAnuncios()
+</script>
+</html>  
+

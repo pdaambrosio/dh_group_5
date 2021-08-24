@@ -8,6 +8,8 @@ router.get('/quem-somos', homeController.quem);
 router.get('/perguntas', homeController.perguntas);
 router.get('/politica', homeController.politica);
 router.get('/produto/:id', homeController.produto);
+router.get('/buscar', homeController.buscar);
+router.get('/pesquisarAnuncios', homeController.pesquisarAnuncios);
 
 module.exports = router
 
