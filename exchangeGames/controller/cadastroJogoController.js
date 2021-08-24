@@ -190,7 +190,7 @@ module.exports.editandoJogo = async function(req, res) {
     where: {id: req.params.id},
     include:['generos']
 })  
-/*
+
   await db.Anuncio.update({
     ano: req.body.anoJogo,
     descricao: req.body.descricao,
@@ -223,7 +223,7 @@ for(let i = 0; i < generos.length; i++){
       })
   }
 }
-*/
+
   console.log(req.session.usuario)
   //console.log(req.files)
   console.log(req.files)

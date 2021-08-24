@@ -59,14 +59,14 @@ body {
 .homePs4 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     padding-left: 3%;
     padding-right: 3%; 
 }
 .homeXbox {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     padding-left: 3%;
     padding-right: 3%;
 
@@ -74,7 +74,7 @@ body {
 .homeSwitch {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -83,7 +83,7 @@ body {
     font-size: 100%;
     color: #1d1736 ;
     padding-bottom: 1%;
-    margin: 8px;
+    margin: 18px;
 }
 .buttonHome {
     background-color: #F8B000;
