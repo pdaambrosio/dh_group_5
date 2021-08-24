@@ -7,31 +7,35 @@
         <link href= "/css/detalhesDoProduto.css" rel="stylesheet">
     </head>
     <body>
-        <nav>
-            <header>
-                <%- include('header.ejs') %>
-            </header>
+        <header>
+            <%- include('header.ejs') %>
+        </header>
         <main class="mainDetalhesDoProduto">
             <div class="caixaDetalhesDoProduto">
-                <div class="tituloDetalhesDoProduto">
-                <img src="/uploads/<%=anuncio.Imagems[0].caminho%>" alt="<%= anuncio.nome %>" width="300px" height="377px"/>
-            </div>
-            <div class="descricaoDetalhesDoProduto">
-                <h2 class="h2DetalhesDoProduto"><%= anuncio.nome %></h2>
-                <h6 class="h6DetalhesDoProduto">Anúncio criado em <%= anuncio.createdAt %>  - cód do anúncio: <%= anuncio.id %></h6>
-                <p>Nome do anunciante: <%= anuncio.usuario.nickname %></p> 
-                <p>Ano do jogo: <%= anuncio.ano %></p>
-                <p>Marca: <%= anuncio.Plataforma.marca %></p>
-                <p>Console: <%= anuncio.Plataforma.console %></p>
-                <p>Tempo de uso: <%= anuncio.tempo_uso %></p>
-                <p>Condição do jogo: <%= anuncio.condicao %></p>
-                <p>Gênero:  <% for(let i = 0; i < anuncio.generos.length; i++){ %> 
+                <div class="exibirFotos">
+                        <% for(let i = 0; i < anuncio.Imagems.length; i++){ %>
+                        <img src="/uploads/<%=anuncio.Imagems[i].caminho%>" class="images"/>  
+                        <% } %> 
+                </div>
+                <div class="imagemPrincipal">
+                    <img src="/uploads/<%=anuncio.Imagems[0].caminho%>" alt="<%= anuncio.nome %>"/>
+                </div>
+                <div class="descricaoDetalhesDoProduto">
+                    <h2 class="h2DetalhesDoProduto"><%= anuncio.nome %></h2>
+                    <h6 class="h6DetalhesDoProduto">Cód. do anúncio: <%= anuncio.id %></h6>
+                    <p>Nome do anunciante: <%= anuncio.usuario.nickname %></p> 
+                    <p>Ano do jogo: <%= anuncio.ano %></p>
+                    <p>Marca: <%= anuncio.Plataforma.marca %></p>
+                    <p>Console: <%= anuncio.Plataforma.console %></p>
+                    <p>Tempo de uso: <%= anuncio.tempo_uso %></p>
+                    <p>Condição do jogo: <%= anuncio.condicao %></p>
+                    <p>Gênero:  <% for(let i = 0; i < anuncio.generos.length; i++){ %> 
                     <%= anuncio.generos[i].nome %> <% } %> </p> 
                 <br>
                 <button class="buttonChat">Chat</button>
              <% if(usuarioLogado == anuncio.usuario.nickname){%> <a class="linkEditar" href="/jogos/editarJogo/<%=anuncio.id%>"><button class="buttonEditar" >Editar anúncio</button></a> <% } %> 
-            </div> 
-            </div>
+                </div>
+        </div>
         <div class="descricao">
             <h4>Descrição do Produto</h4>
             <p><%= anuncio.descricao %></p>
@@ -40,6 +44,14 @@
         <footer>
             <%- include('footer.ejs') %>
         </footer>
-        </nav>
     </body>
-    </html>
+    <script>
+        let images = document.querySelectorAll('.images')
+
+            for (let image of images){
+                image.onclick = (e) => {
+                    document.querySelector('.imagemPrincipal').innerHTML = `<img src=${image.src} />` 
+                }
+        }
+    </script>
+</html>
