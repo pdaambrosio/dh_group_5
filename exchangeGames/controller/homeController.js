@@ -1,4 +1,4 @@
-exchangeGames/controller/homeController.jsconst db = require('../models')
+const db = require('../models')
 const {Op} = require('sequelize')
 
 module.exports.home = async function(req, res) {
